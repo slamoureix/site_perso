@@ -21,6 +21,7 @@ export default function Links(props) {
                 <span className="typeOfLink">{props.type}</span>
                 <div className="link__project_cover">
                     <Picture 
+                    rep={props.rep}
                     src_default={props.cover.src_default}
                     alt={props.cover.alt}
                     source={props.cover.source}

@@ -1,4 +1,4 @@
-const JHV_data = [{
+const JHV_data = {
     "routes": {
         "path": "/JeanetteHussVarnet",
         "typeofLink": "project"
@@ -9,40 +9,35 @@ const JHV_data = [{
     "content": "Création graphique du portfolio de l’artiste Jeannette Huss––Varnet.",
     "photographies": "Marcel Huss",
     "img": {
+        "rep": "JH--V",
         "cover": {
-            "src_default": "../../assets/JH--V/Img/01.jpg",
+            "src_default": {
+                name : "interieur_litlle_size",
+                format : "webp"
+            },
+            // "src_default": import("../../assets/JH--V/Img/01.jpg").then(value => value.default),
             "source": {
                 "medium": {
-                    "src": "Src",
+                    "src": {
+                        name: "01",
+                        format: "jpg"
+                    },
                     "type": "beau type",
                     "media": "cool"
                 },
                 "large": {
-                    "src": "Src",
+                    "src": {
+                        name: "01",
+                        format: "jpg"
+                    },
                     "type": "beau truc",
                     "media": "ouech"
                 }
             },
             "alt": "ma belle image est jolie"
         },
-        "1": {
-            "src_default": "./Img/",
-            "source": {
-                "medium": {
-                    "src": "Src",
-                    "type": "beau type",
-                    "media": "cool"
-                },
-                "large": {
-                    "src": "Src",
-                    "type": "beau truc",
-                    "media": "ouech"
-                }
-            },
-            "alt": "ma belle image est jolie"
-        }
     }
-}]
+}
 
 export default JHV_data;
 

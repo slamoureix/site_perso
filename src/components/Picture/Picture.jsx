@@ -1,30 +1,30 @@
-import React from 'react';
+import React, { useEffect,useRef } from 'react';
 
 
 
 export default function Picture(
     {
+    rep,
     src_default, 
     source, 
     alt
     }) 
     {
-        // import("../../assets/JH--V/Img/01.jpg")
-    
+        const refImg = useRef()
 
-    function getURL() {
-        let img = <img src = ''
-        alt = {alt}
-        />;
-        return img;
-    }
-    
+        useEffect(() => {
+            import(`../../assets/${rep}/Img/${src_default.name}.${src_default.format}`).then(value => (
+                refImg.current.setAttribute("src", `${value.default}`)))
+        }, [])
+
+        /* fonctionne avec require */
+        // let R = require(`../../assets/${rep}/Img/${src_default.name}.${src_default.format}`).default
 
     function OnTakeSources() {
         let arrSources = [];
         for (let name of Object.keys(source)) {
             let S = source[name];
-            let baliseSource = <source key={name} srcSet={S.src} type={S.type} media={S.media} />;
+            let baliseSource = <source key = {name} srcSet = {S.src} type = {S.type} media = {S.media} />;
             arrSources.push(baliseSource);
         }
         return arrSources;
@@ -33,7 +33,8 @@ export default function Picture(
     return (
             <picture>
                 {OnTakeSources()}
-                {getURL()}
+                <img ref={refImg} alt = {alt} />
+                {/* <img src={R} alt = {alt} /> */}
             </picture>
     )
 }

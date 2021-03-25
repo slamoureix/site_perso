@@ -10,10 +10,13 @@ export function useLinksCreate(Links) {
         key={L.path} 
         exact path={L.path} 
         name={L.name} 
-        cover={L.cover}
-        target={L.target} 
-        typeofLink = {L.typeofLink}
         type={L.type}
+        typeofLink = {L.typeofLink}
+
+        target={L.target} 
+
+        rep={L.rep}
+        cover={L.cover}
         />
         arrLinks.push(link)
         }
