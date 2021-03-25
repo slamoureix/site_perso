@@ -1,0 +1,52 @@
+/* fonts */
+$popins_regular : "poppinsregular";
+$popins--italic : "poppinsitalic";
+$popins_light--italic : "poppins_light_italic";
+$popins_light : "poppinslight";
+$popins_thin : "poppinsthin";
+$popins_medium : "poppinsmedium";
+$popins_semi_bold : "poppinssemibold";
+$popins_bold : "poppinsbold";
+$popins_black : "poppinsblack";
+
+/* colors */
+$C_E84E32 : #E84E32; //Burning Tomato
+$C_71816D : #71816D;
+$C_742719 : #742719;
+$C_461108 :#461108;
+$C_170805 : #170805;
+
+// $Palette: {
+//     DEFAULT: '#E84E32', 
+//     '50': '#FFFFFF', 
+//     '100': '#FDECE9', 
+//     '200': '#F7C5BC', 
+//     '300': '#F29D8E', 
+//     '400': '#ED7660', 
+//     '500': '#E84E32', '600': '#D03417', '700': '#A22812', '800': '#741D0D', '900': '#461108'
+// }
+
+
+
+$col-left : 10%; 
+$col-right : 14.5%;
+
+// systeme de col 
+
+$columns : 12;
+
+$height-max : 46vh; 
+
+/* breakpoints */
+$grid-breakpoints: (
+    xs: 0px,
+    sm: 576px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1280px
+    );
+
+/* -- Easing -- */
+$easeInOutCirc: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+$ease-material: cubic-bezier(.4, 0, .2, 1);
+$global-ease: $ease-material;

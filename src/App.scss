@@ -1,0 +1,76 @@
+@use '../src/scss/abstracts/reset'as *;
+@use '../src/scss/abstracts/base'as *;
+@use '../src/scss/abstracts/index'as *;
+
+.App {
+    .circle_transition {
+        position: absolute;
+        background-color: $C_170805;
+        z-index: -1;
+        // top: 0;
+        // left: 0;
+        transform: scale(2);
+        top : 10%;
+        left : 10%;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+    }
+    margin: 0 auto;
+    width: 93.05vw;
+}
+
+.Box {
+    @extend .height-content; // classe extend.
+}
+
+
+.ToScaleTransition{
+    animation: ToScaleTransition 2.5s $ease-material ;
+}
+
+.Hidden{
+    visibility: hidden;
+}
+
+.Visible{
+    visibility: visible;
+}
+
+.MoveTo{
+    animation: $LetterMove 3s $ease-material;
+}
+
+@keyframes ToScaleTransition{
+    100%{
+        border-radius: 50%;
+        display: none;
+        transform: scale(0);
+    }
+}
+
+// html {
+//     //min-width 0px & max-width 575,98px
+//     @include media-breakpoint-only(xs) {
+//         background-color: blue;
+//     }
+//     //min-width 576px & max-width 767,98px
+//     @include media-breakpoint-only(sm) {
+//         background-color: green;
+//     }
+
+//     //min-width 768px & max-width 1279.98px
+//     @include media-breakpoint-only(md) {
+//         background-color: yellow;
+//     }
+
+//     //min-width 1280px & max-width 1439.98px
+//     @include media-breakpoint-only(lg) {
+//         background-color: orange;
+//     }
+
+//     // min-width : 1440px;
+//     @include media-breakpoint-only(xl) {
+//         background-color: orchid;
+//     }
+// }

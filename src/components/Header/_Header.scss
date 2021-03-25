@@ -1,0 +1,56 @@
+@use '../../scss/abstracts/' as *;
+
+header{
+    @include display($justify : space-between);
+    flex-wrap: wrap;
+
+    /* header in size 1024px à ne pas mettre en flex-wrap*/
+
+    @include media-breakpoint-between(lg, xl){
+        flex-wrap: nowrap;
+    }
+
+    //min-width : 1280px
+    @include media-breakpoint-up(xl) {
+        margin-top: 8.5rem;
+    }
+    // max-width : 1279.98px
+    @include media-breakpoint-down(lg){
+        margin-top: 10px;
+    }
+    
+    .name{
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
+
+        @include media-breakpoint-between(lg, xl) {
+            width: $col-right;
+        }
+        
+
+        @include media-breakpoint-down(lg){
+            margin-top: 25px;
+        }
+
+        @include media-breakpoint-up(xl){
+            width: $col-right;
+        }
+
+        span{
+            color: $C_71816D;
+            font-family: $popins_light--italic;
+            font-size: 1.5rem;
+        }
+
+        strong, h1{
+            color: $C_E84E32;
+        }
+
+        hr{
+            margin: 1.25rem auto;
+            @include filet(5rem, .5rem, $C_71816D);
+        }
+        
+    }
+}
