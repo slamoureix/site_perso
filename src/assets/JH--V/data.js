@@ -19,20 +19,18 @@ const JHV_data = {
             "source": {
                 "medium": {
                     "src": {
-                        name: "01",
-                        format: "jpg"
+                        name: "cicrcle",
+                        format: "svg"
                     },
-                    "type": "beau type",
-                    "media": "cool"
+                    "media": "(max-width: 600px)"
                 },
                 "large": {
                     "src": {
                         name: "01",
                         format: "jpg"
                     },
-                    "type": "beau truc",
-                    "media": "ouech"
-                }
+                    "media": "(min-width: 600px) and (max-width: 900px)"
+                },
             },
             "alt": "ma belle image est jolie"
         },
