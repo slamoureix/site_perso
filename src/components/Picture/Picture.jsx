@@ -33,20 +33,20 @@ export default function Picture({rep, src_default, source, alt}) {
             return imp;
         }
 
-
         useEffect(() => {
             const fetchSource = async () => {
-                source.forEach(element => {
+                source.map(element => 
                     importSource(element)
-                    .then(v => {
-                        let SRC = v.default;
-                        element = {...element, SRC};
-                        setSourceState(s => {return {...s, element}})} 
+                    .then(v => { element = {...element, 'SRC' : v.default};
+                        setSourceState(() => {
+                            return {...SourceState, element}}
+                            )
+                        }
                     )
-                });
+                )
             }
-            fetchSource()
             
+            fetchSource() 
         }, [])
         
     //instancier un objet c
@@ -106,12 +106,11 @@ export default function Picture({rep, src_default, source, alt}) {
                 {/* {OnTakeSources()} */}
                 {/* {OnLoadSources()} */}
                 
-                {
-                    console.log(SourceState)
-
-                }
                 
+                    
+                        
 
+                
                 
                     
                 <img src={SrcState} alt = {alt} />
