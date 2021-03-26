@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Picture({rep, src_default, source, alt}) {
 
@@ -6,9 +6,12 @@ export default function Picture({rep, src_default, source, alt}) {
     const [SrcState, SrcSetstate] = useState('');
 
     useEffect(() => {
-        import(`../../assets/${rep}/Img/${src_default.name}.${src_default.format}`)
-            .then(value => (SrcSetstate(value.default)));
-    }, [])
+        const fetchSrc_default = async () => {
+            await import(`../../assets/${rep}/Img/${src_default.name}.${src_default.format}`)
+                .then(value => (SrcSetstate(value.default)));
+        }
+        fetchSrc_default();
+    }, [] )
 
     /* SOURCES */ 
 
@@ -23,39 +26,60 @@ export default function Picture({rep, src_default, source, alt}) {
     //     return arrSources;
     // }
 
-    
-    
-    //instancier un objet c
-    class Source {
-        constructor(key, name, format, media) {
-            this.key = key;
-            this.name = name;
-            this.format = format;
-            this.media = media
-        }
-    }
-    
-    const OnLoadSources = () => {
-        const data_sources = [];
-        
-        for(let name of Object.keys(source)){
-            let S = source[name];
-            let So = new Source(name, S.src.name, S.src.format, S.media);
-            let imp = [];
-            import(`../../assets/${rep}/Img/${S.src.name}.${S.src.format}`).then(v => imp.push(v.default));
-            let fullSRC = {...So, 'srcset' : imp}
-            console.log(imp[0])
-            data_sources.push(fullSRC);
+        const [SourceState, setSourceState] = useState([]);
+
+        const importSource = async (element) => {
+            let imp = await import(`../../assets/${rep}/Img/${element.src.name}.${element.src.format}`)
+            return imp;
         }
 
-        let sources = []
-        console.log(data_sources)
-        data_sources.forEach(({key, name, media, srcset}) => {
-                let s = <source id= {key} key= {name} media={media} srcSet={srcset} />
-                sources.push(s)})
+
+        useEffect(() => {
+            const fetchSource = async () => {
+                source.forEach(element => {
+                    importSource(element)
+                    .then(v => {
+                        let SRC = v.default;
+                        element = {...element, SRC};
+                        setSourceState(s => {return {...s, element}})} 
+                    )
+                });
+            }
+            fetchSource()
+            
+        }, [])
         
-        return sources
-    }
+    //instancier un objet c
+    // class Source {
+    //     constructor(key, name, format, media) {
+    //         this.key = key;
+    //         this.name = name;
+    //         this.format = format;
+    //         this.media = media
+    //     }
+    // }
+    
+    // const OnLoadSources = () => {
+    //     const data_sources = [];
+        
+    //     for(let name of Object.keys(source)){
+    //         let S = source[name];
+    //         let So = new Source(name, S.src.name, S.src.format, S.media);
+    //         let imp = [];
+    //         import(`../../assets/${rep}/Img/${S.src.name}.${S.src.format}`).then(v => imp.push(v.default));
+    //         let fullSRC = {...So, 'srcset' : imp}
+    //         console.log(imp)
+    //         data_sources.push(fullSRC);
+    //     }
+
+    //     let sources = []
+    //     console.log(data_sources.srcset)
+    //     data_sources.forEach(({key, name, media, srcset}) => {
+    //             let s = <source id= {key} key= {name} media={media} srcSet={srcset} />
+    //             sources.push(s)})
+        
+    //     return sources
+    // }
     
     
 
@@ -80,7 +104,16 @@ export default function Picture({rep, src_default, source, alt}) {
     return (
             <picture>
                 {/* {OnTakeSources()} */}
-                {OnLoadSources()}
+                {/* {OnLoadSources()} */}
+                
+                {
+                    console.log(SourceState)
+
+                }
+                
+
+                
+                    
                 <img src={SrcState} alt = {alt} />
             </picture>
     )

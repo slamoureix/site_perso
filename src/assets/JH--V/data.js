@@ -16,22 +16,29 @@ const JHV_data = {
                 format : "webp"
             },
             // "src_default": import("../../assets/JH--V/Img/01.jpg").then(value => value.default),
-            "source": {
-                "medium": {
+            "source": [
+                {
                     "src": {
                         name: "cicrcle",
                         format: "svg"
                     },
                     "media": "(max-width: 600px)"
                 },
-                "large": {
+                {
                     "src": {
                         name: "01",
                         format: "jpg"
                     },
                     "media": "(min-width: 600px) and (max-width: 900px)"
                 },
-            },
+                {
+                    "src": {
+                        name: "01",
+                        format: "jpg"
+                    },
+                    "media": "(min-width 900px) and (max-width: 1200px)"
+                }
+            ],
             "alt": "ma belle image est jolie"
         },
     }
