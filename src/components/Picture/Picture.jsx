@@ -44,8 +44,8 @@ export default function Picture({rep, src_default, source, alt}) {
             let imp = [];
             import(`../../assets/${rep}/Img/${S.src.name}.${S.src.format}`).then(v => imp.push(v.default));
             let fullSRC = {...So, 'srcset' : imp}
+            console.log(imp[0])
             data_sources.push(fullSRC);
-            console.log(imp)
         }
 
         let sources = []
