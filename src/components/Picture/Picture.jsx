@@ -25,32 +25,37 @@ export default function Picture({rep, src_default, source, alt}) {
     //     }
     //     return arrSources;
     // }
+    
 
-        const [SourceState, setSourceState] = useState([]);
+   
+    const [DataSourceState, setDataSourceState] = useState([]);
 
-        const CreateSrcset = async (element) => {
-            return await import(`../../assets/${rep}/Img/${element.src.name}.${element.src.format}`)
+    useEffect(() => {
+
+        const CreateSrcset = (element) => {
+            return import(`../../assets/${rep}/Img/${element.src.name}.${element.src.format}`)
         }
 
-        useEffect(() => {
-            const fetchSource = async () => {
-                let arrtemp = []
-                source.forEach(element => 
+        const fetchSource = () => {
+            let arrtemp = [];
+            source.forEach(element => {
                     CreateSrcset(element)
                     .then(v => { 
                         element = {...element, "srcset" : v.default};
                         arrtemp.push(element);
-                    }))
-                setSourceState(arrtemp)
-                }
-            fetchSource(); 
-   
+                })})
+
+            console.log(arrtemp)
+            console.log(DataSourceState);
+            setDataSourceState(arrtemp);
+            console.log(DataSourceState)
+            }
+            fetchSource()
+        
+            return () => {
+            }
         }, [])
-        
-        const list = () => {
-            SourceState.forEach((S) => console.log('totot'))
-        }
-        
+
     //instancier un objet c
     // class Source {
     //     constructor(key, name, format, media) {
@@ -120,7 +125,6 @@ export default function Picture({rep, src_default, source, alt}) {
             <picture>
                 {/* {OnTakeSources()} */}
                 {/* {OnLoadSources()} */}
-                {list()}
                 <img src={SrcState} alt = {alt} />
             </picture>
     )
