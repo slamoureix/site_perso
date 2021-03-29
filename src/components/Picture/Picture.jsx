@@ -15,19 +15,6 @@ export default function Picture({rep, src_default, source, alt}) {
 
     /* SOURCES */ 
 
-    // fonctionne avec require ->
-    // const OnTakeSources = () => {
-    //     let arrSources = [];
-    //     for (let name of Object.keys(source)) {
-    //         let S = source[name];
-    //         let baliseSource = <source key= {name} srcSet= {require(`../../assets/${rep}/Img/${S.src.name}.${S.src.format}`).default} media= {S.media} />;
-    //         arrSources.push(baliseSource);
-    //     }
-    //     return arrSources;
-    // }
-    
-
-   
     const [DataSourceState, setDataSourceState] = useState([]);
 
     useEffect(() => {
@@ -35,6 +22,7 @@ export default function Picture({rep, src_default, source, alt}) {
         const CreateSrcset = (element) => {
             return import(`../../assets/${rep}/Img/${element.src.name}.${element.src.format}`)
         }
+        
 
         const fetchSource = () => {
             let arrtemp = [];
@@ -43,88 +31,31 @@ export default function Picture({rep, src_default, source, alt}) {
                     .then(v => { 
                         element = {...element, "srcset" : v.default};
                         arrtemp.push(element);
-                })})
-
-            console.log(arrtemp)
-            console.log(DataSourceState);
-            setDataSourceState(arrtemp);
-            console.log(DataSourceState)
+                        setDataSourceState(...DataSourceState, arrtemp);
+                    })})
             }
+
             fetchSource()
         
             return () => {
             }
         }, [])
 
-    //instancier un objet c
-    // class Source {
-    //     constructor(key, name, format, media) {
-    //         this.key = key;
-    //         this.name = name;
-    //         this.format = format;
-    //         this.media = media
-    //     }
-    // }
-    
-    // const OnLoadSources = () => {
-    //     const data_sources = [];
-        
-    //     for(let name of Object.keys(source)){
-    //         let S = source[name];
-    //         let So = new Source(name, S.src.name, S.src.format, S.media);
-    //         let imp = [];
-    //         import(`../../assets/${rep}/Img/${S.src.name}.${S.src.format}`).then(v => imp.push(v.default));
-    //         let fullSRC = {...So, 'srcset' : imp}
-    //         console.log(imp)
-    //         data_sources.push(fullSRC);
-    //     }
-
-    //     let sources = []
-    //     console.log(data_sources.srcset)
-    //     data_sources.forEach(({key, name, media, srcset}) => {
-    //             let s = <source id= {key} key= {name} media={media} srcSet={srcset} />
-    //             sources.push(s)})
-        
-    //     return sources
-    // }
-    
-    
-
-
-    
-    // const OnTakeSources = () => {
-    //     let arrSources = [];
-    //     for (let name of Object.keys(source)) {
-    //         let srcset= []
-    //         let S = source[name];
-    //         import(`../../assets/${rep}/Img/${S.src.name}.${S.src.format}`).then(
-    //             value => {
-    //                 srcset.push(value.default)
-    //             });
-    //         let baliseSource = <source key= {name} srcSet= {srcset} media= {S.media} />;
-    //         arrSources.push(baliseSource);
-    //     }
-    //     return arrSources;
-    // }
-
-    // const OnTakeSources = () => {
-    //     let arrSources = [];
-    //     for (let name of Object.keys(SourceState)) {
-    //         let S = SourceState[name];
-    //         let baliseSource = <source key= {SourceState[name].name} srcSet= {srcset} media= {S.media} />;
-    //         arrSources.push(baliseSource);
-    //     }
-    //     return arrSources;
-    // }
-        
-        
-    
+        const DisplaySources = ( ) => {
+            let arrSources = [];
+            console.log(DataSourceState.length)
+            DataSourceState.map(
+                source => arrSources.push(<source key={source.src.name} srcSet={source.srcset} media={source.media} />) 
+                    )
+            return arrSources;
+        } 
 
 
     return (
             <picture>
                 {/* {OnTakeSources()} */}
                 {/* {OnLoadSources()} */}
+                {DisplaySources()}
                 <img src={SrcState} alt = {alt} />
             </picture>
     )
@@ -150,3 +81,80 @@ export default function Picture({rep, src_default, source, alt}) {
 // {<img src={R} alt = {alt} /> }
 
 */
+
+
+/* <source key= {source.src.name} srcSet= {source.srcset} media= {source.media} /> */ 
+
+
+    //instancier un objet c
+    // class Source {
+    //     constructor(key, name, format, media) {
+    //         this.key = key;
+    //         this.name = name;
+    //         this.format = format;
+    //         this.media = media
+    //     }
+    // }
+
+    // const OnLoadSources = () => {
+    //     const data_sources = [];
+
+    //     for(let name of Object.keys(source)){
+    //         let S = source[name];
+    //         let So = new Source(name, S.src.name, S.src.format, S.media);
+    //         let imp = [];
+    //         import(`../../assets/${rep}/Img/${S.src.name}.${S.src.format}`).then(v => imp.push(v.default));
+    //         let fullSRC = {...So, 'srcset' : imp}
+    //         console.log(imp)
+    //         data_sources.push(fullSRC);
+    //     }
+
+    //     let sources = []
+    //     console.log(data_sources.srcset)
+    //     data_sources.forEach(({key, name, media, srcset}) => {
+    //             let s = <source id= {key} key= {name} media={media} srcSet={srcset} />
+    //             sources.push(s)})
+
+    //     return sources
+    // }
+
+
+
+
+
+    // const OnTakeSources = () => {
+    //     let arrSources = [];
+    //     for (let name of Object.keys(source)) {
+    //         let srcset= []
+    //         let S = source[name];
+    //         import(`../../assets/${rep}/Img/${S.src.name}.${S.src.format}`).then(
+    //             value => {
+    //                 srcset.push(value.default)
+    //             });
+    //         let baliseSource = <source key= {name} srcSet= {srcset} media= {S.media} />;
+    //         arrSources.push(baliseSource);
+    //     }
+    //     return arrSources;
+    // }
+
+    // const OnTakeSources = () => {
+    //     let arrSources = [];
+    //     for (let name of Object.keys(SourceState)) {
+    //         let S = SourceState[name];
+    //         let baliseSource = <source key= {SourceState[name].name} srcSet= {srcset} media= {S.media} />;
+    //         arrSources.push(baliseSource);
+    //     }
+    //     return arrSources;
+    // }
+
+
+    // fonctionne avec require ->
+    // const OnTakeSources = () => {
+    //     let arrSources = [];
+    //     for (let name of Object.keys(source)) {
+    //         let S = source[name];
+    //         let baliseSource = <source key= {name} srcSet= {require(`../../assets/${rep}/Img/${S.src.name}.${S.src.format}`).default} media= {S.media} />;
+    //         arrSources.push(baliseSource);
+    //     }
+    //     return arrSources;
+    // }
