@@ -31,7 +31,7 @@ export default function Picture({rep, src_default, source, alt}) {
                     .then(v => { 
                         element = {...element, "srcset" : v.default};
                         arrtemp.push(element);
-                        setDataSourceState(...DataSourceState, arrtemp);
+                        setDataSourceState(arrtemp);
                     })})
             }
 
@@ -41,13 +41,8 @@ export default function Picture({rep, src_default, source, alt}) {
             }
         }, [])
 
-        const DisplaySources = ( ) => {
-            let arrSources = [];
-            console.log(DataSourceState.length)
-            DataSourceState.map(
-                source => arrSources.push(<source key={source.src.name} srcSet={source.srcset} media={source.media} />) 
-                    )
-            return arrSources;
+        const DisplaySources = () => {
+            console.log(DataSourceState)
         } 
 
 
