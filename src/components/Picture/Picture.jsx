@@ -28,26 +28,28 @@ export default function Picture({rep, src_default, source, alt}) {
 
         const [SourceState, setSourceState] = useState([]);
 
-        const importSource = async (element) => {
-            let imp = await import(`../../assets/${rep}/Img/${element.src.name}.${element.src.format}`)
-            return imp;
+        const CreateSrcset = async (element) => {
+            return await import(`../../assets/${rep}/Img/${element.src.name}.${element.src.format}`)
         }
 
         useEffect(() => {
             const fetchSource = async () => {
-                source.map(element => 
-                    importSource(element)
-                    .then(v => { element = {...element, 'SRC' : v.default};
-                        setSourceState(() => {
-                            return {...SourceState, element}}
-                            )
-                        }
-                    )
-                )
-            }
-            
-            fetchSource() 
+                let arrtemp = []
+                source.forEach(element => 
+                    CreateSrcset(element)
+                    .then(v => { 
+                        element = {...element, "srcset" : v.default};
+                        arrtemp.push(element);
+                    }))
+                setSourceState(arrtemp)
+                }
+            fetchSource(); 
+   
         }, [])
+        
+        const list = () => {
+            SourceState.forEach((S) => console.log('totot'))
+        }
         
     //instancier un objet c
     // class Source {
@@ -100,19 +102,25 @@ export default function Picture({rep, src_default, source, alt}) {
     //     return arrSources;
     // }
 
+    // const OnTakeSources = () => {
+    //     let arrSources = [];
+    //     for (let name of Object.keys(SourceState)) {
+    //         let S = SourceState[name];
+    //         let baliseSource = <source key= {SourceState[name].name} srcSet= {srcset} media= {S.media} />;
+    //         arrSources.push(baliseSource);
+    //     }
+    //     return arrSources;
+    // }
+        
+        
+    
+
 
     return (
             <picture>
                 {/* {OnTakeSources()} */}
                 {/* {OnLoadSources()} */}
-                
-                
-                    
-                        
-
-                
-                
-                    
+                {list()}
                 <img src={SrcState} alt = {alt} />
             </picture>
     )
