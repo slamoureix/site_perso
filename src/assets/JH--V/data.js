@@ -16,7 +16,7 @@ const JHV_data = {
                 format : "webp"
             },
             // "src_default": import("../../assets/JH--V/Img/01.jpg").then(value => value.default),
-            "source": [
+            "sources": [
                 {
                     "src": {
                         name: "cicrcle",
@@ -33,8 +33,8 @@ const JHV_data = {
                 },
                 {
                     "src": {
-                        name: "01",
-                        format: "jpg"
+                        name: "interieur_litlle_size",
+                        format: "webp"
                     },
                     "media": "(min-width 900px) and (max-width: 1200px)"
                 }

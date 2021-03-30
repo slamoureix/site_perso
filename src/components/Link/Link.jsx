@@ -24,7 +24,7 @@ export default function Links(props) {
                     rep={props.rep}
                     src_default={props.cover.src_default}
                     alt={props.cover.alt}
-                    source={props.cover.source}
+                    sources={props.cover.sources}
                     />
                 </div>
             </li>
