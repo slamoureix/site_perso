@@ -2,15 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 export default function Picture({rep, src_default, sources, alt}) {
     /* SOURCES */ 
-    const [DataSourceState, setDataSourceState] = useState([]);
-    const [temporaryImportSources, setTemorarySources] = useState([])
+    const [DataSourceState, setDataSourceState] = useState();
+    const [temporaryImportSources, setTemorarySources] = useState()
     
     /* pour src_default */
     const [SrcState, SrcSetstate] = useState('');
-
-
-    const [LoadingState, setLoadingState] = useState(false);
-    const [IsLoad, setIsLoadState] = useState(false);
 
     const CreateSrcset = (name, format, repertory) => {
         try{
@@ -29,12 +25,10 @@ export default function Picture({rep, src_default, sources, alt}) {
     const AllSources = (Sources) => {
         // On vient map le tableau de data sources afin de créer pour chaque element  un nouveau tableau avec les promesses.
         let importSources = Sources.map(element => CreateSrcset(element.src.name, element.src.format, rep).then(v => v.default));
-        // Permet de ressoudre toutes les promesses dans l'Array de promesse. puis on vient fusionner les deux array
+        // Permet de ressoudre toutes les promesses dans l'Array de promesse.
         Promise.all(importSources).then(value => {
-            setTemorarySources(value)
-            setLoadingState(true)
-        }
-        )
+            setTemorarySources(value) // -> on ajoute le tableau au state Temporaire
+        })
     }
     
     const fusionToArray = (InitSources, Temporary) => {
@@ -45,25 +39,19 @@ export default function Picture({rep, src_default, sources, alt}) {
             CompletedSources.push(element)
         }
         setDataSourceState(CompletedSources);
-        setIsLoadState(true)
-        return CompletedSources
     }
     
     useEffect(() => {
-            if (LoadingState) {
-                fusionToArray(sources, temporaryImportSources)
-            }else{
-                AllSources(sources)
-            }
+            !temporaryImportSources ? AllSources(sources) : fusionToArray(sources, temporaryImportSources)
             fetchSrc_default();
-        }, [LoadingState])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        }, [temporaryImportSources])
 
 
 
     return (
             <picture>
-                { LoadingState ? (IsLoad ? DataSourceState.map(source => <source key= {source.src.name} srcSet= {source.srcset} media= {source.media} />) : null): null
-                }
+                {temporaryImportSources ? (DataSourceState ? DataSourceState.map(source => <source key= {source.src.name} srcSet= {source.srcset} media= {source.media} />) : null ) : null}
                 <img src={SrcState} alt = {alt} />
             </picture>
     )
