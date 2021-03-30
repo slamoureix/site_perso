@@ -9,12 +9,7 @@ export default function Picture({rep, src_default, sources, alt}) {
     const [SrcState, SrcSetstate] = useState('');
 
     const CreateSrcset = (name, format, repertory) => {
-        try{
-            return import(`../../assets/${repertory}/Img/${name}.${format}`)
-        }
-        catch(error){
-            console.log(error)
-        }
+        return import(`../../assets/${repertory}/Img/${name}.${format}`)
     }
 
     const fetchSrc_default = () => {
@@ -42,7 +37,7 @@ export default function Picture({rep, src_default, sources, alt}) {
     }
     
     useEffect(() => {
-            !temporaryImportSources ? AllSources(sources) : fusionToArray(sources, temporaryImportSources)
+            temporaryImportSources ? fusionToArray(sources, temporaryImportSources) : AllSources(sources)
             fetchSrc_default();
         // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [temporaryImportSources])
