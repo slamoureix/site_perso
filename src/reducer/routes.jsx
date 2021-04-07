@@ -52,46 +52,46 @@ export const routes = {
         }
     },
     Projects: {
-        // Ylig: {
-        //     path: '/Ylig',
-        //     name: 'Your Look Is Good',
-        //     typeofLink: 'project',
-        //     rep: JHV_data.img.rep,
-        //     cover: JHV_data.img.cover, // modif avec les vrais datas //
-        //     component: Ylig,
-        // },
-        // Number: {
-        //     path: '/Number',
-        //     name: 'Number',
-        //     typeofLink: 'project',
-        //     rep: JHV_data.img.rep,
-        //     cover: JHV_data.img.cover,
-        //     component: Number,
-        // },
-        // Landscape: {
-        //     path: '/Landscape',
-        //     name: 'Landscape',
-        //     typeofLink: 'project',
-        //     rep: JHV_data.img.rep,
-        //     cover: JHV_data.img.cover,
-        //     component: Landscape,
-        // },
-        // CyrilJournet: {
-        //     path: '/CyrilJournet',
-        //     name: 'Cyril Journet',
-        //     rep: JHV_data.img.rep,
-        //     cover: JHV_data.img.cover,
-        //     typeofLink: 'project',
-        //     component: CyrilJournet,
-        // },
-        // ChezSoiRienQueSoi: {
-        //     path: '/ChezSoiRienQueSoi',
-        //     name: 'Chez Soi Rien Que Soi',
-        //     typeofLink: 'project',
-        //     rep: JHV_data.img.rep,
-        //     cover: JHV_data.img.cover,
-        //     component: ChezSoiRienQueSoi,
-        // },
+        Ylig: {
+            path: '/Ylig',
+            name: 'Your Look Is Good',
+            typeofLink: 'project',
+            rep: JHV_data.img.rep,
+            cover: JHV_data.img.cover, // modif avec les vrais datas //
+            component: Ylig,
+        },
+        Number: {
+            path: '/Number',
+            name: 'Number',
+            typeofLink: 'project',
+            rep: JHV_data.img.rep,
+            cover: JHV_data.img.cover,
+            component: Number,
+        },
+        Landscape: {
+            path: '/Landscape',
+            name: 'Landscape',
+            typeofLink: 'project',
+            rep: JHV_data.img.rep,
+            cover: JHV_data.img.cover,
+            component: Landscape,
+        },
+        CyrilJournet: {
+            path: '/CyrilJournet',
+            name: 'Cyril Journet',
+            rep: JHV_data.img.rep,
+            cover: JHV_data.img.cover,
+            typeofLink: 'project',
+            component: CyrilJournet,
+        },
+        ChezSoiRienQueSoi: {
+            path: '/ChezSoiRienQueSoi',
+            name: 'Chez Soi Rien Que Soi',
+            typeofLink: 'project',
+            rep: JHV_data.img.rep,
+            cover: JHV_data.img.cover,
+            component: ChezSoiRienQueSoi,
+        },
         JHV: {
             path: JHV_data.routes.path,
             name: JHV_data.name,
@@ -101,14 +101,14 @@ export const routes = {
             cover: JHV_data.img.cover,
             component: JeanetteHussVarnet,
         },
-        // Oldies: {
-        //     path: '/Oldies',
-        //     name: 'Oldies',
-        //     typeofLink: 'project',
-        //     rep: JHV_data.img.rep,
-        //     cover: JHV_data.img.cover,
-        //     component: Oldies,
-        // }
+        Oldies: {
+            path: '/Oldies',
+            name: 'Oldies',
+            typeofLink: 'project',
+            rep: JHV_data.img.rep,
+            cover: JHV_data.img.cover,
+            component: Oldies,
+        }
     },
     Social: {
         Instagram: {

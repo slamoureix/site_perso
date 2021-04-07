@@ -2,28 +2,31 @@
 @use '../src/scss/abstracts/base'as *;
 @use '../src/scss/abstracts/index'as *;
 
-.App {
-    .circle_transition {
-        position: absolute;
-        background-color: $C_170805;
-        z-index: -1;
-        // top: 0;
-        // left: 0;
-        transform: scale(2);
-        top : 10%;
-        left : 10%;
-        width: 600px;
-        height: 600px;
-        border-radius: 50%;
-    }
+#root{
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+
     margin: 0 auto;
     width: 93.05vw;
+}
+.circle_transition {
+    position: absolute;
+    background-color: $C_170805;
+    z-index: -1;
+    // top: 0;
+    // left: 0;
+    transform: scale(2);
+    top : 10%;
+    left : 10%;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
 }
 
 .Box {
     @extend .height-content; // classe extend.
 }
-
 
 .ToScaleTransition{
     animation: ToScaleTransition 2.5s $ease-material ;

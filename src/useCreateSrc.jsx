@@ -1,14 +1,17 @@
-import { useEffect } from "react";
+
 
 /**
  * associate dynamically attribute src.
- * @param {String} rep : name of the field project
+ * @param {String} repertory: name of the field project
  * @param {String} name : name of the file
  * @param {String} format : name of the file format
- * @param {HTMLElement} refImg : ref to the element 
  */
-export default function useCreateSrc(rep = '', name='', format='', refImg='') {
-        import(`../../assets/${rep}/Img/${name}.${format}`)
-            .then(value => (
-                refImg.current.setAttribute("src", `${value.default}`)))
+export default function useCreateSrc(repertory, name, format, test = null) {
+        if (test == null) {
+        console.log('test', test)
+            return 
+        } else {
+            console.log('else')
+            // return import(`../../assets/${repertory}/Img/${name}.${format}`)
+        }
 }

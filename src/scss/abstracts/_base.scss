@@ -13,9 +13,14 @@ html {
     ::-webkit-scrollbar-button {
         color: none;
     }
-    // cursor: none;
+    cursor: none;
     
     color: $C_E84E32;
+    height: 100%;
+
+    body{
+        height: 100%;
+    }
 
     h1{
         font-family: $popins_black;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 export default function Picture({rep, src_default, sources, alt}) {
+
     /* SOURCES */ 
     const [DataSourceState, setDataSourceState] = useState(); // undefined vaut false lors d'un test bol
     const [temporaryImportSources, setTemorarySources] = useState()
@@ -37,8 +38,9 @@ export default function Picture({rep, src_default, sources, alt}) {
 
     return (
             <picture>
-                {temporaryImportSources ? (DataSourceState ? DataSourceState.map(source => <source key= {source.src.name} srcSet= {source.srcset} media= {source.media} />) : null ) : null}
+                {temporaryImportSources ? (DataSourceState ? DataSourceState.map(s => <source key={s.src.name} srcSet={s.srcset} media={s.media} />) : null ) : null}
                 <img src={SrcState} alt = {alt} />
             </picture>
     )
 }
+

@@ -2,7 +2,9 @@
 
 footer {
     @include display($justify : space-between);
-    
+
+    margin-top: auto;
+    padding-bottom: 25px;
     // max-width : 1279.98px
     @include media-breakpoint-down(md) {
         margin: 0 auto;
@@ -11,7 +13,7 @@ footer {
 
     nav {
         font-family: $popins_regular;
-        font-size: 15px;
+        font-size: 1.5rem;
         line-height: 25px;
     }
 
@@ -55,15 +57,19 @@ footer {
         @include media-breakpoint-up(xl){
             width: $col-right;
         }
+        .svg_box{
+            max-width: 75%;
+            max-height: 75%;
+            position: relative;
+            overflow: hidden;
 
-        svg {
-            width: 75%;
-            height: 75%;
-            stroke: $C_E84E32;
-            fill: none;
-            animation: $rotate 8s linear infinite;
+            svg {
+                stroke: $C_E84E32;
+                fill: none;
+                animation: $rotate 8s linear infinite;
+            }
         }
-
+        
         ul {
             position: absolute;
             top: 50%;

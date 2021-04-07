@@ -3,9 +3,15 @@ import './Contact.scss';
 
 export default function Contact() {
     return (
-        <div className="Box Contact">
-            <p>Pour m'écrire </p>
-            c. &gt; <a href="mailto:lamoureixs@gmail.com">lamoureixs@gmail.com</a>
+        <div className="Contact">
+            <p className="Contact_content"> 
+            Pour m'écrire
+            <br></br>
+            <span>
+                c.&nbsp; &gt; <a className="link" href="mailto:lamoureixs@gmail.com">lamoureixs@gmail.com</a>
+            </span>
+            
+            </p>
         </div>
     )
 }

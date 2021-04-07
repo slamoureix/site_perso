@@ -1,5 +1,25 @@
 @use '../../scss/abstracts/'as *;
 
-.Contact{
-    font-size: 15rem;
+:root {
+    --EcartToRight: 15vw;
+}
+
+.Contact {
+    display: flex;
+    align-items: center;
+    @extend .height-content;
+    
+    &_content {
+        width: calc(100% - var(--EcartToRight));
+        transform: translateX(var(--EcartToRight));
+        font-family: $popins_black;
+        font-size: 8rem;
+
+        span {
+            position: relative;
+            font-family: $popins_bold;
+            font-size: 4rem;
+            line-height: 1.2;
+        }
+    }
 }

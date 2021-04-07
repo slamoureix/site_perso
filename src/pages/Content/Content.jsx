@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-import './Content.scss';
+import './_Content.scss';
 import { useSelector } from 'react-redux';
 import { useAnimHomePage } from '../../useAnimHomePage';
 import { useLinksCreate } from '../../uselinksCreate';
@@ -24,12 +24,10 @@ export default function Content() {
     const Links = useLinksCreate(Projects);
 
     return (
-        <div ref={content} className="box Content">
-            <ul className="project">
-                {Links}
-                <li><p>D'autres projets viendrront completer</p></li>
-            </ul>
-        </div>
+        <ul ref = {content} className = "project" >
+            {Links}
+            <li><p>D'autres projets viendrront completer</p></li>
+        </ul>
     )
 }
 

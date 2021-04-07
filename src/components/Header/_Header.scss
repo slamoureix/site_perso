@@ -5,7 +5,6 @@ header{
     flex-wrap: wrap;
 
     /* header in size 1024px à ne pas mettre en flex-wrap*/
-
     @include media-breakpoint-between(lg, xl){
         flex-wrap: nowrap;
     }

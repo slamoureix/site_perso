@@ -3,10 +3,8 @@ import React from 'react';
 import './_legals.scss';
 
 export default function Legals() {
-    
-    
     return (
-        <div className="box legals">
+        <div className="legals">
             <h1>Mentions Légales</h1>
             <h2>Création & Développement</h2>
             <p>
@@ -16,10 +14,10 @@ export default function Legals() {
             <span className="legals_filet"></span>
             T. 06 82 59 45 65<br/>
             C. lamoureixs @gmail.com<br/>
-            L’ adresse de notre site est: <a className="link" href= "https://www.sebastienlamoureix.fr"> https://www.sebastienlamoureix.fr</a> <br/>
+            L’ adresse de notre site est &nbsp;: <a className = "link" href = "https://www.sebastienlamoureix.fr" > https://www.sebastienlamoureix.fr</a> <br/>
             <span className="legals_filet"></span>
-            Artiste Auteur<span>&gt;</span> Siret : 829 910 009 00010<br/>
-            Développeur<span>&gt;</span> Siret : 829 910 009 00028<br/>
+            Artiste Auteur<span>&gt;</span> Siret&nbsp;: 829 910 009 00010<br/>
+            Développeur<span>&gt;</span> Siret&nbsp;: 829 910 009 00028<br/>
             <span className="legals_filet"></span>
             Ce site est hébergé par Gandi.
             <span className="legals_filet"></span>
