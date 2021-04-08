@@ -24,10 +24,6 @@
     border-radius: 50%;
 }
 
-.Box {
-    @extend .height-content; // classe extend.
-}
-
 .ToScaleTransition{
     animation: ToScaleTransition 2.5s $ease-material ;
 }

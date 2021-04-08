@@ -1,5 +1,5 @@
 import React from 'react';
-import './Contact.scss';
+import './_Contact.scss';
 
 export default function Contact() {
     return (
@@ -10,7 +10,6 @@ export default function Contact() {
             <span>
                 c.&nbsp; &gt; <a className="link" href="mailto:lamoureixs@gmail.com">lamoureixs@gmail.com</a>
             </span>
-            
             </p>
         </div>
     )

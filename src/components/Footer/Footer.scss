@@ -13,8 +13,8 @@ footer {
 
     nav {
         font-family: $popins_regular;
-        font-size: 1.5rem;
-        line-height: 25px;
+        font-size: clamp(1.2rem, 1.042vw, 1.5rem);
+        line-height: clamp(1.6rem, 1.736vw,2.5rem);
     }
 
     nav:nth-of-type(1) {

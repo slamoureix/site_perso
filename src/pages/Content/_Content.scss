@@ -3,20 +3,19 @@
 $coeff: 50px;
 
 .project {
+    @extend .height-content;
+
     font-family: $popins_regular;
     font-size: 3rem;
     position: relative;
     margin-left: $col-left;
     width: 75.5%;
-    min-height: calc(100vh - #{$height-max});
 
     @include media-breakpoint-down(lg){
         margin: 10px auto;
     }
 
     @include media-breakpoint-up(lg) {
-
-        /*boucle sur les li permettant d'appli*/
         @for $i from 1 through 10 {
             li:nth-of-type(#{$i}) {
                 position: absolute;
@@ -24,7 +23,6 @@ $coeff: 50px;
                 transform: rotate(-45deg);
                 top: 50%;
                 left: calc(#{$coeff} * #{$i});
-               // on ne peut pas multiplier des px entres eux, seulement des nombres sans unité(px).
             }
         }
     }

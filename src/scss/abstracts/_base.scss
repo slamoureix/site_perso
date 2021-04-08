@@ -16,6 +16,8 @@ html {
     cursor: none;
     
     color: $C_E84E32;
+
+    /* La height 100% est nécessaire pour placer le footer à l'aide d'une marge-top:auto */
     height: 100%;
 
     body{
