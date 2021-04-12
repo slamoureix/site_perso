@@ -39,7 +39,7 @@ export default function Picture({rep, src_default, sources, alt}) {
     return (
             <picture>
                 {temporaryImportSources ? (DataSourceState ? DataSourceState.map(s => <source key={s.src.name} srcSet={s.srcset} media={s.media} />) : null ) : null}
-                <img src={SrcState} alt = {alt} />
+                <img src={SrcState} alt= {alt} />
             </picture>
     )
 }

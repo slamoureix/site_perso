@@ -1,28 +1,102 @@
 @use '../../scss/abstracts/'as *;
 
-$coeff: 50px;
+$coeff: 7.5rem;
 
-.project {
+.project_container{
     @extend .height-content;
-
-    font-family: $popins_regular;
-    font-size: 3rem;
     position: relative;
     margin-left: $col-left;
-    width: 75.5%;
 
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
         margin: 10px auto;
+    }
+}
+.project {
+    font-size: clamp(2rem, 3.472vw, 5rem);
+    width: 0;
+
+
+    .link__project_box{
+        position: relative;
+        padding: 5px 0;
+    }
+
+    .link__project_name{
+        font-family: $popins_bold;
+    }
+
+    .typeOfLink {
+        color: $C_71816D;
+        font-family: $popins_regular;
+        margin-left: 10px;
+        font-size: 1.5rem;
+    }
+    
+    
+
+    
+
+    .link__project_cover {
+        img{
+            display: none;
+        }
+    }
+
+    // Responsive //
+    @include media-breakpoint-down(lg) {
+        width: 100%;
+        .link__project {
+            margin-bottom: 10px;
+        }
     }
 
     @include media-breakpoint-up(lg) {
-        @for $i from 1 through 10 {
-            li:nth-of-type(#{$i}) {
-                position: absolute;
-                transform-origin: top left;
-                transform: rotate(-45deg);
-                top: 50%;
+        .link__project {
+            position: absolute;
+            transform-origin: top left;
+            transform: translateX(- #{$coeff}) rotate(-45deg);
+            bottom: 0;
+        }
+
+        @for $i from 1 through 11 {
+            .link__project:nth-of-type(#{$i}) {
                 left: calc(#{$coeff} * #{$i});
+            }
+        }
+        
+        .blur {
+            opacity: .25;
+            transition: all .5 $ease-material;
+        }
+
+        .link__project_box--hover {
+            position: relative;
+            transition: opacity .3s ease-in-out;
+
+            .link__project_name {
+                display: block;
+                transform: translateX((calc(20vw - #{$coeff})));
+                transition: all .5s $ease-material;
+            }
+
+            .link__project_cover {
+                position: absolute;
+                left: 0;
+                top: -13vw;
+                width: 16vw;
+                height: 16vw;
+
+                img {
+                    display: block;
+                    position: relative;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .typeOfLink {
+                display: none;
             }
         }
     }

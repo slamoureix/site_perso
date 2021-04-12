@@ -17,8 +17,10 @@ export default function Links(props) {
         case 'project':
             return (
             <li className="link__project">
-                <Link className="link" to={props.path} replace>{props.name}</Link>
+            <div className="link link__project_box">
+                <span className="link__project_name">{props.name}</span>
                 <span className="typeOfLink">{props.type}</span>
+                <Link to={props.path} replace>
                 <div className="link__project_cover">
                     <Picture 
                     rep={props.rep}
@@ -27,6 +29,8 @@ export default function Links(props) {
                     sources={props.cover.sources}
                     />
                 </div>
+                </Link>
+            </div>
             </li>
         );
         default:

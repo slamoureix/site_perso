@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { useAnimHomePage } from '../../useAnimHomePage';
 import { useLinksCreate } from '../../uselinksCreate';
 
-import './Footer.scss';
+import './_Footer.scss';
 
 export default function Footer() {
 
@@ -41,8 +41,6 @@ const navSocial = useRef();
 const [LocalNavSocialState] = useState(NavSocialState)
 // useAnimHomePage(LocalNavSocialState, navSocial);
 const linksSocial = useLinksCreate(LinkSocial);
-
-
 
     return (
         <footer>

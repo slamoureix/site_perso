@@ -1,5 +1,5 @@
-@use '../../scss/abstracts/variables'as *;
-@use '../../scss/abstracts/anim'as *;
+@use '../../scss/abstracts/'as *;
+
 
 .cursor{
     position: absolute;
@@ -25,6 +25,19 @@
 }
 
 // 
-a:hover {
-    cursor: none;
+a:hover>.link__project_name {
+    // cursor: none;
+
+    
+    // &::before{
+    //     content:'VOIR';
+    //     font-family: $popins--italic;
+    //     font-size: 7rem;
+    //     color: $C_461108;
+    //     position: absolute;
+    //     width: 50px;
+    //     height: 50px;
+    //     top : -50px;
+    //     left: 0;
+    // }
 }

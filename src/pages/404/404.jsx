@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-import './404.scss';
+import './_404.scss';
 
 export default function error_404() {
     return (

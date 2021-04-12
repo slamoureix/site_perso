@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
 import './_Content.scss';
 import { useSelector } from 'react-redux';
@@ -22,12 +22,37 @@ export default function Content() {
 
     // useAnimHomePage(LocalState, content);
     const Links = useLinksCreate(Projects);
+    
+
+    useEffect(() => {
+        const ArrLinks = document.querySelectorAll('.link__project_box');
+        const ulLink = document.querySelector('.project');
+
+        ArrLinks.forEach((link) => {
+            link.addEventListener('mouseenter', () => {
+                link.classList.add('link__project_box--hover')
+                if (link.classList.contains('link__project_box--hover')) {
+                ArrLinks.forEach(l => l.classList.add('blur'));
+                link.classList.remove('blur');
+            }
+            
+            })
+            link.addEventListener('mouseleave', () => {
+                link.classList.remove('link__project_box--hover');
+            })
+        })
+
+        ulLink.addEventListener('mouseleave', () => {
+            ArrLinks.forEach((link) => link.classList.remove('blur'))
+        })
+    }, [])
 
     return (
-        <ul ref = {content} className = "project" >
+        <div className="project_container">
+            <ul ref= {content} className = "project" >
             {Links}
-            <li><p>D'autres projets viendrront completer</p></li>
-        </ul>
+            </ul>
+        </div>
     )
 }
 

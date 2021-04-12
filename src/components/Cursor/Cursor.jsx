@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 
-import './Cursor.scss';
+import './_Cursor.scss';
 
 export default function Cursor({Position}) {
     let cursorRef = useRef();

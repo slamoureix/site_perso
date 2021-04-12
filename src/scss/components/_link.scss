@@ -1,35 +1,15 @@
 @use '../abstracts/variables'as *;
 
 .link {
-    display: inline-block;
+    // display: inline-block;
     position: relative;
     animation-delay: .2s;
     margin-bottom: 0.25rem;
-
-    &__project {
-        position: relative;
-
-        &:hover {
-            .link__project_cover {
-                display: block;
-                position: absolute;
-                z-index: 99999;
-                right: -150px;
-                top: -150px;
-                width: 150px;
-                height: 150px;
-            }
-        }
-
-        &_cover {
-            display: none;
-        }
-    }
 }
 
 .link::after {
     content: '';
-    display: inline-block;
+    // display: inline-block;
     width: 50%;
     height: 3px;
     position: absolute;
@@ -39,14 +19,9 @@
 }
 
 .link:hover::after {
+    z-index: 5;
     transform: scaleX(1);
     transform-origin: right;
-    transition: transform 0.5s ease-in-out;
+    transition: transform .3s ease-in-out;
 }
 
-.typeOfLink {
-    color: $C_71816D;
-    margin-left: 10px;
-    font-size: 1.5rem;
-    display: inline;
-}

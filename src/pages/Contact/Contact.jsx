@@ -8,7 +8,7 @@ export default function Contact() {
             Pour m'écrire
             <br></br>
             <span>
-                c.&nbsp; &gt; <a className="link" href="mailto:lamoureixs@gmail.com">lamoureixs@gmail.com</a>
+                c.&#8239;&gt;&#8239;<a className= "link" href = "mailto:lamoureixs@gmail.com">lamoureixs@gmail.com</a>
             </span>
             </p>
         </div>
