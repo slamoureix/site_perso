@@ -16,23 +16,22 @@ $C_742719 : #742719;
 $C_461108 :#461108;
 $C_170805 : #170805;
 
-$col-left : 10%; 
+$col-left : 10%;
 $col-right : 14.5%;
 
 // systeme de col 
+$columns : 6;
+$gutter : clamp(1rem, 1.736vw, 2.5rem);
 
-$columns : 12;
-
-$height-max : 46vh; 
+$height-max : 46vh;
 
 /* breakpoints */
-$grid-breakpoints: (
-    xs: 0px,
+$grid-breakpoints: (xs: 0px,
     sm: 576px,
     md: 768px,
     lg: 1024px,
-    xl: 1280px
-    );
+    xl: 1280px);
+
 
 /* -- Easing -- */
 $easeInOutCirc: cubic-bezier(0.785, 0.135, 0.15, 0.86);

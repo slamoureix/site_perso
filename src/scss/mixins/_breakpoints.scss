@@ -15,8 +15,6 @@
     @return if($min !=0, $min, null);
 }
 
-
-
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
     $min: breakpoint-min($name, $breakpoints);
 

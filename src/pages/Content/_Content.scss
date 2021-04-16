@@ -1,6 +1,6 @@
 @use '../../scss/abstracts/'as *;
 
-$coeff: 7.5rem;
+$coeff: 9.5rem;
 
 .project_container{
     @extend .height-content;
@@ -23,6 +23,7 @@ $coeff: 7.5rem;
 
     .link__project_name{
         font-family: $popins_bold;
+        line-height: 100%;
     }
 
     .typeOfLink {
@@ -31,10 +32,6 @@ $coeff: 7.5rem;
         margin-left: 10px;
         font-size: 1.5rem;
     }
-    
-    
-
-    
 
     .link__project_cover {
         img{
@@ -75,7 +72,7 @@ $coeff: 7.5rem;
 
             .link__project_name {
                 display: block;
-                transform: translateX((calc(20vw - #{$coeff})));
+                transform: translateX((calc(22vw - #{$coeff})));
                 transition: all .5s $ease-material;
             }
 

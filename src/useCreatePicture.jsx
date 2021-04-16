@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import UseCreateSrc from './useCreateSrc';
 
-export default function Picture({rep, src_default, sources, alt}) {
+/**
+ * associate dynamically attribute src.
+ * @param {String} rep : name of the field project
+ * @param {String} src_default : default src of the img
+ * @param {String} sources : sources of the file format
+ * @param {String} alt : alt of the file format
+ */
+export default function useCreatePicture(rep, src_default, sources, alt) {
 
     /* SOURCES */ 
     const [DataSourceState, setDataSourceState] = useState(); // undefined vaut false lors d'un test bol
@@ -9,15 +17,13 @@ export default function Picture({rep, src_default, sources, alt}) {
     /* pour src_default */
     const [SrcState, SrcSetstate] = useState('');
 
-    const CreateSrcset = (name, format, repertory) => {return import(`../../assets/${repertory}/Img/${name}.${format}`)}
-
     const fetchSrc_default = () => {
-        CreateSrcset(src_default.name, src_default.format, rep).then(value => (SrcSetstate(value.default)));
+        UseCreateSrc(src_default.name, src_default.format, rep).then(value => (SrcSetstate(value.default)));
     }
 
     const AllSources = (Sources) => {
         // On vient map le tableau de data sources afin de créer pour chaque element un nouveau tableau avec les promesses.
-        let importSources = Sources.map(element => CreateSrcset(element.src.name, element.src.format, rep).then(v => v.default));
+        let importSources = Sources.map(element => UseCreateSrc(element.src.name, element.src.format, rep).then(v => v.default));
         // Permet de ressoudre toutes les promesses dans l'Array de promesse.
         Promise.all(importSources).then(value => setTemorarySources(value)) // -> on ajoute le tableau au state Temporaire
     }
@@ -36,11 +42,11 @@ export default function Picture({rep, src_default, sources, alt}) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [temporaryImportSources])
 
+    
     return (
-            <picture>
+        <picture>
                 {temporaryImportSources ? (DataSourceState ? DataSourceState.map(s => <source key={s.src.name} srcSet={s.srcset} media={s.media} />) : null ) : null}
                 <img src={SrcState} alt= {alt} />
-            </picture>
+        </picture>
     )
 }
-

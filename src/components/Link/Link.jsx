@@ -2,6 +2,7 @@ import React from 'react';
 import {
     Link
 } from 'react-router-dom';
+import useCreatePicture from '../../useCreatePicture';
 
 import Picture from '../Picture/Picture';
 
@@ -22,12 +23,10 @@ export default function Links(props) {
                 <span className="typeOfLink">{props.type}</span>
                 <Link to={props.path} replace>
                 <div className="link__project_cover">
-                    <Picture 
-                    rep={props.rep}
-                    src_default={props.cover.src_default}
-                    alt={props.cover.alt}
-                    sources={props.cover.sources}
-                    />
+                {// eslint-disable-next-line react-hooks/rules-of-hooks 
+                useCreatePicture(props.rep, props.cover.src_default, props.cover.sources, props.cover.alt)
+                }
+                    {/* <Picture rep={props.rep} src_default={props.cover.src_default} alt={props.cover.alt} sources={props.cover.sources}/>*/}
                 </div>
                 </Link>
             </div>

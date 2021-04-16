@@ -15,19 +15,18 @@ export default function about() {
                     </p>
                 <hr></hr>
                     <p className="competence">
-                        <div>
+                        
                         J'associe fonds, formes, couleurs et typographies dans un esprit de symbiose afin de rendre l'expérience visuelle forte 
                         et émotionnellement riche.
-                        </div>
-                        <hr></hr>
-                        <div>
+                        
+                        <span></span>
+                        
                         Mon éventail de compétences s'étend du concept à la réalisation et de la direction artistique à l'aspect technique.
-                        </div>
-                        <hr></hr>
-                        <div>
-                        Pour continuer d'évoluer, je experimente sur de nombreux projets graphiques print et web, illustrations, typographies… qui sont autant de possibilités créatives dans lesquelles je peux m'
-                        exprimer.
-                        </div>
+                        
+                        <span></span>
+                        
+                        Pour continuer d'évoluer, j'experimente sur de nombreux projets graphiques print et web, illustrations, typographies… 
+                        
                     </p>
                 <hr></hr>
             </div>

@@ -3,7 +3,6 @@
 .me {
     margin: 25px auto;
 
-    
     .content {
         max-width: 90%;
         margin: 0 auto;
@@ -20,7 +19,6 @@
     .presentation {
         padding: 5px;
         font-size: clamp(3rem, 6.250vw, 9rem);
-        font-family: $popins_regular;
         line-height: 1.15; // facteur de multiplication de la police.
 
         strong {
@@ -47,14 +45,14 @@
     
     .competence{
         width: 85%;
-        font-family: $popins_regular;
         font-size: clamp(2rem, 3.472vw, 5rem);
         padding : 5px;
         line-height: 1.15;
         margin-bottom: 15px;
         transform: translateX(clamp(50px, 6.944vw, 100px));
 
-        hr{
+        span{
+            display: block;
             margin: clamp(5px, 3.472vw, 10px) 0;
             @include filet(1rem, clamp(25px, 6.944vw, 50px), $C_E84E32);
         }

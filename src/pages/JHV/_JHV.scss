@@ -1,0 +1,68 @@
+@use '../../scss/abstracts/'as *;
+
+.JHV{
+    width: calc(100% - #{$col-left} - #{$col-right});
+    margin: 25px $col-left auto;
+    
+
+    position: relative; // pour le layout col/grid -> visu
+    
+    &__presentation{
+        margin: 20px 0;
+        align-items: baseline;
+    }
+
+    &__title{
+        @extend .col-6, .col-sm-3,
+        .col-md-2, .col-md-offset-1;
+        
+        h1{
+            font-family: $popins_regular;
+            font-size: 35px;
+            padding: 5px 0
+        }
+    }
+
+    &__year{
+        @extend .col-3, .col-sm-1;
+        p {
+            font-family: $popins_bold;
+            font-size: 20px;
+        }
+    }
+    &__type{
+        @extend .col-3, .col-sm-2;
+        margin-bottom: 50px;
+        p{
+            color: $C_461108;
+            font-size: 25px;
+        }
+        text-align: right;
+        text-transform: uppercase;
+        
+    }
+
+    &__content {
+        @extend .col-6,
+        .col-sm-3, .col-sm-offset-3;
+
+        p {
+            color: $C_71816D;
+            font-size: 15px;
+            line-height: 1.15;
+        }
+    }
+    
+}
+.grid{
+    top: 0;
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+}
+.content-col{
+    background-color: rgba(128, 0, 128, 0.2);
+    height: 100vh;
+}
+
+

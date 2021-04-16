@@ -13,9 +13,15 @@ html {
     ::-webkit-scrollbar-button {
         color: none;
     }
+
+    scroll-behavior: smooth;
     cursor: none;
-    
     color: $C_E84E32;
+
+    ::selection{
+        background-color:  $C_170805;
+        color: $C_71816D;
+    }
 
     /* La height 100% est nécessaire pour placer le footer à l'aide d'une marge-top:auto */
     height: 100%;
