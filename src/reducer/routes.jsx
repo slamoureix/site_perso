@@ -14,7 +14,7 @@ import JeanetteHussVarnet from '../pages/JHV/JeanetteHussVarnet'
 import Oldies from '../pages/Oldies/Oldies';
 
 // DATAS //
-import JHV_data from '../assets/JH--V/data';
+import JHV_data from '../assets/JHV/data';
 
 /*
     utilisation d'un tableau associatif -> utilisable avec la boucle for... In 

@@ -9,6 +9,10 @@
     align-items: flex-start;
 }
 
+.no-padding {
+    padding: 0;
+}
+
 @mixin col($i) {
     flex: 0 0 auto;
     width: percentage($i / $columns);

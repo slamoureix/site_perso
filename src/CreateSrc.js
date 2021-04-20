@@ -5,7 +5,7 @@
  * @param {String} format : format of the img
  * @param {String} repertory : repertory of the format
  */
-export default function useCreateSrc(name, format, repertory) {
+export default function CreateSrc(name, format, repertory) {
     return import(`./assets/${repertory}/Img/${name}.${format}`)
 }
 

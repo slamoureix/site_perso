@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import JHV_data from '../../assets/JH--V/data.js';
-import useCreatePicture from '../../useCreatePicture';
+
+import React, { useState } from 'react';
+import JHV_data from '../../assets/JHV/data.js';
+
+import CreateImageGrid from '../../CreateImageGrid.js';
 import './_JHV.scss';
 
 export default function JeanetteHussVarnet() {
-    const [dataImgState] = useState(JHV_data.img.cover);
+    const rep = JHV_data.img.rep;
+    const [DatasImgState] = useState(JHV_data.img.content)
 
     return (
         <article className="JHV">
@@ -16,21 +19,9 @@ export default function JeanetteHussVarnet() {
                 <p>{JHV_data.content}</p></div>
             </section>
 
-            <section className="row JHV__diaporama">
-            {useCreatePicture(JHV_data.img.rep, dataImgState.src_default, dataImgState.sources, dataImgState.alt)}
+            <section className="row JHV__grid">
+            {CreateImageGrid(DatasImgState, rep)}
             </section>
-
-            {/* <div className="grid">
-            <section className="row">
-                <div className="col-1"><div className="content-col"></div></div>
-                <div className="col-1"><div className="content-col"></div></div>
-                <div className="col-1"><div className="content-col"></div></div>
-                <div className="col-1"><div className="content-col"></div></div>
-                <div className="col-1"><div className="content-col"></div></div>
-                <div className="col-1"><div className="content-col"></div></div>
-            </section>
-            </div> */}
-
             <nav>
                 <div className="last">prev</div>
                 <div className="prev">last</div>
