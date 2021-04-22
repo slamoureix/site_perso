@@ -17,14 +17,14 @@ export default function Links(props) {
         case 'project':
             return (
             <li className="link__project">
-            <div className="link link__project_box">
-                <Link to={props.path} replace>
-                <span className="link__project_name">{props.name}</span>
+            <div className="link__project_box">
+            <Link to={props.path} replace>
+                <span className="link link__project_name">{props.name}</span>
                 <span className="typeOfLink">{props.type}</span>
-                <div className="link__project_cover">
+                <div className ="link link__project_cover" >
                 {CreatePicture(props.rep, props.cover.src_default, props.cover.sources, props.cover.alt)}
                 </div>
-                </Link>
+            </Link>
             </div>
             </li>
         );

@@ -1,7 +1,7 @@
 @use '../abstracts/variables'as *;
 
 .link {
-    // display: inline-block;
+    width: auto;
     position: relative;
     animation-delay: .2s;
     margin-bottom: 0.25rem;
@@ -9,7 +9,6 @@
 
 .link::after {
     content: '';
-    // display: inline-block;
     width: 50%;
     height: 3px;
     position: absolute;
@@ -22,6 +21,9 @@
     z-index: 5;
     transform: scaleX(1);
     transform-origin: right;
-    transition: transform .3s ease-in-out;
+    transition: transform .3s $ease-material;
 }
 
+
+
+    

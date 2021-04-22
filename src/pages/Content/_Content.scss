@@ -1,27 +1,25 @@
 @use '../../scss/abstracts/'as *;
 
-$coeff: 9.5rem;
+$coeff: 7.3vw; // 13 rem // 9.028vw
+$numOfelement : 7;
 
-.project_container{
+.project_container {
     @extend .height-content;
     position: relative;
     margin-left: $col-left;
 
     @include media-breakpoint-down(lg) {
+        width: 95%;
         margin: 10px auto;
     }
 }
+
+// .project agit sur la UL
 .project {
-    font-size: clamp(2rem, 3.472vw, 5rem);
-    width: 0;
+    // agit sur la li .link__project{}
 
-
-    .link__project_box{
-        position: relative;
-        padding: 5px 0;
-    }
-
-    .link__project_name{
+    .link__project_name {
+        font-size: clamp(2rem, 3.125vw, 4rem);
         font-family: $popins_bold;
         line-height: 100%;
     }
@@ -34,67 +32,120 @@ $coeff: 9.5rem;
     }
 
     .link__project_cover {
-        img{
+        img {
             display: none;
         }
     }
 
+
     // Responsive //
     @include media-breakpoint-down(lg) {
-        width: 100%;
         .link__project {
             margin-bottom: 10px;
         }
     }
 
+
+    // pour les écrans supérieurs à 1024
     @include media-breakpoint-up(lg) {
         .link__project {
             position: absolute;
             transform-origin: top left;
-            transform: translateX(- #{$coeff}) rotate(-45deg);
-            bottom: 0;
+            transform: translateX(-#{$coeff}) rotate(-45deg);
+            bottom: -10%;
         }
 
-        @for $i from 1 through 11 {
+        @for $i from 1 through $numOfelement {
             .link__project:nth-of-type(#{$i}) {
                 left: calc(#{$coeff} * #{$i});
             }
         }
-        
-        .blur {
-            opacity: .25;
-            transition: all .5 $ease-material;
+
+        .link__project_box {
+            padding: .52vw 0 1.05vw 1.05vw; // padding: 10px 0px 20px 20px;
         }
 
+        .link__project_name {
+            display: inline;
+            height: 100%;
+        }
+
+        // classe ajoutée sur les liens inactifs
+        .blur {
+            opacity: .25;
+            transition: all .8 $ease-material;
+        }
+
+        // classe ajoutée que la souris entre sur la box
         .link__project_box--hover {
             position: relative;
             transition: opacity .3s ease-in-out;
 
             .link__project_name {
+                font-size: clamp(2rem, 3.125vw, 3rem);
+                font-family: $popins--italic;
                 display: block;
-                transform: translateX((calc(22vw - #{$coeff})));
+                transform: translateX((calc(20.5vw - #{$coeff}))); //20vw
+                padding: 1.05vw .52vw 1.05vw 3.13vw; // padding: 20px 10px 20px 60px;
                 transition: all .5s $ease-material;
             }
 
             .link__project_cover {
                 position: absolute;
                 left: 0;
-                top: -13vw;
+                top: -11vw;
                 width: 16vw;
                 height: 16vw;
 
                 img {
                     display: block;
                     position: relative;
-                    object-fit: cover;
-                    width: 100%;
-                    height: 100%;
                 }
             }
 
             .typeOfLink {
                 display: none;
             }
+        }
+
+        // agit au hover des liens
+        a:hover>.link__project_cover {
+
+            &::before {
+                content: '';
+                font-family: $popins_light;
+                font-size: 5rem;
+                background-color: $C_E84E32;
+                position: absolute;
+                width: 1vw;
+                height: 1vw;
+                border-radius: 50%;
+                top: calc(50% - 0.5vw);
+                left: calc(50% - 0.5vw);
+                z-index: 999999;
+                transition: all .5s $ease-material;
+            }
+        }
+
+        a:hover>.link__project_cover:hover::before {
+            mix-blend-mode: darken;
+            opacity: .8;
+            border-radius: 0%;
+            transform: scale(18);
+        }
+
+        //~ permet d'agir sur des classes css de même niveau dans l'arbre.
+        .link__project_name:hover~.link__project_cover::before {
+            opacity: 0;
+        }
+
+
+    }
+    
+    // pour les écrans supérieurs à 1441
+    @include media-breakpoint-up(xxl){
+        .link__project_name {
+            font-size: clamp(2rem, 3.125vw, 5rem);
         }
     }
 }

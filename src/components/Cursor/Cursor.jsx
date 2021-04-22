@@ -5,7 +5,7 @@ import './_Cursor.scss';
 export default function Cursor({Position}) {
     let cursorRef = useRef();
     let pageX = Position.pageX;
-    let pageY = Position.pageY
+    let pageY = Position.pageY;
 
     useEffect(() => {
         cursorRef.current.setAttribute('style', `top: ${pageY - 10}px; left:${pageX - 10}px;`);
