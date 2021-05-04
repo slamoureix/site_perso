@@ -24,9 +24,7 @@ export default function App() {
   };
   const [postionCursorState, setPostionCursor] = useState(PositionCursor);
 
-  const ObjRoutes = useSelector(state => ({
-    ...state.AllRoutesReducer.RoutesReducer
-  }));
+  const ObjRoutes = useSelector(({AllRoutesReducer}) => ({...AllRoutesReducer}));
 
   useEffect(() => {
       const setMousePosition = (e, positionCursorState) => {
@@ -54,6 +52,7 @@ export default function App() {
   <DocumentTitle title= {Title}>
     <div>
       <div className= "circle_transition"/>
+
         <Cursor Position = {postionCursorState}/>
           <Router>
             <Header/>

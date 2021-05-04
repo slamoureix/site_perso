@@ -1,35 +1,37 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import {
+    useSelector
+} from 'react-redux';
 
-import useCreateNavigation from '../../useCreateNavigation';
+import Nav from '../../components/Navigation/Navigation';
+import CreateImageGrid from '../../scripts/CreateImageGrid';
 
 // datas 
-import CYRILJOURNET_data from './data';
-
-import CreateImageGrid from '../../scripts/CreateImageGrid';
-import { useSelector } from 'react-redux';
+import {
+    default as nameProject
+} from './data.js';
 
 
 
 
 export default function CyrilJournet() {
-    const nameProject = CYRILJOURNET_data;
-    const rep = nameProject.img.rep;
     const [DatasImgState] = useState(nameProject.img.content);
-    const ObjProjects = useSelector(state => ({
-        ...state.RoutesReducer.Projects
+
+    const ProjectsRoutes = useSelector(({AllRoutesReducer}) => ({
+        ...AllRoutesReducer.RoutesReducer.Projects
     }));
 
     return (
-        <article className = "CYRILJOURNET__project_container" >
-            <section className="CYRILJOURNET__presentation">
-                <div className="CYRILJOURNET__title"><h1>{nameProject.name}</h1></div>
-                <div className="CYRILJOURNET__year"><p>{nameProject.year}</p></div>
-                <div className="CYRILJOURNET__type"><p><strong>{nameProject.type}</strong></p></div>
-                <div className="CYRILJOURNET__content">
+        <article className= {`${nameProject.rep}__project_container`}>
+            <section className= {`${nameProject.rep}__presentation`}>
+                <div className= {`${nameProject.rep}__title`}><h1>{nameProject.name}</h1></div>
+                <div className= {`${nameProject.rep}__year`}><p>{nameProject.year}</p></div>
+                {/* <div className={`${rep}__type`}><p><strong>{nameProject.type}</strong></p></div> */}
+                <div className = {`${nameProject.rep}__content`}>
                 <p>{nameProject.content}</p></div>
             </section>
-            <section className="CYRILJOURNET__grid">{CreateImageGrid(DatasImgState, rep)}</section>
-            <nav className = "CYRILJOURNET__navigation">{useCreateNavigation(rep, ObjProjects)}</nav>  
+            <section className={`${nameProject.rep}__grid`}>{CreateImageGrid(DatasImgState, nameProject.rep)}</section>
+            <Nav rep= {nameProject.rep} routes= {ProjectsRoutes}/>
         </article>
     )
 }

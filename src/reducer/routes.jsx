@@ -4,14 +4,13 @@ import Content from '../pages/Content/Content';
 import About from '../pages/About/About';
 import Contact from '../pages/Contact/Contact';
 import Legals from '../pages/Legals/Legals';
-import Error from '../pages/404/404';
+
 
 import Typographie from '../pages/Typographie/Typographie';
 import Ylig from '../pages/Ylig/Ylig';
 import UxUi from '../pages/UxUi/UxUi';
 import Landscape from '../pages/Landscape/Landscape';
 import CyrilJournet from '../pages/CyrilJournet/CyrilJournet';
-
 import JeanetteHussVarnet from '../pages/JeanetteHussVarnet/JeanetteHussVarnet'
 import Oldies from '../pages/Oldies/Oldies';
 
@@ -144,14 +143,7 @@ export const routes = {
             target: '_blank',
             typeofLink: 'external'
         }
-    },
-    Admin: {
-        Error: {
-            path: '',
-            name: 'Erreur',
-            component: Error,
-        }
-    },
+    }
 }
 
 export default function RoutesReducer(state = routes) {

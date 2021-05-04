@@ -9,6 +9,8 @@ import { default as nameProject } from './data.js';
 
 import './_typography.scss';
 
+
+
 export default function Typographie() {
 
     const TypographieRoutes = useSelector(({AllRoutesReducer}) => ({
@@ -27,8 +29,10 @@ export default function Typographie() {
                 <div className = {`${nameProject.rep}__content`}>
                 <p>{nameProject.content}</p></div>
             </section>
+
             <ul>{useLinksCreate(TypographieRoutes)}</ul>
             <Nav rep= {nameProject.rep} routes= {ProjectsRoutes}/>
+            
         </article>
     )
 }

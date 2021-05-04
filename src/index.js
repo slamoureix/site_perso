@@ -13,7 +13,10 @@ import AnimReducer from './reducer/anim';
 import RoutesReducer from './reducer/routes';
 import TypographieReducer from './reducer/typographie';
 
-const AllRoutesReducer = combineReducers({RoutesReducer, TypographieReducer});
+//dernier reducer à être intégré dans les routes globales.
+import AdminReducer from './reducer/admin';
+
+const AllRoutesReducer = combineReducers({RoutesReducer, TypographieReducer, AdminReducer});
 const rootReducer = combineReducers({AnimReducer, AllRoutesReducer});
 const GeneralStore = createStore(rootReducer);
 

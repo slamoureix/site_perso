@@ -1,3 +1,4 @@
+
 import Letter from '../pages/Typographie/Letter/Letter';
 import Words from '../pages/Typographie/Words/Words';
 
@@ -7,28 +8,21 @@ export const TypoRoutes = {
         Letter: {
             path: '/Letter',
             name: 'Letter',
-            rep: 'Letter',
             component: Letter,
+            rep: 'Letter',
         },
         Words: {
             path: '/Words',
             name: 'Words',
-            rep: 'Words',
             component: Words,
+            rep: 'Words',
         },
         Number: {
             path: '/Number',
             name: 'Number',
-            rep: 'Number',
             component: Words,
+            rep: 'Number',
         },
-    },
-    Admin: {
-        Error: {
-            path: '',
-            name: 'Erreur',
-            component: Error,
-        }
     },
 }
 

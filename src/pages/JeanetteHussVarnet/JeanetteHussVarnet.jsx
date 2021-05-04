@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import { useSelector } from 'react-redux';
 
-import useCreateNavigation from '../../useCreateNavigation';
+import Nav from '../../components/Navigation/Navigation';
 import CreateImageGrid from '../../scripts/CreateImageGrid';
 
 // datas 
@@ -19,16 +19,16 @@ export default function JeanetteHussVarnet() {
     }));
 
     return (
-        <article className={`${nameProject.rep}__project_container`}>
-            <section className={`${nameProject.rep}__presentation`}>
-                <div className={`${nameProject.rep}__title`}><h1>{nameProject.name}</h1></div>
-                <div className={`${nameProject.rep}__year`}><p>{nameProject.year}</p></div>
-                <div className={`${nameProject.rep}__type`}><p><strong>{nameProject.type}</strong></p></div>
-                <div className={`${nameProject.rep}__content`}>
+        <article className= {`${nameProject.rep}__project_container`}>
+            <section className= {`${nameProject.rep}__presentation`}>
+                <div className= {`${nameProject.rep}__title`}><h1>{nameProject.name}</h1></div>
+                <div className= {`${nameProject.rep}__year`}><p>{nameProject.year}</p></div>
+                <div className= {`${nameProject.rep}__type`}><p><strong>{nameProject.type}</strong></p></div>
+                <div className= {`${nameProject.rep}__content`}>
                 <p>{nameProject.content}</p></div>
             </section>
-            <section className={`${nameProject.rep}__grid`}>{CreateImageGrid(DatasImgState, nameProject.rep)}</section>
-            <nav className = {`${nameProject.rep}__navigation`}>{useCreateNavigation(nameProject.rep, ProjectsRoutes)}</nav>  
+            <section className= {`${nameProject.rep}__grid`}>{CreateImageGrid(DatasImgState, nameProject.rep)}</section>
+            <Nav rep= {nameProject.rep} routes= {ProjectsRoutes}/>
         </article>
     )
 }

@@ -1,6 +1,6 @@
-const LandscapeData = {
+const UxUiData = {
     "routes": {
-        "path": "/Landscape",
+        "path": "/UxUi",
         "typeofLink": "project"
     },
     "name": "UX - UI",
@@ -9,9 +9,9 @@ const LandscapeData = {
     "format": "",
     "content": "lorem",
     "photographies": "",
-    "rep": "Landscape",
+    "rep": "UxUi",
     "img": {
-        "rep": "Landscape",
+        "rep": "UxUi",
         "cover": {
             "src_default": {
                 name: "beauty",
@@ -361,4 +361,4 @@ const LandscapeData = {
     }
 }
 
-export default LandscapeData;
+export default UxUiData;

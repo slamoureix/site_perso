@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
-import useCreateNavigation from '../../../useCreateNavigation';
+
+import Nav from '../../../components/Navigation/Navigation';
 
 import { default as nameProject } from './data';
 
@@ -13,8 +14,8 @@ function Letter() {
     const projectName = nameProject.name ;
     const [DatasImgState] = useState(nameProject.img.content);
 
-    const Reducer = useSelector(state => ({
-        ...state.TypographieReducer.Typographie
+    const TypographieRoutes = useSelector(({AllRoutesReducer}) => ({
+        ...AllRoutesReducer.TypographieReducer.Typographie
     }));
 
     return (
@@ -26,7 +27,7 @@ function Letter() {
                 <p>{nameProject.content}</p></div>
             </section>
             <section className= {`${projectName}__grid`}>{CreateImageGrid(DatasImgState, nameProject.name)}</section>
-            <nav className= {`${projectName}__navigation`}>{useCreateNavigation(projectName, Reducer)}</nav>  
+            <Nav rep= {nameProject.rep} routes= {TypographieRoutes}/>
         </article>
     )
 }

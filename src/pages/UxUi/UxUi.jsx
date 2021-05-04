@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { default as nameProject } from './data.js';
 
 // SCSS
-// import './_number.scss';
+
 
 //Scripts
 import CreateImageGrid from '../../scripts/CreateImageGrid';

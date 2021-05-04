@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { useSelector } from 'react-redux';
 
-import useCreateNavigation from '../../useCreateNavigation';
+import Nav from '../../components/Navigation/Navigation';
 import CreateImageGrid from '../../scripts/CreateImageGrid';
 
 // datas 
@@ -26,7 +26,7 @@ export default function Oldies() {
                 <p>{nameProject.content}</p></div>
             </section>
             <section className={`${nameProject.rep}__grid`}>{CreateImageGrid(DatasImgState, nameProject.rep)}</section>
-            <nav className={`${nameProject.rep}__navigation`}>{useCreateNavigation(nameProject.rep, ProjectsRoutes)}</nav>  
+            <Nav rep= {nameProject.rep} routes= {ProjectsRoutes}/>
         </article>
     )
 }
