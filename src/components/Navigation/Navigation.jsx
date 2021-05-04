@@ -1,20 +1,18 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-import Arrow from './components/Navigation/Arrow';
+import Arrow from '../Navigation/Arrow';
 
-export default function useCreateNavigation(rep, ObjProjects) {
+export default function Navigation(props) {
 
     const [navState, setNavState] = useState({
             last: '', 
             next: ''
         });
-        
-    const ArrButtons = [];
 
     useEffect(() => {
-        for (let index = 0; index < Object.values(ObjProjects).length; index++) {
-            const element = Object.values(ObjProjects)[index];
-            if (rep === element.rep) {
+        for (let index = 0; index < Object.values(props.routes).length; index++) {
+            const element = Object.values(props.routes)[index];
+            if (props.rep === element.rep) {
 
                 const last = (index, ObjProjects) => {
                     if (index === 0) {
@@ -32,27 +30,26 @@ export default function useCreateNavigation(rep, ObjProjects) {
                         return Object.values(ObjProjects)[index + 1].path
                     }
                 }
+
                 setNavState(() => {
                     return {
                         ...navState,
-                        last: last(index, ObjProjects),
-                        next: next(index, ObjProjects)
+                        last: last(index, props.routes),
+                        next: next(index, props.routes)
                     }
                 })
             }
         }
     }, [])
 
-
-    const last = <button className="last">
+    return (
+        <nav className={`${props.rep}__navigation`}>
+            <button className="last">
                     <Arrow to={navState.last}/>
-                </button>
-    const next =
-                <button className="next">
+            </button>
+            <button className="next">
                     <Arrow to={navState.next}/>
-                </button>
-
-    ArrButtons.push(last, next);
-
-    return ArrButtons;
+            </button>
+        </nav> 
+    )
 }

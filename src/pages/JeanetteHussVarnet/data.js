@@ -1,17 +1,17 @@
-import Letter from './letter';
-
-const Letter_data = {
+const JeanetteHussVarnetData = {
     "routes": {
-        "path": "/Letter",
-        "typeofLink": "underProject",
-        "component" : Letter
+        "path": "/JeanetteHussVarnet",
+        "typeofLink": "project"
     },
-    "name": "Letter",
-    "type": "typographie",
-    "content": "",
-    "outils": "",
-    "rep": "Typographie",
+    "name": "Jeanette Huss--Varnet",
+    "type": "édition",
+    "year": "2020",
+    "format": "A4",
+    "content": "Création graphique du portfolio de l’artiste Jeannette Huss––Varnet.",
+    "photographies": "Marcel Huss",
+    "rep": "JeanetteHussVarnet",
     "img": {
+        "rep": "JeanetteHussVarnet",
         "cover": {
             "src_default": {
                 name: "interieur_6621_xxl",
@@ -57,40 +57,40 @@ const Letter_data = {
         },
         "content": [{
                 "src_default": {
-                    name: "letter-01_xxl",
+                    name: "interieur_6621_xxl",
                     format: "webp"
                 },
                 "sources": [{
                         "src": {
-                            name: "letter-01_xs",
+                            name: "interieur_6621_xs",
                             format: "webp"
                         },
                         "media": "(max-width: 576px)"
                     },
                     {
                         "src": {
-                            name: "letter-01_md",
+                            name: "interieur_6621_md",
                             format: "webp"
                         },
                         "media": "(min-width: 577px) and (max-width: 768px)"
                     },
                     {
                         "src": {
-                            name: "letter-01_lg",
+                            name: "interieur_6621_lg",
                             format: "webp"
                         },
                         "media": "(min-width 769px) and (max-width: 1024px)"
                     },
                     {
                         "src": {
-                            name: "letter-01_xl",
+                            name: "interieur_6621_xl",
                             format: "webp"
                         },
                         "media": "(min-width 1025px) and (max-width: 1280px)"
                     },
                     {
                         "src": {
-                            name: "letter-01_xxl",
+                            name: "interieur_6621_xxl",
                             format: "webp"
                         },
                         "media": "(min-width 1281px)"
@@ -100,40 +100,40 @@ const Letter_data = {
             },
             {
                 "src_default": {
-                    name: "letter-02_xxl",
+                    name: "interieur_6621_xxl",
                     format: "webp"
                 },
                 "sources": [{
                         "src": {
-                            name: "letter-02_xs",
+                            name: "interieur_6621_xs",
                             format: "webp"
                         },
                         "media": "(max-width: 576px)"
                     },
                     {
                         "src": {
-                            name: "letter-02_md",
+                            name: "interieur_6621_md",
                             format: "webp"
                         },
                         "media": "(min-width: 577px) and (max-width: 768px)"
                     },
                     {
                         "src": {
-                            name: "letter-02_lg",
+                            name: "interieur_6621_lg",
                             format: "webp"
                         },
                         "media": "(min-width 769px) and (max-width: 1024px)"
                     },
                     {
                         "src": {
-                            name: "letter-02_xl",
+                            name: "interieur_6621_xl",
                             format: "webp"
                         },
                         "media": "(min-width 1025px) and (max-width: 1280px)"
                     },
                     {
                         "src": {
-                            name: "letter-02_xxl",
+                            name: "interieur_6621_xxl",
                             format: "webp"
                         },
                         "media": "(min-width 1281px)"
@@ -143,40 +143,40 @@ const Letter_data = {
             },
             {
                 "src_default": {
-                    name: "letter-03_xxl",
+                    name: "interieur_6621_xxl",
                     format: "webp"
                 },
                 "sources": [{
                         "src": {
-                            name: "letter-03_xs",
+                            name: "interieur_6621_xs",
                             format: "webp"
                         },
                         "media": "(max-width: 576px)"
                     },
                     {
                         "src": {
-                            name: "letter-03_md",
+                            name: "interieur_6621_md",
                             format: "webp"
                         },
                         "media": "(min-width: 577px) and (max-width: 768px)"
                     },
                     {
                         "src": {
-                            name: "letter-03_lg",
+                            name: "interieur_6621_lg",
                             format: "webp"
                         },
                         "media": "(min-width 769px) and (max-width: 1024px)"
                     },
                     {
                         "src": {
-                            name: "letter-03_xl",
+                            name: "interieur_6621_xl",
                             format: "webp"
                         },
                         "media": "(min-width 1025px) and (max-width: 1280px)"
                     },
                     {
                         "src": {
-                            name: "letter-03_xxl",
+                            name: "interieur_6621_xxl",
                             format: "webp"
                         },
                         "media": "(min-width 1281px)"
@@ -186,83 +186,40 @@ const Letter_data = {
             },
             {
                 "src_default": {
-                    name: "letter-04_xxl",
-                    format: "jpg"
-                },
-                "sources": [{
-                        "src": {
-                            name: "letter-04_xs",
-                            format: "webp"
-                        },
-                        "media": "(max-width: 576px)"
-                    },
-                    {
-                        "src": {
-                            name: "letter-04_md",
-                            format: "webp"
-                        },
-                        "media": "(min-width: 577px) and (max-width: 768px)"
-                    },
-                    {
-                        "src": {
-                            name: "letter-04_lg",
-                            format: "webp"
-                        },
-                        "media": "(min-width 769px) and (max-width: 1024px)"
-                    },
-                    {
-                        "src": {
-                            name: "letter-04_xl",
-                            format: "webp"
-                        },
-                        "media": "(min-width 1025px) and (max-width: 1280px)"
-                    },
-                    {
-                        "src": {
-                            name: "letter-04_xxl",
-                            format: "jpg"
-                        },
-                        "media": "(min-width 1281px)"
-                    }
-                ],
-                "alt": "interieur du portfolio"
-            },
-            {
-                "src_default": {
-                    name: "letter-05_xxl",
+                    name: "interieur_6621_xxl",
                     format: "webp"
                 },
                 "sources": [{
                         "src": {
-                            name: "letter-05_xs",
+                            name: "interieur_6621_xs",
                             format: "webp"
                         },
                         "media": "(max-width: 576px)"
                     },
                     {
                         "src": {
-                            name: "letter-05_md",
+                            name: "interieur_6621_md",
                             format: "webp"
                         },
                         "media": "(min-width: 577px) and (max-width: 768px)"
                     },
                     {
                         "src": {
-                            name: "letter-05_lg",
+                            name: "interieur_6621_lg",
                             format: "webp"
                         },
                         "media": "(min-width 769px) and (max-width: 1024px)"
                     },
                     {
                         "src": {
-                            name: "letter-05_xl",
+                            name: "interieur_6621_xl",
                             format: "webp"
                         },
                         "media": "(min-width 1025px) and (max-width: 1280px)"
                     },
                     {
                         "src": {
-                            name: "letter-05_xxl",
+                            name: "interieur_6621_xxl",
                             format: "webp"
                         },
                         "media": "(min-width 1281px)"
@@ -272,209 +229,84 @@ const Letter_data = {
             },
             {
                 "src_default": {
-                    name: "letter-06_xxl",
+                    name: "interieur_6621_xxl",
                     format: "webp"
                 },
                 "sources": [{
                         "src": {
-                            name: "letter-06_xs",
+                            name: "interieur_6621_xs",
                             format: "webp"
                         },
                         "media": "(max-width: 576px)"
                     },
                     {
                         "src": {
-                            name: "letter-06_md",
+                            name: "interieur_6621_md",
                             format: "webp"
                         },
                         "media": "(min-width: 577px) and (max-width: 768px)"
                     },
                     {
                         "src": {
-                            name: "letter-06_lg",
+                            name: "interieur_6621_lg",
                             format: "webp"
                         },
                         "media": "(min-width 769px) and (max-width: 1024px)"
                     },
                     {
                         "src": {
-                            name: "letter-06_xl",
+                            name: "interieur_6621_xl",
                             format: "webp"
                         },
                         "media": "(min-width 1025px) and (max-width: 1280px)"
                     },
                     {
                         "src": {
-                            name: "letter-06_xxl",
+                            name: "interieur_6621_xxl",
                             format: "webp"
                         },
                         "media": "(min-width 1281px)"
                     }
                 ],
                 "alt": "interieur du portfolio"
-            }, {
+            },
+            {
                 "src_default": {
-                    name: "letter-07_xxl",
-                    format: "jpg"
+                    name: "interieur_6621_xxl",
+                    format: "webp"
                 },
                 "sources": [{
                         "src": {
-                            name: "letter-07_xs",
+                            name: "interieur_6621_xs",
                             format: "webp"
                         },
                         "media": "(max-width: 576px)"
                     },
                     {
                         "src": {
-                            name: "letter-07_md",
+                            name: "interieur_6621_md",
                             format: "webp"
                         },
                         "media": "(min-width: 577px) and (max-width: 768px)"
                     },
                     {
                         "src": {
-                            name: "letter-07_lg",
+                            name: "interieur_6621_lg",
                             format: "webp"
                         },
                         "media": "(min-width 769px) and (max-width: 1024px)"
                     },
                     {
                         "src": {
-                            name: "letter-07_xl",
+                            name: "interieur_6621_xl",
                             format: "webp"
                         },
                         "media": "(min-width 1025px) and (max-width: 1280px)"
                     },
                     {
                         "src": {
-                            name: "letter-07_xxl",
-                            format: "jpg"
-                        },
-                        "media": "(min-width 1281px)"
-                    }
-                ],
-                "alt": "interieur du portfolio"
-            }, {
-                "src_default": {
-                    name: "letter-08_xxl",
-                    format: "jpg"
-                },
-                "sources": [{
-                        "src": {
-                            name: "letter-08_xs",
+                            name: "interieur_6621_xxl",
                             format: "webp"
-                        },
-                        "media": "(max-width: 576px)"
-                    },
-                    {
-                        "src": {
-                            name: "letter-08_md",
-                            format: "webp"
-                        },
-                        "media": "(min-width: 577px) and (max-width: 768px)"
-                    },
-                    {
-                        "src": {
-                            name: "letter-08_lg",
-                            format: "webp"
-                        },
-                        "media": "(min-width 769px) and (max-width: 1024px)"
-                    },
-                    {
-                        "src": {
-                            name: "letter-08_xl",
-                            format: "webp"
-                        },
-                        "media": "(min-width 1025px) and (max-width: 1280px)"
-                    },
-                    {
-                        "src": {
-                            name: "letter-08_xxl",
-                            format: "jpg"
-                        },
-                        "media": "(min-width 1281px)"
-                    }
-                ],
-                "alt": "interieur du portfolio"
-            }, {
-                "src_default": {
-                    name: "letter-09_xxl",
-                    format: "jpg"
-                },
-                "sources": [{
-                        "src": {
-                            name: "letter-09_xs",
-                            format: "webp"
-                        },
-                        "media": "(max-width: 576px)"
-                    },
-                    {
-                        "src": {
-                            name: "letter-09_md",
-                            format: "webp"
-                        },
-                        "media": "(min-width: 577px) and (max-width: 768px)"
-                    },
-                    {
-                        "src": {
-                            name: "letter-09_lg",
-                            format: "webp"
-                        },
-                        "media": "(min-width 769px) and (max-width: 1024px)"
-                    },
-                    {
-                        "src": {
-                            name: "letter-09_xl",
-                            format: "webp"
-                        },
-                        "media": "(min-width 1025px) and (max-width: 1280px)"
-                    },
-                    {
-                        "src": {
-                            name: "letter-09_xxl",
-                            format: "jpg"
-                        },
-                        "media": "(min-width 1281px)"
-                    }
-                ],
-                "alt": "interieur du portfolio"
-            }, {
-                "src_default": {
-                    name: "letter-10_xxl",
-                    format: "jpg"
-                },
-                "sources": [{
-                        "src": {
-                            name: "letter-10_xs",
-                            format: "webp"
-                        },
-                        "media": "(max-width: 576px)"
-                    },
-                    {
-                        "src": {
-                            name: "letter-10_md",
-                            format: "webp"
-                        },
-                        "media": "(min-width: 577px) and (max-width: 768px)"
-                    },
-                    {
-                        "src": {
-                            name: "letter-10_lg",
-                            format: "webp"
-                        },
-                        "media": "(min-width 769px) and (max-width: 1024px)"
-                    },
-                    {
-                        "src": {
-                            name: "letter-10_xl",
-                            format: "webp"
-                        },
-                        "media": "(min-width 1025px) and (max-width: 1280px)"
-                    },
-                    {
-                        "src": {
-                            name: "letter-10_xxl",
-                            format: "jpg"
                         },
                         "media": "(min-width 1281px)"
                     }
@@ -485,4 +317,4 @@ const Letter_data = {
     }
 }
 
-export default Letter_data;
+export default JeanetteHussVarnetData;

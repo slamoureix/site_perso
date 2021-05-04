@@ -13,7 +13,8 @@ import AnimReducer from './reducer/anim';
 import RoutesReducer from './reducer/routes';
 import TypographieReducer from './reducer/typographie';
 
-const rootReducer = combineReducers({AnimReducer, RoutesReducer, TypographieReducer});
+const AllRoutesReducer = combineReducers({RoutesReducer, TypographieReducer});
+const rootReducer = combineReducers({AnimReducer, AllRoutesReducer});
 const GeneralStore = createStore(rootReducer);
 
 ReactDOM.render(

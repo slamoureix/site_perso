@@ -7,7 +7,7 @@ import { useLinksCreate } from '../../uselinksCreate';
 
 export default function Content() {
     const Projects = useSelector(state => ({
-        ...state.RoutesReducer.Projects
+        ...state.AllRoutesReducer.RoutesReducer.Projects
     }));
     const content = useRef()
     

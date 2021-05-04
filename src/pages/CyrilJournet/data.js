@@ -1,16 +1,17 @@
-const JHV_data = {
+const CyrilJournetData = {
     "routes": {
-        "path": "/JeanetteHussVarnet",
+        "path": "/CyrilJournet",
         "typeofLink": "project"
     },
-    "name": "Jeanette Huss--Varnet",
-    "type": "édition",
-    "year": "2020",
-    "format": "A4",
-    "content": "Création graphique du portfolio de l’artiste Jeannette Huss––Varnet.",
-    "photographies": "Marcel Huss",
+    "name": "Cyril Journet",
+    "type": "développement",
+    "year": "2021",
+    "format": "",
+    "content": "lorem",
+    "photographies": "",
+    "rep": "CyrilJournet",
     "img": {
-        "rep": "JHV",
+        "rep": "CyrilJournet",
         "cover": {
             "src_default": {
                 name: "interieur_6621_xxl",
@@ -316,4 +317,4 @@ const JHV_data = {
     }
 }
 
-export default JHV_data;
+export default CyrilJournetData;

@@ -3,9 +3,9 @@ import React, {useState} from 'react';
 import useCreateNavigation from '../../useCreateNavigation';
 
 // datas 
-import CYRILJOURNET_data from '../../assets/CYRILJOURNET/data.js';
+import CYRILJOURNET_data from './data';
 
-import CreateImageGrid from '../../CreateImageGrid';
+import CreateImageGrid from '../../scripts/CreateImageGrid';
 import { useSelector } from 'react-redux';
 
 

@@ -1,4 +1,4 @@
-import Letter_data from '../../pages/Typography/letter/data';
+import Letter_data from './Letter/data';
 
 
 const Typo_data = {
@@ -6,8 +6,8 @@ const Typo_data = {
         path: "/Typographie",
         typeofLink: "project"
     },
-    name: "Typography",
-    type: "typography",
+    name: "Typographie",
+    type: "typographie",
     year: "",
     format: "",
     content: "",

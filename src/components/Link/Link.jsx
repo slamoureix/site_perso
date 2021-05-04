@@ -1,8 +1,7 @@
 import React from 'react';
-import {
-    Link
-} from 'react-router-dom';
-import CreatePicture from '../../CreatePicture';
+import {Link} from 'react-router-dom';
+
+import CreatePicture from '../../scripts/CreatePicture';
 
 
 export default function Links(props) {

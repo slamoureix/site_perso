@@ -1,15 +1,19 @@
-import React, {useState} from 'react'
-
-// datas 
-import {default as nameProject} from './data.js';
-
-import CreateImageGrid from '../../scripts/CreateImageGrid';
-import Nav from '../../components/Navigation/Navigation';
-
+import React, {useState} from 'react';
 import { useSelector } from 'react-redux';
 
+// datas 
+import { default as nameProject } from './data.js';
 
-export default function Ylig() {
+// SCSS
+// import './_number.scss';
+
+//Scripts
+import CreateImageGrid from '../../scripts/CreateImageGrid';
+
+//Components
+import Nav from '../../components/Navigation/Navigation';
+
+export default function UxUi() {
     const [DatasImgState] = useState(nameProject.img.content);
 
     const ProjectsRoutes = useSelector(({AllRoutesReducer}) => ({

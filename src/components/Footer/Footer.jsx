@@ -9,10 +9,11 @@ import './_Footer.scss';
 export default function Footer() {
 
 const LinkSocial = useSelector(state => ({
-    ...state.RoutesReducer.Social
+    ...state.AllRoutesReducer.RoutesReducer.Social
 }));
+
 const LinkNav = useSelector(state => ({
-    ...state.RoutesReducer.Nav
+    ...state.AllRoutesReducer.RoutesReducer.Nav
 }));
 
 // const NavMenuState = {

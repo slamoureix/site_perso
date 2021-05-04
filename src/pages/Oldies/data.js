@@ -1,16 +1,17 @@
-const CSRQS_data = {
+const OldiesData = {
     "routes": {
-        "path": "/ChezSoiRienQueSoi",
+        "path": "/Oldies",
         "typeofLink": "project"
     },
-    "name": "Chez Soi Rien Que Soi",
-    "type": "édition",
+    "name": "Oldies",
+    "type": "",
     "year": "",
     "format": "",
     "content": "lorem",
     "photographies": "",
+    "rep": "Oldies",
     "img": {
-        "rep": "CSRQS",
+        "rep": "Oldies",
         "cover": {
             "src_default": {
                 name: "interieur_6621_xxl",
@@ -316,4 +317,4 @@ const CSRQS_data = {
     }
 }
 
-export default CSRQS_data;
+export default OldiesData;

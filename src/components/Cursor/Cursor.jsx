@@ -13,7 +13,7 @@ export default function Cursor({Position}) {
 
     return (
         <div ref={cursorRef} className="cursor">
-        <span></span>
+        <span/>
         </div>
     )
 }

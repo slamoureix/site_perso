@@ -1,5 +1,5 @@
-import Letter from '../pages/Typography/letter/letter';
-import Words from '../pages/Typography/words/words';
+import Letter from '../pages/Typographie/Letter/Letter';
+import Words from '../pages/Typographie/Words/Words';
 
 
 export const TypoRoutes = {
