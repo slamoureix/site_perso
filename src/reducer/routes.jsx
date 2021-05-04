@@ -5,7 +5,11 @@ import About from '../pages/About/About';
 import Contact from '../pages/Contact/Contact';
 import Legals from '../pages/Legals/Legals';
 import Error from '../pages/404/404';
-import Number from '../pages/Number/Number';
+
+import Typographie from '../pages/Typography/Typography';
+import Letter from '../pages/Typography/letter/letter';
+import Words from '../pages/Typography/words/words';
+
 import Ylig from '../pages/Ylig/Ylig';
 import Landscape from '../pages/Landscape/Landscape';
 import CyrilJournet from '../pages/CyrilJournet/CyrilJournet';
@@ -15,6 +19,12 @@ import Oldies from '../pages/Oldies/Oldies';
 
 // DATAS //
 import JHV_data from '../assets/JHV/data';
+import YLIG_data from '../assets/YLIG/data';
+import OLDIES_data from '../assets/OLDIES/data';
+import Typo_data from '../assets/Typographie/data';
+import LANDSCAPE_data from '../assets/LANDSCAPE/data';
+import CYRILJOURNET_data from '../assets/CYRILJOURNET/data';
+import CSRQS_data from '../assets/CSRQS/data';
 
 /*
     utilisation d'un tableau associatif -> utilisable avec la boucle for... In 
@@ -53,43 +63,48 @@ export const routes = {
     },
     Projects: {
         Ylig: {
-            path: '/Ylig',
-            name: 'Your Look Is Good',
-            typeofLink: 'project',
-            rep: JHV_data.img.rep,
-            cover: JHV_data.img.cover, // modif avec les vrais datas //
+            path: YLIG_data.routes.path,
+            name: YLIG_data.name,
+            type: YLIG_data.type,
+            typeofLink: YLIG_data.routes.typeofLink,
+            rep: YLIG_data.img.rep,
+            cover: YLIG_data.img.cover, // modif avec les vrais datas //
             component: Ylig,
         },
-        Number: {
-            path: '/Number',
-            name: 'Number',
-            typeofLink: 'project',
-            rep: JHV_data.img.rep,
-            cover: JHV_data.img.cover,
-            component: Number,
+        Typographie: {
+            path: Typo_data.routes.path,
+            name: Typo_data.name,
+            type: Typo_data.type,
+            typeofLink: Typo_data.routes.typeofLink,
+            rep: Typo_data.img.rep,
+            cover: Typo_data.img.cover,
+            component: Typographie,
         },
         Landscape: {
-            path: '/Landscape',
-            name: 'Landscape',
-            typeofLink: 'project',
-            rep: JHV_data.img.rep,
-            cover: JHV_data.img.cover,
+            path: LANDSCAPE_data.routes.path,
+            name: LANDSCAPE_data.name,
+            type: LANDSCAPE_data.type,
+            typeofLink: LANDSCAPE_data.routes.typeofLink,
+            rep: LANDSCAPE_data.img.rep,
+            cover: LANDSCAPE_data.img.cover,
             component: Landscape,
         },
         CyrilJournet: {
-            path: '/CyrilJournet',
-            name: 'Cyril Journet',
-            rep: JHV_data.img.rep,
-            cover: JHV_data.img.cover,
-            typeofLink: 'project',
+            path: CYRILJOURNET_data.routes.path,
+            name: CYRILJOURNET_data.name,
+            type: CYRILJOURNET_data.type,
+            typeofLink: CYRILJOURNET_data.routes.typeofLink,
+            rep: CYRILJOURNET_data.img.rep,
+            cover: CYRILJOURNET_data.img.cover,
             component: CyrilJournet,
         },
         ChezSoiRienQueSoi: {
-            path: '/ChezSoiRienQueSoi',
-            name: 'Chez Soi Rien Que Soi',
-            typeofLink: 'project',
-            rep: JHV_data.img.rep,
-            cover: JHV_data.img.cover,
+            path: CSRQS_data.routes.path,
+            name: CSRQS_data.name,
+            type: CSRQS_data.type,
+            typeofLink: CSRQS_data.routes.typeofLink,
+            rep: CSRQS_data.img.rep,
+            cover: CSRQS_data.img.cover,
             component: ChezSoiRienQueSoi,
         },
         JHV: {
@@ -102,13 +117,34 @@ export const routes = {
             component: JeanetteHussVarnet,
         },
         Oldies: {
-            path: '/Oldies',
-            name: 'Oldies',
-            typeofLink: 'project',
-            rep: JHV_data.img.rep,
-            cover: JHV_data.img.cover,
+            path: OLDIES_data.routes.path,
+            name: OLDIES_data.name,
+            type: OLDIES_data.type,
+            typeofLink: OLDIES_data.routes.typeofLink,
+            rep: OLDIES_data.img.rep,
+            cover: OLDIES_data.img.cover,
             component: Oldies,
         }
+    },
+    Typographie: {
+        Letter: {
+            path: '/Letter',
+            name: 'Letter',
+            rep:'Letter',
+            component: Letter,
+        },
+        Words: {
+            path: '/Words',
+            name: 'Words',
+            rep: 'Words',
+            component: Words,
+        },
+        Number: {
+            path: '/Number',
+            name: 'Number',
+            rep: 'Number',
+            component: Words,
+        },
     },
     Social: {
         Instagram: {

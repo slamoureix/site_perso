@@ -8,8 +8,7 @@ export default function Cursor({Position}) {
     let pageY = Position.pageY;
 
     useEffect(() => {
-        cursorRef.current.setAttribute('style', `top: ${pageY - 10}px; left:${pageX - 10}px;`);
-        // regarder à nouveau la vidéo sur le cursor Ecole du web
+        cursorRef.current.setAttribute('style', `top: ${pageY - 12.5}px; left:${pageX - 12.5}px;`);
     }, [pageX, pageY])
 
     return (

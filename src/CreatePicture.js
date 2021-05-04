@@ -17,33 +17,31 @@ export default function CreatePicture(rep, src_default, sources, alt) {
     /* pour src_default */
     const [SrcState, SrcSetstate] = useState('');
 
-
     useEffect(() => {
             const fetchSrc_default = () => {
-                CreateSrc(src_default.name, src_default.format, rep).then(value => (SrcSetstate(value.default)));
+            CreateSrc(src_default.name, src_default.format, rep).then(value => (SrcSetstate(value.default)));
             }
-
+    
             const AllSources = (Sources) => {
-                // On vient map le tableau de data sources afin de créer pour chaque element un nouveau tableau avec les promesses.
-                let importSources = Sources.map(element => CreateSrc(element.src.name, element.src.format, rep).then(v => v.default));
-                // Permet de ressoudre toutes les promesses dans l'Array de promesse.
-                Promise.all(importSources).then(value => setTemorarySources(value)) // -> on ajoute le tableau au state Temporaire
+            // On vient map le tableau de data sources afin de créer pour chaque element un nouveau tableau avec les promesses.
+            let importSources = Sources.map(element => CreateSrc(element.src.name, element.src.format, rep).then(v => v.default));
+            // Permet de ressoudre toutes les promesses dans l'Array de promesse.
+            Promise.all(importSources).then(value => setTemorarySources(value)) // -> on ajoute le tableau au state Temporaire
             }
-
+    
             const fusionToArray = (InitSources, Temporary) => {
-                let CompletedSources = [];
-                for (let index = 0; index < InitSources.length; index++) {
-                    CompletedSources.push({
-                        ...InitSources[index],
-                        'srcset': Temporary[index]
-                    })
-                }
-                setDataSourceState(CompletedSources);
+            let CompletedSources = [];
+            for (let index = 0; index < InitSources.length; index++) {
+                CompletedSources.push({
+                    ...InitSources[index],
+                    'srcset': Temporary[index]
+                })
             }
-
+            setDataSourceState(CompletedSources);
+            }
+            
             temporaryImportSources ? fusionToArray(sources, temporaryImportSources) : AllSources(sources)
             fetchSrc_default();
-        
         }, [rep, sources, src_default.format, src_default.name, temporaryImportSources])
 
     

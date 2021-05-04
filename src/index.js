@@ -11,8 +11,9 @@ import {Provider} from 'react-redux';
 
 import AnimReducer from './reducer/anim';
 import RoutesReducer from './reducer/routes';
+import TypographieReducer from './reducer/typographie';
 
-const rootReducer = combineReducers({AnimReducer, RoutesReducer});
+const rootReducer = combineReducers({AnimReducer, RoutesReducer, TypographieReducer});
 const GeneralStore = createStore(rootReducer);
 
 ReactDOM.render(

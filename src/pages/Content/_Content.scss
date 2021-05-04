@@ -123,6 +123,7 @@ $numOfelement : 7;
                 top: calc(50% - 0.5vw);
                 left: calc(50% - 0.5vw);
                 z-index: 999999;
+                
                 transition: all .5s $ease-material;
             }
         }
@@ -137,6 +138,7 @@ $numOfelement : 7;
         //~ permet d'agir sur des classes css de même niveau dans l'arbre.
         .link__project_name:hover~.link__project_cover::before {
             opacity: 0;
+            
         }
 
 

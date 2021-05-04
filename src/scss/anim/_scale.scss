@@ -29,3 +29,8 @@ $Scale : RotateScale;
 }
 
 
+@mixin parallax {
+    transform: translate3d(0px, 129px, 0px) scale(1.4);
+    will-change: transform;
+    transition: transform 0.4s cubic-bezier(0, 0, 0, 1) 0s
+}

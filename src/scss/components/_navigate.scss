@@ -1,0 +1,23 @@
+@use '../abstracts/variables'as *;
+@use '../abstracts/anim'as *;
+
+[class*="__navigation"] {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin: 0 auto;
+
+    svg {
+        fill: $C_E84E32;
+        width: 40px;
+        height: 40px;
+    }
+
+    .last>a>svg {
+        transform: rotate(180deg);
+    }
+
+    button:hover {
+        animation: $rotate .5s ease-in-out forwards;
+    }
+}

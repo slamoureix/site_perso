@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 
-import { useAnimHomePage } from '../../useAnimHomePage';
+// import { useAnimHomePage } from '../../useAnimHomePage';
 import { useLinksCreate } from '../../uselinksCreate';
 
 import './_Footer.scss';
@@ -15,30 +15,30 @@ const LinkNav = useSelector(state => ({
     ...state.RoutesReducer.Nav
 }));
 
-const NavMenuState = {
-    visibility: false,
-    transition: 'MoveTo',
-    duration: 750,
-    firstime: true,
-    statutElem: 'Hidden'
-}
+// const NavMenuState = {
+//     visibility: false,
+//     transition: 'MoveTo',
+//     duration: 750,
+//     firstime: true,
+//     statutElem: 'Hidden'
+// }
 
 const navMenu = useRef();
-const [LocalNavMenuState] = useState(NavMenuState);
+// const [LocalNavMenuState] = useState(NavMenuState);
 // useAnimHomePage(LocalNavMenuState, navMenu);
 const linksNav = useLinksCreate(LinkNav);
 
 
-const NavSocialState = {
-    visibility: false,
-    transition: 'MoveTo',
-    duration: 700,
-    firstime: true,
-    statutElem: 'Hidden'
-}
+// const NavSocialState = {
+//     visibility: false,
+//     transition: 'MoveTo',
+//     duration: 700,
+//     firstime: true,
+//     statutElem: 'Hidden'
+// }
 
 const navSocial = useRef();
-const [LocalNavSocialState] = useState(NavSocialState)
+// const [LocalNavSocialState] = useState(NavSocialState)
 // useAnimHomePage(LocalNavSocialState, navSocial);
 const linksSocial = useLinksCreate(LinkSocial);
 

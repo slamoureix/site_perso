@@ -1,0 +1,9 @@
+@use '../../scss/abstracts/'as *;
+
+// pour le responsive sm/lg
+// [class*=NUMBER__item]:nth-of-type(odd) {
+//     @extend .no-padding-left;
+// }
+// [class*=NUMBER__item]:nth-of-type(even) {
+//     @extend .no-padding-right;
+// }
