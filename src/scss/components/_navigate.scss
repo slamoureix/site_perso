@@ -1,23 +1,27 @@
 @use '../abstracts/variables'as *;
 @use '../abstracts/anim'as *;
 
-[class*="__navigation"] {
-    display: flex;
-    justify-content: space-between;
-    width: 30%;
-    margin: 0 auto;
-
-    svg {
+.arrow{
         fill: $C_E84E32;
         width: 40px;
         height: 40px;
-    }
 
-    .last>a>svg {
-        transform: rotate(180deg);
-    }
+        &:hover {
+            animation: $rotate .5s ease-in-out forwards;
+        }
+}
 
-    button:hover {
-        animation: $rotate .5s ease-in-out forwards;
-    }
+[class*="__navigation"] {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 30%;
+    a{
+            display: inherit;
+            align-items: center;
+            p{
+
+                font-size: 20px;
+            }
+        }
 }

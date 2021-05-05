@@ -7,6 +7,7 @@ export default function about() {
     return (
         <section className="me">
             <div className="content">
+                <hr></hr>
                 <img src={src} loading="lazy" alt=""></img>
                     <p className="presentation">
                         Passionné par le <strong>design graphique</strong>, l'<strong>édition</strong>,<br></br> 

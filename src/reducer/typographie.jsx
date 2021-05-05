@@ -1,8 +1,10 @@
-
 import Letter from '../pages/Typographie/Letter/Letter';
 import Words from '../pages/Typographie/Words/Words';
+import Numbers from '../pages/Typographie/Number/Number';
 
 import LetterData from '../pages/Typographie/Letter/data';
+import WordsData from '../pages/Typographie/Words/data';
+import NumbersData from '../pages/Typographie/Number/data';
 
 export const TypoRoutes = {
     Typographie: {
@@ -11,21 +13,21 @@ export const TypoRoutes = {
             name: LetterData.name,
             component: Letter,
             rep: LetterData.rep,
-            "typeofLink": LetterData.routes.typeofLink,
+            typeofLink: LetterData.routes.typeofLink,
         },
         Words: {
-            path: '/Words',
-            name: 'Words',
+            path: WordsData.routes.path,
+            name: WordsData.name,
             component: Words,
-            rep: 'Words',
-            "typeofLink": "underProject",
+            rep: WordsData.rep,
+            typeofLink: WordsData.routes.typeofLink,
         },
         Number: {
-            path: '/Number',
-            name: 'Number',
-            component: Words,
-            rep: 'Number',
-            "typeofLink": "underProject",
+            path: NumbersData.routes.path,
+            name: NumbersData.name,
+            component: Numbers,
+            rep: NumbersData.rep,
+            typeofLink: NumbersData.routes.typeofLink,
         },
     },
 }

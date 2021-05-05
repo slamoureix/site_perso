@@ -7,7 +7,7 @@ const OldiesData = {
     "type": "",
     "year": "",
     "format": "",
-    "content": "lorem",
+    "content": "Soon",
     "photographies": "",
     "rep": "Divers",
     "img": {

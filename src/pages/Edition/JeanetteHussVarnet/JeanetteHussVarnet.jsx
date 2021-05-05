@@ -2,8 +2,8 @@
 import React, {useState} from 'react';
 import { useSelector } from 'react-redux';
 
-import Nav from '../../components/Navigation/Navigation';
-import CreateImageGrid from '../../scripts/CreateImageGrid';
+import Nav from '../../../components/Navigation/Navigation';
+import CreateImageGrid from '../../../scripts/CreateImageGrid';
 
 // datas 
 import {default as nameProject} from './data';
