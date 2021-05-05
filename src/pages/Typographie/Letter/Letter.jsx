@@ -9,9 +9,9 @@ import { default as nameProject } from './data';
 import CreateImageGrid from '../../../scripts/CreateImageGrid.js';
 
 import './_letter.scss';
+import { Link } from 'react-router-dom';
 
 function Letter() {
-    const projectName = nameProject.name ;
     const [DatasImgState] = useState(nameProject.img.content);
 
     const TypographieRoutes = useSelector(({AllRoutesReducer}) => ({
@@ -19,14 +19,17 @@ function Letter() {
     }));
 
     return (
-        <article className = {`${projectName}__project_container`}>
-            <section className = {`${projectName}__presentation`}>
-                <div className={`${projectName}__title`}><h1>{nameProject.name}</h1></div>
-                <div className={`${projectName}__type`}><p><strong>{nameProject.type}</strong></p></div>
-                <div className = {`${projectName}__content`}>
-                <p>{nameProject.content}</p></div>
+        <article className= {`${nameProject.name}__project_container`}>
+            <section className= {`${nameProject.name}__presentation`}>
+                <div className= {`${nameProject.name}__title`}><h1>{nameProject.name}</h1></div>
+                <div className = {`${nameProject.name}__type`}>
+                <Link to = "/Typographie">
+                <p><strong className="link">{nameProject.type}</strong></p>
+                </Link>
+                </div>
+
             </section>
-            <section className= {`${projectName}__grid`}>{CreateImageGrid(DatasImgState, nameProject.name)}</section>
+            <section className= {`${nameProject.name}__grid`}>{CreateImageGrid(DatasImgState, nameProject.name)}</section>
             <Nav rep= {nameProject.rep} routes= {TypographieRoutes}/>
         </article>
     )

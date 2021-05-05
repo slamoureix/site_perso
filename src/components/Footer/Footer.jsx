@@ -12,24 +12,6 @@ const LinkSocial = useSelector(state => ({
     ...state.AllRoutesReducer.RoutesReducer.Social
 }));
 
-const LinkNav = useSelector(state => ({
-    ...state.AllRoutesReducer.RoutesReducer.Nav
-}));
-
-// const NavMenuState = {
-//     visibility: false,
-//     transition: 'MoveTo',
-//     duration: 750,
-//     firstime: true,
-//     statutElem: 'Hidden'
-// }
-
-const navMenu = useRef();
-// const [LocalNavMenuState] = useState(NavMenuState);
-// useAnimHomePage(LocalNavMenuState, navMenu);
-const linksNav = useLinksCreate(LinkNav);
-
-
 // const NavSocialState = {
 //     visibility: false,
 //     transition: 'MoveTo',
@@ -45,11 +27,6 @@ const linksSocial = useLinksCreate(LinkSocial);
 
     return (
         <footer>
-            <nav ref= {navMenu} className="NavMenu">
-                <ul>
-                    {linksNav}
-                </ul>
-            </nav>
             <nav ref={navSocial} className= "NavSocial" >
             <div className="svg_box">
                 <svg viewBox="0 0 192 192">

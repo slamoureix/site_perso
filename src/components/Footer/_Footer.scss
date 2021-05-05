@@ -1,8 +1,8 @@
 @use '../../scss/abstracts/'as *;
 
 footer {
-    @include display($justify : space-between);
-
+    @include display();
+    justify-content: flex-end;
     margin-top: auto;
     padding-bottom: 25px;
     // max-width : 1279.98px
@@ -15,35 +15,6 @@ footer {
         font-family: $popins_regular;
         font-size: clamp(1.2rem, 1.042vw, 1.5rem);
         line-height: clamp(1.6rem, 1.736vw,2.5rem);
-    }
-
-    nav:nth-of-type(1) {
-        width: 50%;
-
-        //min-width : 1280px
-        @include media-breakpoint-up(xl){
-            width: $col-left;
-            display: inherit;
-            justify-content: center;
-            ul {
-                display: inherit;
-                writing-mode: vertical-lr;
-                transform: rotate(180deg);
-    
-                li {
-                    margin-bottom: .5rem;
-                    text-align: center;
-                }
-    
-                li:nth-of-type(1) {
-                    height: 75px;
-                }
-            }
-        }
-
-    }
-
-    nav:nth-of-type(2) {
         position: relative;
         display: inherit;
         justify-content: center;
@@ -69,12 +40,11 @@ footer {
                 animation: $rotate 8s linear infinite;
             }
         }
-        
         ul {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(30deg);
             text-align: center;
         }
     }

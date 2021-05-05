@@ -5,6 +5,8 @@ import './_Header.scss';
 import {
     useAnimHomePage
 } from '../../useAnimHomePage';
+import { useLinksCreate } from '../../uselinksCreate';
+import { useSelector } from 'react-redux';
 
 export default function Header() {
     const InitialState = {
@@ -14,29 +16,22 @@ export default function Header() {
         firstime: true,
     }
 
-    
+    const LinkNav = useSelector(state => ({
+        ...state.AllRoutesReducer.RoutesReducer.Nav
+    }));
+
     const [LocalState] = useState(InitialState)
-    const contentRef = useRef();
+    const navMenu = useRef();
+    const linksNav = useLinksCreate(LinkNav);
 
     // useAnimHomePage(LocalState, contentRef);
 
     return (
         <header>
             <Logo/>
-            <div ref = {contentRef} className="name">
-                <h1>Sebastien Lamoureix</h1>
-                <hr></hr>
-                <span>
-                <strong>Designer Graphique</strong>
-                <br></br>
-                &&
-                <br></br>
-                <strong> Développeur Front-End</strong>
-                </span>
-            </div>
-
-            
-
+            <nav ref= {navMenu} className="NavMenu">
+            <ul>{linksNav}</ul>
+            </nav>
         </header>
     )
 }

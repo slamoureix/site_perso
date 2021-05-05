@@ -10,7 +10,7 @@ const Letter_data = {
     "type": "typographie",
     "content": "",
     "outils": "",
-    "rep": "Typographie",
+    "rep": "Letter",
     "img": {
         "cover": {
             "src_default": {

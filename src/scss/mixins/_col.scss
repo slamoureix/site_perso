@@ -34,6 +34,9 @@
 
 @mixin offset($i) {
     margin-left: percentage($i / $columns);
+    @if($i == 0){
+        margin-left: 0
+    }
 }
 
 
@@ -54,7 +57,7 @@
     }
     @if $bk==xxl {
         @include media-breakpoint-up($bk) {
-            @for $i from 1 through $columns {
+            @for $i from 0 through $columns {
                 .col-#{$bk}-#{$i} {
                     @include col($i);
                 }
@@ -68,7 +71,7 @@
     }
     @else {
         @include media-breakpoint-only($bk) {
-            @for $i from 1 through $columns {
+            @for $i from 0 through $columns {
                 .col-#{$bk}-#{$i} {
                     @include col($i);
                 }

@@ -6,7 +6,6 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.3",
-    "bootstrap": "^5.0.0-beta3",
     "eslint-plugin-react-hooks": "0.0.0-634cc52e6",
     "locomotive-scroll": "^4.1.0",
     "react": "^17.0.1",

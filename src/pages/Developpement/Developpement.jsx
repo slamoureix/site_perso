@@ -9,7 +9,7 @@ import Nav from '../../components/Navigation/Navigation';
 import { useSelector } from 'react-redux';
 
 
-export default function Ylig() {
+export default function Developement() {
     const [DatasImgState] = useState(nameProject.img.content);
 
     const ProjectsRoutes = useSelector(({AllRoutesReducer}) => ({

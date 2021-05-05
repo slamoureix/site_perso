@@ -1,15 +1,17 @@
 @use '../../scss/abstracts/'as *;
 
-$coeff: 7.3vw; // 13 rem // 9.028vw
-$numOfelement : 7;
+$coeff: 10vw; // 13 rem // 9.028vw
+$numOfelement : 5;
 
 .project_container {
-    @extend .height-content;
+    // @extend .height-content;
+    height: clamp(25rem, 24.306vw, 35rem);
     position: relative;
-    margin-left: $col-left;
+    
 
     @include media-breakpoint-down(lg) {
         width: 95%;
+        height: auto;
         margin: 10px auto;
     }
 }
@@ -22,13 +24,6 @@ $numOfelement : 7;
         font-size: clamp(2rem, 3.125vw, 4rem);
         font-family: $popins_bold;
         line-height: 100%;
-    }
-
-    .typeOfLink {
-        color: $C_71816D;
-        font-family: $popins_regular;
-        margin-left: 10px;
-        font-size: 1.5rem;
     }
 
     .link__project_cover {
@@ -48,11 +43,14 @@ $numOfelement : 7;
 
     // pour les écrans supérieurs à 1024
     @include media-breakpoint-up(lg) {
+        
         .link__project {
             position: absolute;
+            top: 85%;
             transform-origin: top left;
-            transform: translateX(-#{$coeff}) rotate(-45deg);
-            bottom: -10%;
+            transform: rotate(-40deg);
+            // transform: translateX(-#{$coeff}) rotate(-45deg);
+            
         }
 
         @for $i from 1 through $numOfelement {
@@ -85,7 +83,7 @@ $numOfelement : 7;
                 font-size: clamp(2rem, 3.125vw, 3rem);
                 font-family: $popins--italic;
                 display: block;
-                transform: translateX((calc(20.5vw - #{$coeff}))); //20vw
+                transform: translateX((calc(23vw - #{$coeff}))); //20vw
                 padding: 1.05vw .52vw 1.05vw 3.13vw; // padding: 20px 10px 20px 60px;
                 transition: all .5s $ease-material;
             }
@@ -138,7 +136,6 @@ $numOfelement : 7;
         //~ permet d'agir sur des classes css de même niveau dans l'arbre.
         .link__project_name:hover~.link__project_cover::before {
             opacity: 0;
-            
         }
 
 

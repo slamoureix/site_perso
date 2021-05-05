@@ -14,7 +14,7 @@ export default function about() {
                         je suis <span><strong>Freelance</strong></span> depuis <span className="date">2016</span>. 
                     </p>
                 <hr></hr>
-                    <p className="competence">
+                    {/* <p className="competence">
                         
                         J'associe fonds, formes, couleurs et typographies dans un esprit de symbiose afin de rendre l'expérience visuelle forte 
                         et émotionnellement riche.
@@ -28,7 +28,7 @@ export default function about() {
                         Pour continuer d'évoluer, j'experimente sur de nombreux projets graphiques print et web, illustrations, typographies… 
                         
                     </p>
-                <hr></hr>
+                <hr></hr> */}
             </div>
         </section>
     )

@@ -1,17 +1,17 @@
-const OldiesData = {
+const DeveloppementData = {
     "routes": {
-        "path": "/Oldies",
+        "path": "/Developpement",
         "typeofLink": "project"
     },
-    "name": "Oldies",
-    "type": "",
-    "year": "",
+    "name": "Développement",
+    "type": "développement",
+    "year": "2020",
     "format": "",
     "content": "lorem",
     "photographies": "",
-    "rep": "Oldies",
+    "rep": "Developpement",
     "img": {
-        "rep": "Oldies",
+        "rep": "Developpement",
         "cover": {
             "src_default": {
                 name: "interieur_6621_xxl",
@@ -55,7 +55,8 @@ const OldiesData = {
             ],
             "alt": "interieur du portfolio"
         },
-        "content": [{
+        "content": [
+            {
                 "src_default": {
                     name: "interieur_6621_xxl",
                     format: "webp"
@@ -317,4 +318,4 @@ const OldiesData = {
     }
 }
 
-export default OldiesData;
+export default DeveloppementData;

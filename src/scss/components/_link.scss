@@ -1,7 +1,6 @@
 @use '../abstracts/variables'as *;
 
 .link {
-    width: auto;
     position: relative;
     animation-delay: .2s;
     margin-bottom: 0.25rem;
@@ -22,4 +21,23 @@
     transform: scaleX(1);
     transform-origin: right;
     transition: transform .3s $ease-material;
+}
+
+.link__underProject_name {
+    font-family: $popins_bold;
+    text-transform: uppercase;
+    color: $C_E84E32;
+    font-size: clamp(10rem, 17.361vw, 25rem);
+
+    .link__underProject{
+
+        &:hover{
+            opacity: 0.85;
+            color: $C_742719;
+            background-color: $C_E84E32;
+            mix-blend-mode: difference;
+            transition: all .5s $ease-material;
+        }
+    }
+
 }

@@ -6,8 +6,10 @@ import './_Logo.scss';
 export default function Logo() {
     return (
         <div className = "box_logo">
-        
+
         <Link className="link" to="/">
+        
+
         <svg viewBox="0 0 261.97 260.51">
         <path d = "M80.21,270.89H9.9V200.57Zm-62.32-8h43l-43-43Z"
         transform = "translate(-9.9 -10.38)" />
@@ -19,6 +21,11 @@ export default function Logo() {
         <path d = "M74.56,10.38,144.88,80.7V10.38Zm62.32,51-43-43h43Z"
         transform = "translate(-9.9 -10.38)" />
         </svg>
+
+        <div className= "name" >
+        <h1>Sebastien Lamoureix</h1>
+        </div>
+        
         </Link> 
         </div>
     )

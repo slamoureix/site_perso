@@ -1,5 +1,21 @@
 @use '../../scss/abstracts/'as *;
 
+.Typographie{
+    &__presentation &__title{
+            @extend .col-xxl-2, .col-xl-2, .col-lg-2,
+            .col-xxl-offset-0;
+        }
+
+    &__links_container{
+        display: flex;
+        flex-direction: column;
+        
+        .separation{
+            @include Separation($Color : $C_71816D);
+        }
+    }
+}
+
 // pour le responsive sm/lg
 // [class*=NUMBER__item]:nth-of-type(odd) {
 //     @extend .no-padding-left;

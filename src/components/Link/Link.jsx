@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import {Link} from 'react-router-dom';
 
 import CreatePicture from '../../scripts/CreatePicture';
@@ -28,13 +28,14 @@ export default function Links(props) {
         );
         case 'underProject':
             return (
-            <li className="link__project">
-            <div className="link__project_box">
+            <>
+            <li className="link__underProject_name">
             <Link to={props.path} replace>
-                <span className="link link__project_name">{props.name}</span>
+                <span className = "link link__underProject"> { props.name} </span>
             </Link>
-            </div>
             </li>
+            <span className="separation"></span>
+            </>
         );
         default:
             return (

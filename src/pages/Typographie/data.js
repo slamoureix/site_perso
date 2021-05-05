@@ -7,11 +7,10 @@ const Typo_data = {
         typeofLink: "project"
     },
     name: "Typographie",
-    type: "typographie",
+    type: "Typographie",
     year: "",
-    format: "",
-    content: "",
-    photographies: "",
+    content: "Illustrator - Photoshop",
+    skills: "Illustrator - Photoshop",
     rep: "Typographie",
     img: {
         rep: "Typographie",
