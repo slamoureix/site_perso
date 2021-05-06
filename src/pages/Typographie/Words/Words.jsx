@@ -12,9 +12,10 @@ import {
 } from './data';
 
 import Preview from '../../../components/Preview/Preview';
+import CreateImageGrid from '../../../scripts/CreateImageGrid';
 
 export default function Words() {
-    
+    const [DatasImgState] = useState(nameProject.img.content);
 
     const TypographieRoutes = useSelector(({AllRoutesReducer}) => ({
         ...AllRoutesReducer.TypographieReducer.Typographie
@@ -30,7 +31,7 @@ export default function Words() {
                 </div>
 
             </section>
-            
+            <section className= {`${nameProject.name}__grid`}>{CreateImageGrid(DatasImgState, nameProject.name)}</section>
             <Nav rep= {nameProject.rep} routes= {TypographieRoutes}/>
         </article>
     )

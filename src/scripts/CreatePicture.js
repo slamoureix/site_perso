@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CreateSrc from './CreateSrc';
+import uuid from 'react-native-uuid';
 
 /**
  * associate dynamically attribute src.
@@ -9,6 +10,7 @@ import CreateSrc from './CreateSrc';
  * @param {String} alt : alt of the file format
  */
 export default function CreatePicture(rep, src_default, sources, alt) {
+    
 
     /* SOURCES */ 
     const [DataSourceState, setDataSourceState] = useState(); // undefined vaut false lors d'un test bol
@@ -47,7 +49,7 @@ export default function CreatePicture(rep, src_default, sources, alt) {
     
     return (
         <picture>
-                {temporaryImportSources ? (DataSourceState ? DataSourceState.map(s => <source key={s.src.name} srcSet={s.srcset} media={s.media} />) : null ) : null}
+                {temporaryImportSources ? (DataSourceState ? DataSourceState.map(s => <source key={uuid.v4()} srcSet={s.srcset} media={s.media} />) : null ) : null}
                 <img className="img" loading="lazy" src={SrcState} alt= {alt}  />
         </picture>
     )

@@ -12,11 +12,16 @@ import {Provider} from 'react-redux';
 import AnimReducer from './reducer/anim';
 import RoutesReducer from './reducer/routes';
 import TypographieReducer from './reducer/typographie';
-
+import UxUiReducer from './reducer/uxui';
 //dernier reducer à être intégré dans les routes globales.
 import AdminReducer from './reducer/admin';
 
-const AllRoutesReducer = combineReducers({RoutesReducer, TypographieReducer, AdminReducer});
+const AllRoutesReducer = combineReducers({
+    RoutesReducer,
+    UxUiReducer,
+    TypographieReducer,
+    AdminReducer
+});
 const rootReducer = combineReducers({AnimReducer, AllRoutesReducer});
 const GeneralStore = createStore(rootReducer);
 
