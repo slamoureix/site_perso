@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 //component
@@ -7,12 +7,24 @@ import Preview from '../../../components/Preview/Preview';
 
 import { default as nameProject } from './data';
 
-import CreateImageGrid from '../../../scripts/CreateImageGrid.js';
+import {CreateImageGrid} from '../../../scripts/CreateImageGrid.js';
 
 import './_letter.scss';
 
 
+
+
 function Letter() {
+    
+
+    useEffect(() => {
+        
+
+        
+        
+    }, [])
+    
+
     const [DatasImgState] = useState(nameProject.img.content);
 
     const TypographieRoutes = useSelector(({AllRoutesReducer}) => ({

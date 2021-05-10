@@ -4,9 +4,6 @@ import Link from './components/Link/Link';
 export function useLinksCreate(Links) {
         let arrLinks = [];
 
-        
-
-
         for (let name of Object.keys(Links)) {
         let L = Links[name];
         let link = 

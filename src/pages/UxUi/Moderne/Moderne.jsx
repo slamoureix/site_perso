@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 import Preview from '../../../components/Preview/Preview';
 import Nav from '../../../components/Navigation/Navigation';
-import CreateImageGrid from '../../../scripts/CreateImageGrid';
+import {CreateImageGrid} from '../../../scripts/CreateImageGrid';
 
 import { default as nameProject } from './data';
 

@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 // datas 
 import {default as nameProject} from './data.js';
 
-import CreateImageGrid from '../../scripts/CreateImageGrid';
+import {CreateImageGrid} from '../../scripts/CreateImageGrid';
 import Nav from '../../components/Navigation/Navigation';
 
 import { useSelector } from 'react-redux';

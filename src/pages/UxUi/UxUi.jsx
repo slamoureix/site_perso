@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 
 // datas 
@@ -26,11 +26,11 @@ export default function UxUi() {
 
     return (
         <article className= {`${nameProject.rep}__project_container`}>
+
             <section className= {`${nameProject.rep}__presentation`}>
                 <div className= {`${nameProject.rep}__title`}><h1>{nameProject.name}</h1></div>
                 <div className={`${nameProject.rep}__type`}><p><strong>{nameProject.type}</strong></p></div>
             </section>
-
 
             <nav>
                 <ul className= {`${nameProject.rep}__links_container`}>{useLinksCreate(UxUiRoutes)}</ul>

@@ -3,6 +3,7 @@ import ModerneData from '../pages/UxUi/Moderne/data';
 import OceanForLifeData from '../pages/UxUi/OceanForLife/data';
 
 
+
 export const UxUiRoutes = {
     UxUi: {
         Modish: {
@@ -28,7 +29,6 @@ export const UxUiRoutes = {
         },
     },
 }
-
 
 export default function RoutesReducer(state = UxUiRoutes) {
     return state;

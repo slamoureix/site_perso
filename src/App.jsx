@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import DocumentTitle from 'react-document-title';
 
 
-import CreateRoutes from './scripts/CreateRoutes';
+import {CreateRoutes} from './scripts/CreateRoutes';
 
 import './App.scss';
 
@@ -12,7 +12,8 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Cursor from './components/Cursor/Cursor';
 
-import {animaLoadHomePage} from '../src/scripts/animLoad';
+// import {animaLoadHomePage} from '../src/scripts/animLoad';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 
 export default function App() {
@@ -39,7 +40,7 @@ export default function App() {
         })
       }
     document.addEventListener('mousemove', setMousePosition);
-    animaLoadHomePage();
+    // animaLoadHomePage();
     return () => {
       document.removeEventListener('mousemove', setMousePosition);
     }
@@ -50,18 +51,24 @@ export default function App() {
   
   return (
   <DocumentTitle title= {Title}>
-    <div>
-      <div className= "circle_transition"/>
+    <Router>
+      <>
+        {/* <div className= "circle_transition"/>  */}
 
         <Cursor Position = {postionCursorState}/>
-          <Router>
+
+            {/* composant qui gère le scroll vers le top */ }
+            <ScrollToTop/>
+
             <Header/>
+
               <Switch>
-              {CreateRoutes(ObjRoutes)}
+                {CreateRoutes(ObjRoutes)}
               </Switch>
+
             <Footer/>
-          </Router>
-    </div>
+      </>
+    </Router>
   </DocumentTitle>
 )
 }

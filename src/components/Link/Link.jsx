@@ -1,19 +1,20 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
+
+import {external, project, underProject} from '../../config.js';
+
 
 import CreatePicture from '../../scripts/CreatePicture';
 
-
 export default function Links(props) {
-
     switch (props.typeofLink) {
-        case 'external':
+        case external:
             return (
             <li>
                 <a href={props.path} target={props.target} className="link">{props.name}</a>
             </li>
         );
-        case 'project':
+        case project:
             return (
             <li className="link__project">
             <div className="link__project_box">
@@ -26,7 +27,7 @@ export default function Links(props) {
             </div>
             </li>
         );
-        case 'underProject':
+        case underProject:
             return (
             <>
             <li className="link__underProject_name">

@@ -1,7 +1,7 @@
 import React from 'react';
 import CreatePicture from './CreatePicture';
 
-export default function CreateImageGrid(datasImgage, repertory) {
+export const CreateImageGrid = (datasImgage, repertory) => {
     let arrayDiv = []
         for (let index = 0; index < datasImgage.length; index++) {
             const element = datasImgage[index];

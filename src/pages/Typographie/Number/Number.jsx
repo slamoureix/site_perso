@@ -6,7 +6,7 @@ import Nav from '../../../components/Navigation/Navigation';
 
 import { default as nameProject } from './data';
 
-import CreateImageGrid from '../../../scripts/CreateImageGrid.js';
+import {CreateImageGrid} from '../../../scripts/CreateImageGrid.js';
 
 import './_Number.scss';
 

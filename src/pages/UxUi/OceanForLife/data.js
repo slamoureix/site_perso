@@ -1,14 +1,15 @@
 import OceanForLife from './OceanForLife';
 import Img from './imgDatas';
+import {underProject, uxUi} from './../../../config';
 
 const OceanForLifeData = {
     "routes": {
         "path": "/OceanForLife",
-        "typeofLink": "underProject",
+        "typeofLink": underProject,
         "component" : OceanForLife
     },
     "name": "Ocean For Life",
-    "type": "Ui - UX",
+    "type": uxUi,
     "content": "Lorem",
     "outils": "Figma",
     "rep": "OceanForLife",

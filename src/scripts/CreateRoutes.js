@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Route } from "react-router";
 
 
-export default function CreateRoutes(ObjRoutesGlobal) {
+export const CreateRoutes = (ObjRoutesGlobal) => {
     
     const [RouteState, setRouteState]= useState([])
 

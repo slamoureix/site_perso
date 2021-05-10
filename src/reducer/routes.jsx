@@ -19,6 +19,9 @@ import TypoData from '../pages/Typographie/data';
 import EditionData from '../pages/Edition/data';
 import UxUiData from '../pages/UxUi/data';
 
+// Config
+import {external} from '../config.js'
+
 /*
     utilisation d'un tableau associatif -> utilisable avec la boucle for... In 
 */
@@ -46,7 +49,7 @@ export const routes = {
             path: 'https://codepen.io/your-work',
             name: 'Lab',
             target: '_blank',
-            typeofLink: 'external'
+            typeofLink: external
         }
     },
     Projects: {
@@ -101,19 +104,19 @@ export const routes = {
             path: 'https://www.instagram.com/slamoureix/?hl=fr',
             name: 'Instagram',
             target: '_blank',
-            typeofLink: 'external'
+            typeofLink: external
         },
         Behance: {
             path: 'https://www.behance.net/cebastiens/projects',
             name: 'Behance',
             target: '_blank',
-            typeofLink: 'external'
+            typeofLink: external
         },
         Linkedin: {
             path: 'https://www.linkedin.com/in/sebastien-lamoureix-2642801a/',
             name: 'Linkedin',
             target: '_blank',
-            typeofLink: 'external'
+            typeofLink: external
         }
     }
 }

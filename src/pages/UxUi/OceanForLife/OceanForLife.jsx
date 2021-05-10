@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
-// import { useSelector } from 'react-redux';
-
-
+import { useSelector } from 'react-redux';
 
 import Preview from '../../../components/Preview/Preview';
-// import Nav from '../../../components/Navigation/Navigation';
-import CreateImageGrid from '../../../scripts/CreateImageGrid';
+import Nav from '../../../components/Navigation/Navigation';
+import {CreateImageGrid} from '../../../scripts/CreateImageGrid';
 
 import { default as nameProject } from './data';
 
@@ -14,9 +12,11 @@ export default function OceanForLife() {
     
         const [DatasImgState] = useState(nameProject.img.content);
 
-    // const TypographieRoutes = useSelector(({AllRoutesReducer}) => ({
-    //     ...AllRoutesReducer.TypographieReducer.Typographie
-    // }));
+    const UxUiRoutes = useSelector(({
+        AllRoutesReducer
+    }) => ({
+        ...AllRoutesReducer.UxUiReducer.UxUi
+    }));
 
     return (
         <article className= {`${nameProject.name}__project_container`}>
@@ -31,7 +31,7 @@ export default function OceanForLife() {
 
             </section>
             <section className= {`${nameProject.name}__grid`}>{CreateImageGrid(DatasImgState, nameProject.rep)}</section>
-            {/* <Nav rep= {nameProject.rep} routes= {TypographieRoutes}/> */}
+            <Nav rep= {nameProject.rep} routes= {UxUiRoutes}/>
         </article>
     )
     
