@@ -5,7 +5,7 @@ import {useLinksCreate} from '../../uselinksCreate';
 
 import Nav from '../../components/Navigation/Navigation';
 // datas 
-import { default as nameProject } from './data.js';
+import { typoData as nameProject } from './data.js';
 
 import './_typography.scss';
 

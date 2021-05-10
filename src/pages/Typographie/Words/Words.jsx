@@ -7,12 +7,10 @@ import {
 
 import Nav from '../../../components/Navigation/Navigation';
 
-import {
-    default as nameProject
-} from './data';
+import {wordsData as nameProject} from './data';
 
 import Preview from '../../../components/Preview/Preview';
-import {CreateImageGrid} from '../../../scripts/CreateImageGrid';
+import CreateImageGrid from '../../../scripts/CreateImageGrid';
 
 export default function Words() {
     const [DatasImgState] = useState(nameProject.img.content);

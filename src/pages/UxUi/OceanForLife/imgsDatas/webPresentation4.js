@@ -7,7 +7,7 @@ import {
 } from '../../../../config';
 
 
-const webPresentation4 = {
+export const webPresentation4 = {
     "src_default": {
         name: "web_presentation4_xxl",
         format: "jpg"
@@ -86,5 +86,3 @@ const webPresentation4 = {
     "alt": "interieur du portfolio"
 
 }
-
-export default webPresentation4

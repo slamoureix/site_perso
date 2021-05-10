@@ -3,7 +3,7 @@ import {
     md
 } from '../../../../config';
 
-const cover = {
+export const cover = {
     "src_default": {
         name: "J5_construire_md",
         format: "jpg"
@@ -25,5 +25,3 @@ const cover = {
     ],
     "alt": "interieur du portfolio"
 }
-
-export default cover;

@@ -3,15 +3,16 @@ import { useSelector } from 'react-redux';
 
 import Preview from '../../../components/Preview/Preview';
 import Nav from '../../../components/Navigation/Navigation';
-import {CreateImageGrid} from '../../../scripts/CreateImageGrid';
-
-import { default as nameProject } from './data';
+import CreateImageGrid from '../../../scripts/CreateImageGrid';
 
 
+
+import { oceanForLifeData as nameProject } from './data';
 export default function OceanForLife() {
     
-        const [DatasImgState] = useState(nameProject.img.content);
+    const [DatasImgState] = useState(nameProject.img.content);
 
+    
     const UxUiRoutes = useSelector(({
         AllRoutesReducer
     }) => ({

@@ -7,7 +7,7 @@ import {
 } from '../../../../config';
 
 
-const cover = {
+export const cover = {
 
     "src_default": {
         name: "Imac_xxl",
@@ -81,5 +81,3 @@ const cover = {
 
     "alt": "Page principale du site internet qui represente un site de mode"
 }
-
-export default cover;

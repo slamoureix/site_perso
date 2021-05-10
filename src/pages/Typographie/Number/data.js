@@ -9,7 +9,7 @@ import {number3} from './imgDatas/number3';
 import {number4} from './imgDatas/number4';
 import {number5} from './imgDatas/number5';
 
-const NumberData = {
+export const numberData = {
     "routes": {
         "path": "/Number",
         "typeofLink": underProject,
@@ -71,5 +71,3 @@ const NumberData = {
         ]
     }
 }
-
-export default NumberData;

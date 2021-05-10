@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 // datas 
-import { default as nameProject } from './data.js';
+import { uxUiData as nameProject } from './data.js';
 
 // SCSS
 

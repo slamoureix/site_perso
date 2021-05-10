@@ -1,33 +1,29 @@
-import Letter from '../pages/Typographie/Letter/Letter';
-import Words from '../pages/Typographie/Words/Words';
-import Numbers from '../pages/Typographie/Number/Number';
-
-import LetterData from '../pages/Typographie/Letter/data';
-import WordsData from '../pages/Typographie/Words/data';
-import NumbersData from '../pages/Typographie/Number/data';
+import {letterData} from '../pages/Typographie/Letter/data';
+import {wordsData} from '../pages/Typographie/Words/data';
+import {numberData} from '../pages/Typographie/Number/data';
 
 export const TypoRoutes = {
     Typographie: {
         Letter: {
-            path: LetterData.routes.path,
-            name: LetterData.name,
-            component: Letter,
-            rep: LetterData.rep,
-            typeofLink: LetterData.routes.typeofLink,
+            path: letterData.routes.path,
+            name: letterData.name,
+            component: letterData.routes.component, 
+            rep: letterData.rep,
+            typeofLink: letterData.routes.typeofLink,
         },
         Words: {
-            path: WordsData.routes.path,
-            name: WordsData.name,
-            component: Words,
-            rep: WordsData.rep,
-            typeofLink: WordsData.routes.typeofLink,
+            path: wordsData.routes.path,
+            name: wordsData.name,
+            rep: wordsData.rep,
+            typeofLink: wordsData.routes.typeofLink,
+            component: wordsData.routes.component,
         },
         Number: {
-            path: NumbersData.routes.path,
-            name: NumbersData.name,
-            component: Numbers,
-            rep: NumbersData.rep,
-            typeofLink: NumbersData.routes.typeofLink,
+            path: numberData.routes.path,
+            name: numberData.name,
+            rep: numberData.rep,
+            typeofLink: numberData.routes.typeofLink,
+            component: numberData.routes.component,
         },
     },
 }

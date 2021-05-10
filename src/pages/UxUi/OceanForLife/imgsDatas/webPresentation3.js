@@ -7,7 +7,7 @@ import {
 } from '../../../../config';
 
 
-const webPresentation3 = {
+export const webPresentation3 = {
     "src_default": {
         name: "web_presentation3_xxl",
         format: "jpg"
@@ -87,4 +87,3 @@ const webPresentation3 = {
 
 }
 
-export default webPresentation3

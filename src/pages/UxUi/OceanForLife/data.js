@@ -1,8 +1,9 @@
 import OceanForLife from './OceanForLife';
-import Img from './imgDatas';
+
+import {img} from './imgDatas';
 import {underProject, uxUi} from './../../../config';
 
-const OceanForLifeData = {
+export const oceanForLifeData = {
     "routes": {
         "path": "/OceanForLife",
         "typeofLink": underProject,
@@ -13,7 +14,6 @@ const OceanForLifeData = {
     "content": "Lorem",
     "outils": "Figma",
     "rep": "OceanForLife",
-    "img": Img
+    "img": img
 }
 
-export default OceanForLifeData;

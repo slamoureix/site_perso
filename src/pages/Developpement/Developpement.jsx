@@ -1,16 +1,23 @@
 import React, {useState} from 'react'
 
 // datas 
-import {default as nameProject} from './data.js';
+import {
+    developpementData as nameProject
+} from './data.js';
 
-import {CreateImageGrid} from '../../scripts/CreateImageGrid';
 import Nav from '../../components/Navigation/Navigation';
 
 import { useSelector } from 'react-redux';
+import { useLinksCreate } from '../../uselinksCreate.jsx';
 
 
 export default function Developement() {
-    const [DatasImgState] = useState(nameProject.img.content);
+
+    const DeveloppementRoutes = useSelector(({
+        AllRoutesReducer
+    }) => ({
+        ...AllRoutesReducer.DeveloppementReducer.Developpement
+    }));
 
     const ProjectsRoutes = useSelector(({AllRoutesReducer}) => ({
         ...AllRoutesReducer.RoutesReducer.Projects
@@ -20,12 +27,11 @@ export default function Developement() {
         <article className= {`${nameProject.rep}__project_container`}>
             <section className= {`${nameProject.rep}__presentation`}>
                 <div className= {`${nameProject.rep}__title`}><h1>{nameProject.name}</h1></div>
-                <div className= {`${nameProject.rep}__year`}><p>{nameProject.year}</p></div>
                 <div className={`${nameProject.rep}__type`}><p><strong>{nameProject.type}</strong></p></div>
-                <div className = {`${nameProject.rep}__content`}>
-                <p>{nameProject.content}</p></div>
             </section>
-            <section className={`${nameProject.rep}__grid`}>{CreateImageGrid(DatasImgState, nameProject.rep)}</section>
+            <nav>
+                <ul className= {`${nameProject.rep}__links_container`}>{useLinksCreate(DeveloppementRoutes)}</ul>
+            </nav>
             <Nav rep = {nameProject.rep} routes = {ProjectsRoutes}/>
         </article>
     )

@@ -1,11 +1,11 @@
-import Cover from './ImgDatas/cover';
-import J5Construire from './ImgDatas/construire'
+import {cover} from './ImgDatas/cover';
+import {construire} from './ImgDatas/construire'
+import {lifeIsLife} from './ImgDatas/lifeIsLife'
 
-const Img = {
-    "cover": Cover,
+export const img = {
+    "cover": cover,
     "content": [
-        J5Construire,
+        construire,
+        lifeIsLife,
     ]
 }
-
-export default Img

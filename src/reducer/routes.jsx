@@ -5,19 +5,16 @@ import Legals from '../pages/Legals/Legals';
 
 import Home from '../pages/Home/Home';
 
-import Typographie from '../pages/Typographie/Typographie';
-import Dev from '../pages/Developpement/Developpement';
-import UxUi from '../pages/UxUi/UxUi';
 import Edition from '../pages/Edition/Edition';
 import Divers from '../pages/Divers/Divers';
 
 // DATAS //
 
-import DevData from '../pages/Developpement/data';
+import {developpementData} from '../pages/Developpement/data';
 import DiversData from '../pages/Divers/data';
-import TypoData from '../pages/Typographie/data';
+import {typoData} from '../pages/Typographie/data';
 import EditionData from '../pages/Edition/data';
-import UxUiData from '../pages/UxUi/data';
+import {uxUiData} from '../pages/UxUi/data';
 
 // Config
 import {external} from '../config.js'
@@ -54,31 +51,31 @@ export const routes = {
     },
     Projects: {
         Developpement: {
-            path: DevData.routes.path,
-            name: DevData.name,
-            type: DevData.type,
-            typeofLink: DevData.routes.typeofLink,
-            rep: DevData.rep,
-            cover: DevData.img.cover,
-            component: Dev,
+            path: developpementData.routes.path,
+            name: developpementData.name,
+            type: developpementData.type,
+            typeofLink: developpementData.routes.typeofLink,
+            rep: developpementData.rep,
+            cover: developpementData.img.cover,
+            component: developpementData.routes.component,
         },
         Typographie: {
-            path: TypoData.routes.path,
-            name: TypoData.name,
-            type: TypoData.type,
-            typeofLink: TypoData.routes.typeofLink,
-            rep: TypoData.rep,
-            cover: TypoData.img.cover,
-            component: Typographie,
+            path: typoData.routes.path,
+            name: typoData.name,
+            type: typoData.type,
+            typeofLink: typoData.routes.typeofLink,
+            rep: typoData.rep,
+            cover: typoData.img.cover,
+            component: typoData.routes.component,
         },
         UiUx: {
-            path: UxUiData.routes.path,
-            name: UxUiData.name,
-            type: UxUiData.type,
-            typeofLink: UxUiData.routes.typeofLink,
-            rep: UxUiData.rep,
-            cover: UxUiData.img.cover,
-            component: UxUi,
+            path: uxUiData.routes.path,
+            name: uxUiData.name,
+            type: uxUiData.type,
+            typeofLink: uxUiData.routes.typeofLink,
+            rep: uxUiData.rep,
+            cover: uxUiData.img.cover,
+            component: uxUiData.routes.component,
         },
         Edition: {
             path: EditionData.routes.path,

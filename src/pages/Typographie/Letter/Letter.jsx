@@ -1,28 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 //component
 import Nav from '../../../components/Navigation/Navigation';
 import Preview from '../../../components/Preview/Preview';
 
-import { default as nameProject } from './data';
+import { letterData as nameProject } from './data';
 
-import {CreateImageGrid} from '../../../scripts/CreateImageGrid.js';
+import CreateImageGrid from '../../../scripts/CreateImageGrid.js';
 
 import './_letter.scss';
 
 
 
 
-function Letter() {
-    
-
-    useEffect(() => {
-        
-
-        
-        
-    }, [])
+export default function Letter() {
     
 
     const [DatasImgState] = useState(nameProject.img.content);
@@ -48,5 +40,3 @@ function Letter() {
         </article>
     )
 }
-
-export default Letter

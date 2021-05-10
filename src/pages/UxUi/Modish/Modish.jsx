@@ -5,9 +5,9 @@ import { useSelector } from 'react-redux';
 
 import Preview from '../../../components/Preview/Preview';
 import Nav from '../../../components/Navigation/Navigation';
-import {CreateImageGrid} from '../../../scripts/CreateImageGrid';
+import CreateImageGrid from '../../../scripts/CreateImageGrid';
 
-import { default as nameProject } from './data';
+import { modishData as nameProject } from './data';
 
 
 export default function Modish() {

@@ -23,3 +23,15 @@ export const divers = "Divers";
 export const webp = "webp";
 export const jpg = "jpg";
 export const gif = "gif";
+
+
+/* Export const vs Export Default */
+
+/*
+export const quand il s'agit d'exporter une seule choses
+import {...} from './...'
+
+export default -> quand tu exportes une fonctionnalités plus complexe
+import .... from './...'
+
+*/

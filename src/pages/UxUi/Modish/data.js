@@ -1,11 +1,11 @@
 import Modish from './Modish';
-import Img from './imgDatas';
+import {img }from './imgDatas';
 import {
     underProject,
     uxUi
 } from './../../../config';
 
-const ModishData = {
+export const modishData = {
     "routes": {
         "path": "/Modish",
         "typeofLink": underProject,
@@ -16,7 +16,5 @@ const ModishData = {
     "content": "Lorem",
     "outils": "Figma",
     "rep": "Modish",
-    "img": Img
+    "img": img
 }
-
-export default ModishData;

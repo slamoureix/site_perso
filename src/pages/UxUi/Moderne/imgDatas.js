@@ -1,20 +1,18 @@
-import Cover from './ImgsDatas/cover';
-import WebPresentation from './ImgsDatas/webPresentation';
-import WebPresentation2 from './ImgsDatas/webPresentation2';
-import WebPresentation3 from './ImgsDatas/webPresentation3';
-import WebPresentation4 from './ImgsDatas/webPresentation4';
-import ColorAndFont from './ImgsDatas/colorAndFont';
+import {cover} from './ImgsDatas/cover';
+import {webPresentation} from './ImgsDatas/webPresentation';
+import {webPresentation2} from './ImgsDatas/webPresentation2';
+import {webPresentation3} from './ImgsDatas/webPresentation3';
+import {webPresentation4} from './ImgsDatas/webPresentation4';
+import {colorAndFont} from './ImgsDatas/colorAndFont';
 
 
-const Img = {
-    "cover": Cover,
+export const img = {
+    "cover": cover,
     "content": [
-        ColorAndFont,
-        WebPresentation,
-        WebPresentation2,
-        WebPresentation3,
-        WebPresentation4,
+        colorAndFont,
+        webPresentation,
+        webPresentation2,
+        webPresentation3,
+        webPresentation4,
     ]
 }
-
-export default Img

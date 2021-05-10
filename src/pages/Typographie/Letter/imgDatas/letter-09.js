@@ -13,7 +13,7 @@ const name = 'letter-09';
 export const letter09 = {
     "src_default": {
         name: `${name}_xxl`,
-        format: jpg
+        format: webp
     },
     "sources": [{
             "src": {

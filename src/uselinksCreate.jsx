@@ -4,6 +4,8 @@ import Link from './components/Link/Link';
 export function useLinksCreate(Links) {
         let arrLinks = [];
 
+        
+
         for (let name of Object.keys(Links)) {
         let L = Links[name];
         let link = 
@@ -24,3 +26,17 @@ export function useLinksCreate(Links) {
         
         return arrLinks
 }
+
+
+/*
+var el = document.getElementById("t");
+el.addEventListener("click", avoidNSError, false); //Firefox
+
+function avoidNSError() {
+        ElementInterval = setInterval(function () {
+                /* Tracking or other request code goes here */
+               /*clearInterval(ElementInterval);
+        }, 0);
+
+};*/
+

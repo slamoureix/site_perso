@@ -30,7 +30,7 @@ export default function CyrilJournet() {
                 <div className = {`${nameProject.rep}__content`}>
                 <p>{nameProject.content}</p></div>
             </section>
-            <section className={`${nameProject.rep}__grid`}>{CreateImageGrid(DatasImgState, nameProject.rep)}</section>
+            {/* <section className={`${nameProject.rep}__grid`}>{CreateImageGrid(DatasImgState, nameProject.rep)}</section> */}
             <Nav rep= {nameProject.rep} routes= {ProjectsRoutes}/>
         </article>
     )

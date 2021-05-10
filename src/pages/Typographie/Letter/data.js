@@ -15,7 +15,7 @@ import {letter08} from './imgDatas/letter-08';
 import {letter09} from './imgDatas/letter-09';
 import {letter10} from './imgDatas/letter-10';
 
-const Letter_data = {
+export const letterData = {
     "routes": {
         "path": "/Letter",
         "typeofLink": underProject,
@@ -84,5 +84,3 @@ const Letter_data = {
         ]
     }
 }
-
-export default Letter_data;

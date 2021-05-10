@@ -1,14 +1,13 @@
-import {
-    project,
-    typographie
-} from './../../config';
+import {project, typographie } from './../../config'
 
 import cover from './imgDatas/cover'
+import Typographie from './Typographie'
 
-const Typo_data = {
+export const typoData = {
     routes: {
         path: "/Typographie",
-        typeofLink: project
+        typeofLink: project,
+        component: Typographie
     },
     name: "Typographie",
     type: typographie,
@@ -18,5 +17,3 @@ const Typo_data = {
         cover: cover,
     }
 }
-
-export default Typo_data;

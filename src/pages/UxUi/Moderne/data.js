@@ -1,11 +1,11 @@
 import Moderne from './Moderne';
-import Img from './imgDatas';
+import {img} from './imgDatas';
 import {
     underProject,
     uxUi
 } from './../../../config';
 
-const ModerneData = {
+export const moderneData = {
     "routes": {
         "path": "/Moderne",
         "typeofLink": underProject,
@@ -16,7 +16,5 @@ const ModerneData = {
     "content": "Lorem",
     "outils": "Figma",
     "rep": "Moderne",
-    "img": Img
+    "img": img
 }
-
-export default ModerneData;

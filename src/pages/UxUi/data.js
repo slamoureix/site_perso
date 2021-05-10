@@ -1,16 +1,18 @@
 import {project, webdesign} from '../../config';
+import UxUi from './UxUi';
 
-const UxUiData = {
+export const uxUiData = {
     "routes": {
-        "path": "/UxUi",
-        "typeofLink": project
+        path: "/UxUi",
+        typeofLink: project,
+        component: UxUi,
     },
-    "name": "UX - UI",
-    "type": webdesign,
-    "content": "lorem",
-    "rep": "UxUi",
+    name: "UX - UI",
+    type: webdesign,
+    content: "lorem",
+    rep: "UxUi",
 
-    "img": {
+    img: {
         "rep": "UxUi",
         "cover": {
             "src_default": {
@@ -36,26 +38,24 @@ const UxUiData = {
                         name: "interieur_6621_lg",
                         format: "webp"
                     },
-                    "media": "(min-width 769px) and (max-width: 1024px)"
+                    "media": "(min-width: 769px) and (max-width: 1024px)"
                 },
                 {
                     "src": {
                         name: "interieur_6621_xl",
                         format: "webp"
                     },
-                    "media": "(min-width 1025px) and (max-width: 1280px)"
+                    "media": "(min-width: 1025px) and (max-width: 1280px)"
                 },
                 {
                     "src": {
                         name: "interieur_6621_xxl",
                         format: "webp"
                     },
-                    "media": "(min-width 1281px)"
+                    "media": "(min-width: 1281px)"
                 }
             ],
             "alt": "interieur du portfolio"
         }
     }
 }
-
-export default UxUiData;

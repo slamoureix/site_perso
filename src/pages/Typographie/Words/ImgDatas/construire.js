@@ -1,27 +1,43 @@
 import {
     xs,
-    md
+    md,
+    webp,
+    jpg
 } from '../../../../config';
 
-const J5Construire = {
+export const construire = {
     "src_default": {
         name: "J5_construire_md",
-        format: "jpg"
+        format: webp
     },
     "sources": [{
         "src": {
             name: "J5_construire_xs",
-            format: "webp"
+            format: webp
         },
         "media": xs
     }, {
         "src": {
             name: "J5_construire_md",
-            format: "webp"
+            format: webp
+        },
+        "media": md
+    }, 
+    
+    // jpeg //
+    
+    {
+        "src": {
+            name: "J5_construire_xs",
+            format: jpg
+        },
+        "media": xs
+    }, {
+        "src": {
+            name: "J5_construire_md",
+            format: jpg
         },
         "media": md
     }, ],
     "alt": "interieur du portfolio"
 }
-
-export default J5Construire

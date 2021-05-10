@@ -1,23 +1,20 @@
-import OceanForLife from './OceanForLife';
-import Img from './imgDatas';
-import {
-    underProject,
-    uxUi
-} from './../../../config';
+import YourLookIsGood from './YourLookIsGood';
+import {img} from './imgDatas';
 
-const OceanForLifeData = {
+import {underProject, developement} from './../../../config';
+
+export const yourLookIsGoodData = {
     "routes": {
-        "path": "/OceanForLife",
+        "path": "/YourLookIsGood",
         "typeofLink": underProject,
-        "component": OceanForLife
+        "component": YourLookIsGood
     },
-    "name": "Ocean For Life",
-    "type": uxUi,
+    "name": "Your Look Is Good",
+    "type": developement,
     "content": "Conception d’ un back office sous Wordpress et réalisation de l’ intégration et les animations.",
     "techno": "HTML CSS préprocesseur SASS, GSAP, Scrollmagic SimpleParallax PhP Wordpress ACF",
     "outils": "Figma",
-    "rep": "OceanForLife",
-    "img": Img
+    "rep": "YourLookIsGood",
+    "img": img
 }
 
-export default OceanForLifeData;

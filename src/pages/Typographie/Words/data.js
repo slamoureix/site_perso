@@ -1,21 +1,18 @@
 import Words from './Words';
-import Img from './imgDatas';
+import {img} from './imgDatas';
 
 import {underProject, typographie } from '../../../config';
 
-const WordsData = {
-    "routes": {
-        "path": "/Words",
-        "typeofLink": underProject,
-        "component": Words
+export const wordsData = {
+    routes: {
+        path: "/Words",
+        typeofLink: underProject,
+        component: Words
     },
-    "name": "Words",
-    "type": typographie,
-    "content": "",
-    "outils": "",
-    "rep": "Words",
-    "img": Img
+    name: "Words",
+    type: typographie,
+    content: "",
+    outils: "",
+    rep: "Words",
+    img: img
 }
-
-
-export default WordsData;

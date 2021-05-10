@@ -1,11 +1,17 @@
-const DeveloppementData = {
+import {project} from '../../config';
+
+
+import Developpement from './Developpement';
+
+
+export const developpementData = {
     "routes": {
         "path": "/Developpement",
-        "typeofLink": "project"
+        "typeofLink": project,
+        component : Developpement
     },
     "name": "Développement",
-    "type": "développement",
-    "year": "2020",
+    "type": "Front-End && Back-End",
     "format": "",
     "content": "lorem",
     "photographies": "",
@@ -318,4 +324,3 @@ const DeveloppementData = {
     }
 }
 
-export default DeveloppementData;

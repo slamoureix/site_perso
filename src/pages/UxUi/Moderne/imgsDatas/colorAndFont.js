@@ -2,7 +2,7 @@ import {
     All
 } from '../../../../config';
 
-const colorAndFont = {
+export const colorAndFont = {
     "src_default": {
         name: "colorAndFont",
         format: "jpg"
@@ -16,5 +16,3 @@ const colorAndFont = {
     }, ],
     "alt": "interieur du portfolio"
 }
-
-export default colorAndFont;

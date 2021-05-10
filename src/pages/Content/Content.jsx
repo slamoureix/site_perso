@@ -21,7 +21,7 @@ export default function Content() {
     const [LocalState] = useState(InitialState);
 
     // useAnimHomePage(LocalState, content);
-    const Links = useLinksCreate(Projects);
+    // const Links = ;
     
 
     useEffect(() => {
@@ -50,7 +50,9 @@ export default function Content() {
     return (
         <div className="project_container">
             <ul ref= {content} className = "project" >
-            {Links}
+            {
+                useLinksCreate(Projects)
+            }
             </ul>
         </div>
     )

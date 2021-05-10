@@ -1,14 +1,19 @@
 import React, {useEffect, useRef} from 'react';
+import useMoussePosition from '../../useMoussePosition';
+
 
 import './_Cursor.scss';
 
-export default function Cursor({Position}) {
-    let cursorRef = useRef();
-    let pageX = Position.pageX;
-    let pageY = Position.pageY;
+
+export default function Cursor() {
+
+    const {pageX, pageY} = useMoussePosition();
+    
+    const cursorRef = useRef();
+    
 
     useEffect(() => {
-        cursorRef.current.setAttribute('style', `top: ${pageY - 12.5}px; left:${pageX - 12.5}px;`);
+        cursorRef.current.setAttribute('style', `top: ${pageY - 15}px; left:${pageX - 15}px;`);
     }, [pageX, pageY])
 
     return (

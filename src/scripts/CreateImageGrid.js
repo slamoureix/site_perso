@@ -1,10 +1,10 @@
 import React from 'react';
 import CreatePicture from './CreatePicture';
 
-export const CreateImageGrid = (datasImgage, repertory) => {
+const CreateImageGrid = (datasImage, repertory) => {
     let arrayDiv = []
-        for (let index = 0; index < datasImgage.length; index++) {
-            const element = datasImgage[index];
+        for (let index = 0; index < datasImage.length; index++) {
+            const element = datasImage[index];
             let div = <div key={index} className={`${repertory}__item-${index}`}> 
             {CreatePicture(repertory, element.src_default, element.sources, element.alt)}
             </div>
@@ -12,3 +12,5 @@ export const CreateImageGrid = (datasImgage, repertory) => {
         }
     return arrayDiv;
 }
+
+export default CreateImageGrid;

@@ -1,18 +1,16 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 
-
-
 import Preview from '../../../components/Preview/Preview';
 import Nav from '../../../components/Navigation/Navigation';
-import {CreateImageGrid} from '../../../scripts/CreateImageGrid';
+import CreateImageGrid from '../../../scripts/CreateImageGrid';
 
-import { default as nameProject } from './data';
+import { moderneData as nameProject } from './data';
 
+// const CreateImageGrid = React.lazy(() => import('../../../scripts/CreateImageGrid'));
 
 export default function Moderne() {
 
-    const CreateGrid = React.lazy(() => import('../../../scripts/CreateImageGrid'))
     
     const [DatasImgState] = useState(nameProject.img.content);
 
@@ -32,7 +30,7 @@ export default function Moderne() {
                 </div>
 
             </section>
-            <section className= {`${nameProject.name}__grid`}>{CreateGrid(DatasImgState, nameProject.rep)}</section>
+            <section className= {`${nameProject.name}__grid`}>{CreateImageGrid(DatasImgState, nameProject.rep)}</section>
             <Nav rep= {nameProject.rep} routes= {UxUiRoutes}/>
         </article>
     )

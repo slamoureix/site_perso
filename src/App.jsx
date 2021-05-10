@@ -16,35 +16,15 @@ import Cursor from './components/Cursor/Cursor';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 
+
 export default function App() {
-  const Title = 'Sebastien Lamoureix Designer && Développeur Front-End';
-  
-  const PositionCursor = {
-    pageY : 0,
-    pageX : 0
-  };
-  const [postionCursorState, setPostionCursor] = useState(PositionCursor);
+  const Title = 'Sebastien Lamoureix Designer && Développeur Front-End'
+  const ObjRoutes = useSelector(({AllRoutesReducer}) => ({...AllRoutesReducer}))
 
-  const ObjRoutes = useSelector(({AllRoutesReducer}) => ({...AllRoutesReducer}));
+  // useEffect(() => {
+  //   // animaLoadHomePage();
 
-  useEffect(() => {
-      const setMousePosition = (e, positionCursorState) => {
-        e.preventDefault();
-        
-        setPostionCursor(() => {
-          return {
-            ...positionCursorState,
-            pageY: e.pageY,
-            pageX: e.pageX
-          }
-        })
-      }
-    document.addEventListener('mousemove', setMousePosition);
-    // animaLoadHomePage();
-    return () => {
-      document.removeEventListener('mousemove', setMousePosition);
-    }
-  }, []);
+  // }, []);
 
 
   
@@ -53,18 +33,18 @@ export default function App() {
   <DocumentTitle title= {Title}>
     <Router>
       <>
+        {/* composant qui gère le scroll vers le top */ }
+        <Cursor/> 
+        <ScrollToTop/>
+
         {/* <div className= "circle_transition"/>  */}
-
-        <Cursor Position = {postionCursorState}/>
-
-            {/* composant qui gère le scroll vers le top */ }
-            <ScrollToTop/>
-
+        
+        
             <Header/>
-
               <Switch>
                 {CreateRoutes(ObjRoutes)}
               </Switch>
+              
 
             <Footer/>
       </>

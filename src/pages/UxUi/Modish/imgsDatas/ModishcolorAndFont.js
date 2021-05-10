@@ -2,7 +2,7 @@ import {
     All
 } from '../../../../config';
 
-const ModishcolorAndFont = {
+export const modishcolorAndFont = {
     "src_default": {
         name: "ModishcolorAndFont",
         format: "jpg"
@@ -16,5 +16,3 @@ const ModishcolorAndFont = {
     }, ],
     "alt": "interieur du portfolio"
 }
-
-export default ModishcolorAndFont;

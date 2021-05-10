@@ -8,7 +8,7 @@ import { default as nameProject } from './data.js';
 import './_Edition.scss';
 
 //Scripts
-import {CreateImageGrid} from '../../scripts/CreateImageGrid';
+import CreateImageGrid from '../../scripts/CreateImageGrid';
 
 //Components
 import Nav from '../../components/Navigation/Navigation';

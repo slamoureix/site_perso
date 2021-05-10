@@ -1,31 +1,29 @@
-import ModishData from '../pages/UxUi/Modish/data';
-import ModerneData from '../pages/UxUi/Moderne/data';
-import OceanForLifeData from '../pages/UxUi/OceanForLife/data';
-
-
+import {modishData} from '../pages/UxUi/Modish/data';
+import {moderneData} from '../pages/UxUi/Moderne/data';
+import {oceanForLifeData} from '../pages/UxUi/OceanForLife/data';
 
 export const UxUiRoutes = {
     UxUi: {
         Modish: {
-            path: ModishData.routes.path,
-            name: ModishData.name,
-            component: ModishData.routes.component,
-            rep: ModishData.rep,
-            typeofLink: ModishData.routes.typeofLink,
+            path: modishData.routes.path,
+            name: modishData.name,
+            component: modishData.routes.component,
+            rep: modishData.rep,
+            typeofLink: modishData.routes.typeofLink,
         },
         Moderne: {
-            path: ModerneData.routes.path,
-            name: ModerneData.name,
-            component: ModerneData.routes.component,
-            rep: ModerneData.rep,
-            typeofLink: ModerneData.routes.typeofLink,
+            path: moderneData.routes.path,
+            name: moderneData.name,
+            component: moderneData.routes.component,
+            rep: moderneData.rep,
+            typeofLink: moderneData.routes.typeofLink,
         },
         OceanForLife: {
-            path: OceanForLifeData.routes.path,
-            name: OceanForLifeData.name,
-            component: OceanForLifeData.routes.component,
-            rep: OceanForLifeData.rep,
-            typeofLink: OceanForLifeData.routes.typeofLink,
+            path: oceanForLifeData.routes.path,
+            name: oceanForLifeData.name,
+            component: oceanForLifeData.routes.component,
+            rep: oceanForLifeData.rep,
+            typeofLink: oceanForLifeData.routes.typeofLink,
         },
     },
 }
