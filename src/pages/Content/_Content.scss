@@ -1,4 +1,5 @@
-@use '../../scss/abstracts/'as *;
+@use '../../scss/abstracts/variables' as *;
+@use '../../scss/abstracts/mixins' as *;
 
 $coeff: 10vw; // 13 rem // 9.028vw
 $numOfelement : 5;

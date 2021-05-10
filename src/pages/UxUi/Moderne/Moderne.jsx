@@ -11,8 +11,10 @@ import { default as nameProject } from './data';
 
 
 export default function Moderne() {
+
+    const CreateGrid = React.lazy(() => import('../../../scripts/CreateImageGrid'))
     
-        const [DatasImgState] = useState(nameProject.img.content);
+    const [DatasImgState] = useState(nameProject.img.content);
 
     const UxUiRoutes = useSelector(({AllRoutesReducer}) => ({
         ...AllRoutesReducer.UxUiReducer.UxUi
@@ -30,7 +32,7 @@ export default function Moderne() {
                 </div>
 
             </section>
-            <section className= {`${nameProject.name}__grid`}>{CreateImageGrid(DatasImgState, nameProject.rep)}</section>
+            <section className= {`${nameProject.name}__grid`}>{CreateGrid(DatasImgState, nameProject.rep)}</section>
             <Nav rep= {nameProject.rep} routes= {UxUiRoutes}/>
         </article>
     )

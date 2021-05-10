@@ -41,7 +41,7 @@ export default function Navigation(props) {
                 })
             }
         }
-    }, [])
+    }, [props.rep, props.routes])
         
     return (
         <nav className={`${props.rep}__navigation`}>

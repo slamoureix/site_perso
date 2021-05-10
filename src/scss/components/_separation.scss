@@ -13,5 +13,4 @@
     ) {
         margin: clamp(#{$m_min}, #{$m_middle}, #{$m_max}) 0;
         @include filet(clamp(#{$f_min}, #{$f_middle}, #{$f_max}), #{$f_height}, #{$Color});
-
 }

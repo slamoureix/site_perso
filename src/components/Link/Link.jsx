@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import {Link} from 'react-router-dom';
 
 import {external, project, underProject} from '../../config.js';
@@ -7,18 +7,27 @@ import {external, project, underProject} from '../../config.js';
 import CreatePicture from '../../scripts/CreatePicture';
 
 export default function Links(props) {
+
+    const ref = useRef()
+
+    
+
+
     switch (props.typeofLink) {
         case external:
             return (
             <li>
-                <a href={props.path} target={props.target} className="link">{props.name}</a>
+                <a ref={ref} href={props.path} target={props.target} className="link">{props.name}</a>
             </li>
         );
         case project:
             return (
             <li className="link__project">
             <div className="link__project_box">
-            <Link to={props.path} replace>
+            <Link 
+            ref = {ref}
+            to = {props.path}
+            replace >
                 <span className="link link__project_name">{props.name}</span>
                 <div className ="link link__project_cover" >
                 {CreatePicture(props.rep, props.cover.src_default, props.cover.sources, props.cover.alt)}
@@ -31,7 +40,7 @@ export default function Links(props) {
             return (
             <>
             <li className="link__underProject_name">
-            <Link to={props.path} replace>
+            <Link ref={ref} to={props.path} replace>
                 <span className = "link link__underProject"> { props.name} </span>
             </Link>
             </li>
@@ -41,8 +50,9 @@ export default function Links(props) {
         default:
             return (
             <li>
-                <Link className="link" to={props.path} replace>{props.name}</Link>
+                <Link ref={ref} className="link" to={props.path} replace>{props.name}</Link>
             </li>
         );
     }
 }
+

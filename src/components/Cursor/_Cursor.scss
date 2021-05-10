@@ -1,4 +1,5 @@
-@use '../../scss/abstracts/'as *;
+@use '../../scss/abstracts/variables' as *;
+@use '../../scss/abstracts/anim' as *;
 
 .cursor{
     position: absolute;
