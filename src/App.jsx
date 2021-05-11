@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {BrowserRouter as Router, Switch} from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import DocumentTitle from 'react-document-title';
@@ -33,19 +33,15 @@ export default function App() {
   <DocumentTitle title= {Title}>
     <Router>
       <>
-        {/* composant qui gère le scroll vers le top */ }
         <Cursor/> 
+        {/* composant qui gère le scroll vers le top */ }
         <ScrollToTop/>
 
         {/* <div className= "circle_transition"/>  */}
-        
-        
             <Header/>
               <Switch>
                 {CreateRoutes(ObjRoutes)}
               </Switch>
-              
-
             <Footer/>
       </>
     </Router>

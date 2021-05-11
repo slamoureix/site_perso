@@ -52,6 +52,7 @@ export default function CreatePicture(rep, src_default, sources, alt) {
         <picture>
                 {temporaryImportSources ? (DataSourceState ? DataSourceState.map(s => <source key={uuid.v4()} srcSet={s.srcset} media={s.media} />) : null ) : null}
                 <img ref={ref} className="img" loading="lazy" src={SrcState} alt= {alt}  />
+                {console.log('create')}
         </picture>
     )
 }

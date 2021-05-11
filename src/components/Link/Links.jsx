@@ -1,38 +1,39 @@
-import React, { useEffect, useRef } from 'react';
-import {Link} from 'react-router-dom';
+import React, { forwardRef } from 'react';
+import {NavLink} from 'react-router-dom';
 
 import {external, project, underProject} from '../../config.js';
 
 
 import CreatePicture from '../../scripts/CreatePicture';
 
+
+const externalLink = forwardRef((props, ref) => (
+<a ref={ref} href={props.props.path} target={props.props.target} className="link">{props.props.name}</a>))
+
 export default function Links(props) {
 
-    const ref = useRef()
-
-    
-
-
     switch (props.typeofLink) {
+        
         case external:
             return (
             <li>
-                <a ref={ref} href={props.path} target={props.target} className="link">{props.name}</a>
+                <NavLink to="/" props={props} component={externalLink} replace />
             </li>
         );
         case project:
             return (
             <li className="link__project">
             <div className="link__project_box">
-            <Link 
-            ref = {ref}
+            <NavLink 
+            target = {props.target}
             to = {props.path}
-            replace >
+            replace // replace current entry in the history stack
+            >
                 <span className="link link__project_name">{props.name}</span>
                 <div className ="link link__project_cover" >
                 {CreatePicture(props.rep, props.cover.src_default, props.cover.sources, props.cover.alt)}
                 </div>
-            </Link>
+            </NavLink>
             </div>
             </li>
         );
@@ -40,9 +41,12 @@ export default function Links(props) {
             return (
             <>
             <li className="link__underProject_name">
-            <Link ref={ref} to={props.path} replace>
+            <NavLink 
+            target = {props.target}
+            to={props.path}
+            replace >
                 <span className = "link link__underProject"> { props.name} </span>
-            </Link>
+            </NavLink>
             </li>
             <span className="separation"></span>
             </>
@@ -50,7 +54,10 @@ export default function Links(props) {
         default:
             return (
             <li>
-                <Link ref={ref} className="link" to={props.path} replace>{props.name}</Link>
+                <NavLink activeClassName="link__current" className="link" 
+                target = {props.target}
+                to={props.path}
+                replace >{props.name}</NavLink>
             </li>
         );
     }

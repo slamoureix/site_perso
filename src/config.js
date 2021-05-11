@@ -10,6 +10,7 @@ export const All = "(min-width: 0px)";
 export const external = "external";
 export const project = "project";
 export const underProject = "underProject";
+export const anchor = "anchor";
 
 // Types de projets
 export const developement = "Developement";

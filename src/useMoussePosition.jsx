@@ -12,8 +12,11 @@ export default function useMoussePosition_2() {
     
         useEffect(() => {
             document.addEventListener("mousemove", updatePosition, false)
+            document.addEventListener("mouseenter", updatePosition, false)
+            
             return () => {
                 document.removeEventListener("mousemove", updatePosition, false)
+                document.removeEventListener("mouseenter", updatePosition, false)
             }
         }, [])
 

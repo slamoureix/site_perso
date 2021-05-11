@@ -5,8 +5,8 @@ import Arrow from '../Navigation/Arrow';
 
 export default function Navigation(props) {
     const [navState, setNavState] = useState({
-            last: '', 
-            next: ''
+            last: '/', 
+            next: '/'
         });
 
     useEffect(() => {
@@ -32,7 +32,7 @@ export default function Navigation(props) {
                     }
                 }
 
-                setNavState(() => {
+                setNavState(navState => {
                     return {
                         ...navState,
                         last: last(index, props.routes),
@@ -41,17 +41,17 @@ export default function Navigation(props) {
                 })
             }
         }
-    }, [props.rep, props.routes])
+    }, [])
         
     return (
         <nav className={`${props.rep}__navigation`}>
-            
-                    <Link className= "last" to = {navState.last.path} replace>
+                    {console.log('nav mise à jour')}
+                    <Link className= "last" to={navState.last.path} replace>
                     <Arrow className="last" />
                     <p>{navState.last.name}</p>
                     </Link>
             
-                    <Link className= "next" to = {navState.next.path} replace>
+                    <Link className= "next" to={navState.next.path} replace>
                     <p>{navState.next.name}</p>
                     <Arrow className="next"/>
                     </Link>

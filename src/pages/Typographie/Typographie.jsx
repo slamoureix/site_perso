@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import {useSelector} from 'react-redux';
 import {useLinksCreate} from '../../uselinksCreate';
 
@@ -19,6 +19,8 @@ export default function Typographie() {
     const ProjectsRoutes = useSelector(({AllRoutesReducer}) => ({
         ...AllRoutesReducer.RoutesReducer.Projects
     }));
+
+    
 
     return (
         <article className= {`${nameProject.rep}__project_container`}>

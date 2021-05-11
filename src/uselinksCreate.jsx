@@ -1,22 +1,24 @@
 import React from 'react';
-import Link from './components/Link/Link';
 
-export function useLinksCreate(Links) {
-        let arrLinks = [];
+import Links from './components/Link/Links';
 
+export function useLinksCreate(ArrLinks) {
+        let arrLinks = []
         
+        for (let name of Object.keys(ArrLinks)) {
+        let L = ArrLinks[name];
 
-        for (let name of Object.keys(Links)) {
-        let L = Links[name];
         let link = 
-        <Link 
+        <Links 
+
         key = {L.name}
-        exact path={L.path} 
+        path={L.path} 
         name={L.name} 
         type={L.type}
         typeofLink = {L.typeofLink}
 
         target={L.target} 
+        anchor={L.anchor} 
 
         rep={L.rep}
         cover={L.cover}

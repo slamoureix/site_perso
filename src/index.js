@@ -14,6 +14,7 @@ import RoutesReducer from './reducer/routes';
 import TypographieReducer from './reducer/typographie';
 import UxUiReducer from './reducer/uxui';
 import DeveloppementReducer from './reducer/developpement';
+
 //dernier reducer à être intégré dans les routes globales.
 import AdminReducer from './reducer/admin';
 

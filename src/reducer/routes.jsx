@@ -17,7 +17,8 @@ import EditionData from '../pages/Edition/data';
 import {uxUiData} from '../pages/UxUi/data';
 
 // Config
-import {external} from '../config.js'
+import {anchor, external} from '../config.js'
+import Content from '../pages/Content/Content';
 
 /*
     utilisation d'un tableau associatif -> utilisable avec la boucle for... In 
@@ -29,6 +30,7 @@ export const routes = {
             path: '/',
             name: 'home',
             component: Home,
+            target: '_self',
         },
     },
     Nav: {
@@ -36,11 +38,13 @@ export const routes = {
             path: '/Legals',
             name: 'Mentions Légales',
             component: Legals,
+            target: '_self',
         },
         Contact: {
             path: '/Contact',
             name: 'Contact',
             component: Contact,
+            target: '_self',
         },
         Lab: {
             path: 'https://codepen.io/your-work',
@@ -58,6 +62,7 @@ export const routes = {
             rep: developpementData.rep,
             cover: developpementData.img.cover,
             component: developpementData.routes.component,
+            target: '_self',
         },
         Typographie: {
             path: typoData.routes.path,
@@ -67,6 +72,7 @@ export const routes = {
             rep: typoData.rep,
             cover: typoData.img.cover,
             component: typoData.routes.component,
+            target: '_self',
         },
         UiUx: {
             path: uxUiData.routes.path,
@@ -76,6 +82,7 @@ export const routes = {
             rep: uxUiData.rep,
             cover: uxUiData.img.cover,
             component: uxUiData.routes.component,
+            target: '_self',
         },
         Edition: {
             path: EditionData.routes.path,
@@ -85,6 +92,7 @@ export const routes = {
             rep: EditionData.rep,
             cover: EditionData.img.cover,
             component: Edition,
+            target: '_self',
         },
         Divers: {
             path: DiversData.routes.path,
@@ -94,6 +102,7 @@ export const routes = {
             rep: DiversData.rep,
             cover: DiversData.img.cover,
             component: Divers,
+            target: '_self',
         }
     },
     Social: {
@@ -121,3 +130,12 @@ export const routes = {
 export default function RoutesReducer(state = routes) {
     return state;
 }
+
+// Projets: {
+//     path: '/',
+//     anchor: '#projet',
+//     name: 'Mes projets',
+//     component: Content,
+//     target: '_self',
+//     typeofLink: anchor
+// },

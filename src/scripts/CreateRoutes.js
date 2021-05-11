@@ -1,4 +1,4 @@
-import { lazy, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Route } from "react-router";
 
 
@@ -14,6 +14,7 @@ export const CreateRoutes = (ObjRoutesGlobal) => {
                     let oneRoute = Routes[route];
                         for (let name of Object.keys(oneRoute)){
                             let r = oneRoute[name];
+                            // exact permet de matcher avec le string exact
                             let jsxRoute = <Route key={r.path} exact path={r.path} component= {r.component} />
                             ArrRoutes.push(jsxRoute);
                         }

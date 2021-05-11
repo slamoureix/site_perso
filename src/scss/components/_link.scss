@@ -4,6 +4,13 @@
     position: relative;
     animation-delay: .2s;
     margin-bottom: 0.25rem;
+
+    &__current {
+        padding: 0px 0px 5px 15px;
+        transform-origin: right;
+        border-bottom: 4px solid $C_E84E32;
+        transition: all .3s $ease-material;
+    }
 }
 
 .link::after {

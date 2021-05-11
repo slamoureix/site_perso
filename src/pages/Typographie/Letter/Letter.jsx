@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState } from 'react';
 import { useSelector } from 'react-redux';
 
 //component
@@ -22,6 +22,7 @@ export default function Letter() {
     const TypographieRoutes = useSelector(({AllRoutesReducer}) => ({
         ...AllRoutesReducer.TypographieReducer.Typographie
     }));
+    
 
     return (
         <article className= {`${nameProject.name}__project_container`}>

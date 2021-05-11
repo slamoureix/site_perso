@@ -6,6 +6,8 @@ import { useAnimHomePage } from '../../useAnimHomePage';
 import { useLinksCreate } from '../../uselinksCreate';
 
 export default function Content() {
+    
+
     const Projects = useSelector(state => ({
         ...state.AllRoutesReducer.RoutesReducer.Projects
     }));
@@ -48,7 +50,7 @@ export default function Content() {
     }, [])
 
     return (
-        <div className="project_container">
+        <div id="projet" className="project_container">
             <ul ref= {content} className = "project" >
             {
                 useLinksCreate(Projects)
