@@ -1,11 +1,6 @@
 @use '../../scss/abstracts/mixins'as *;
 
-.Typographie{
-    &__presentation &__title{
-            @extend .col-xxl-2, .col-xl-2, .col-lg-2,
-            .col-xxl-offset-0;
-        }
-}
+
 
 // pour le responsive sm/lg
 // [class*=NUMBER__item]:nth-of-type(odd) {

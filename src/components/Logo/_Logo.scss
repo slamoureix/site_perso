@@ -6,11 +6,7 @@
 .box_logo{
     width: 100%;
 
-    @include media-breakpoint-between(lg, xl) {
-        width: $col-left;
-    }
-
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
         width: $col-left;
     }
 
@@ -21,8 +17,8 @@
 
     svg {
         transform: rotate(-45deg);
-        height: 9.4rem;
-        width: 9.4rem;
+        height: 9rem;
+        width: 9rem;
         fill: $C_E84E32;
         margin-bottom: 30px;
     }
@@ -50,6 +46,9 @@
     .name {
         text-transform: uppercase;
         text-align: center;
+        h1{
+            font-size: 2rem;
+        }
         
         @include media-breakpoint-down(lg) {
             margin-top: 15px;

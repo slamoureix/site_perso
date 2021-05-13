@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 import Preview from '../../../components/Preview/Preview';
 import Nav from '../../../components/Navigation/Navigation';
-import CreateImageGrid from '../../../scripts/CreateImageGrid';
+import useCreateImageGrid from '../../../useCreateImageGrid';
 
 
 
@@ -31,7 +31,7 @@ export default function OceanForLife() {
                 </div>
 
             </section>
-            <section className= {`${nameProject.name}__grid`}>{CreateImageGrid(DatasImgState, nameProject.rep)}</section>
+            <section className= {`${nameProject.name}__grid`}>{useCreateImageGrid(DatasImgState, nameProject.rep)}</section>
             <Nav rep= {nameProject.rep} routes= {UxUiRoutes}/>
         </article>
     )

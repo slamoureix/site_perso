@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 //component
@@ -7,7 +7,7 @@ import Preview from '../../../components/Preview/Preview';
 
 import { letterData as nameProject } from './data';
 
-import CreateImageGrid from '../../../scripts/CreateImageGrid.js';
+import CreateImageGrid from '../../../useCreateImageGrid.jsx';
 
 import './_letter.scss';
 
@@ -15,13 +15,12 @@ import './_letter.scss';
 
 
 export default function Letter() {
-    
-
     const [DatasImgState] = useState(nameProject.img.content);
 
     const TypographieRoutes = useSelector(({AllRoutesReducer}) => ({
         ...AllRoutesReducer.TypographieReducer.Typographie
     }));
+
     
 
     return (
@@ -30,13 +29,16 @@ export default function Letter() {
                 <div className= {`${nameProject.name}__title`}><h1>{nameProject.name}</h1></div>
 
                 <div className = {`${nameProject.name}__preview`} > 
-                    <Preview 
+
+                <Preview 
                 path = '/Typographie'
                 typeName = {nameProject.type}/>
                 </div>
 
             </section>
-            <section className= {`${nameProject.name}__grid`}>{CreateImageGrid(DatasImgState, nameProject.name)}</section>
+            <section className= {`${nameProject.name}__grid`}>
+            {CreateImageGrid(DatasImgState, nameProject.name)}
+            </section>
             <Nav rep= {nameProject.rep} routes= {TypographieRoutes}/>
         </article>
     )

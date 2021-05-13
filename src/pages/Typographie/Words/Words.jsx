@@ -10,7 +10,7 @@ import Nav from '../../../components/Navigation/Navigation';
 import {wordsData as nameProject} from './data';
 
 import Preview from '../../../components/Preview/Preview';
-import CreateImageGrid from '../../../scripts/CreateImageGrid';
+import useCreateImageGrid from '../../../useCreateImageGrid';
 
 export default function Words() {
     const [DatasImgState] = useState(nameProject.img.content);
@@ -29,7 +29,7 @@ export default function Words() {
                 </div>
 
             </section>
-            <section className= {`${nameProject.name}__grid`}>{CreateImageGrid(DatasImgState, nameProject.name)}</section>
+            <section className= {`${nameProject.name}__grid`}>{useCreateImageGrid(DatasImgState, nameProject.name)}</section>
             <Nav rep= {nameProject.rep} routes= {TypographieRoutes}/>
         </article>
     )

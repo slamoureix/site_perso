@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import Nav from '../../../components/Navigation/Navigation';
-import CreateImageGrid from '../../../scripts/CreateImageGrid';
+import useCreateImageGrid from '../../../useCreateImageGrid';
 
 import Preview from '../../../components/Preview/Preview';
 
@@ -11,6 +11,9 @@ import {yourLookIsGoodData as nameProject } from './data.js';
 
 
 export default function YourLookIsGood() {
+
+    const [count, setcount] = useState(0);
+
     const [DatasImgState] = useState(nameProject.img.content);
 
     const ProjectsRoutes = useSelector(({AllRoutesReducer}) => ({
@@ -37,10 +40,11 @@ export default function YourLookIsGood() {
                 <p>{nameProject.content}</p>
                 <br/>
                 <p>{nameProject.techno}</p>
-                
+                <p>You have liked us {count} </p>
+                <button onClick={() => setcount(count + 1)}>click here to like again</button>
                 </div>
             </section>
-            <section className={`${nameProject.rep}__grid`}>{CreateImageGrid(DatasImgState, nameProject.rep)}</section>
+            <section className={`${nameProject.rep}__grid`}>{useCreateImageGrid(DatasImgState, nameProject.rep)}</section>
             <Nav rep= {nameProject.rep} routes= {DeveloppementRoutes}/>
         </article>
     )

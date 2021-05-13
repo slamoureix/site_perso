@@ -8,7 +8,7 @@ import { default as nameProject } from './data.js';
 import './_Edition.scss';
 
 //Scripts
-import CreateImageGrid from '../../scripts/CreateImageGrid';
+import useCreateImageGrid from '../../useCreateImageGrid';
 
 //Components
 import Nav from '../../components/Navigation/Navigation';
@@ -29,7 +29,7 @@ export default function Edition() {
                 <div className = {`${nameProject.rep}__content`}>
                 <p>{nameProject.content}</p></div>
             </section>
-            <section className={`${nameProject.rep}__grid`}>{CreateImageGrid(DatasImgState, nameProject.rep)}</section>
+            <section className={`${nameProject.rep}__grid`}>{useCreateImageGrid(DatasImgState, nameProject.rep)}</section>
             <Nav rep = {nameProject.rep} routes = {ProjectsRoutes}/>
         </article>
     )

@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {CreateSrc} from './CreateSrc';
 import uuid from 'react-native-uuid';
+
 
 /**
  * associate dynamically attribute src.
@@ -9,8 +10,9 @@ import uuid from 'react-native-uuid';
  * @param {String} sources : sources of the file format
  * @param {String} alt : alt of the file format
  */
-export default function CreatePicture(rep, src_default, sources, alt) {
-    const ref = useRef();
+function CreatePicture(rep, src_default, sources, alt) {
+    
+    
 
     /* SOURCES */ 
     const [DataSourceState, setDataSourceState] = useState(); // undefined vaut false lors d'un test bol
@@ -19,20 +21,12 @@ export default function CreatePicture(rep, src_default, sources, alt) {
     /* pour src_default */
     const [SrcState, SrcSetstate] = useState('');
 
+    
     useEffect(() => {
+            CreateSrc(src_default.name, src_default.format, rep).then(value => (SrcSetstate(value.default)));
 
-            const fetchSrc_default = () => {
-                CreateSrc(src_default.name, src_default.format, rep).then(value => (SrcSetstate(value.default)));
-            }
-    
-            const AllSources = (Sources) => {
-            // On vient map le tableau de data sources afin de créer pour chaque element un nouveau tableau avec les promesses.
-            let importSources = Sources.map(element => CreateSrc(element.src.name, element.src.format, rep).then(v => v.default));
-            // Permet de ressoudre toutes les promesses dans l'Array de promesse.
-            Promise.all(importSources).then(value => setTemorarySources(value)) // -> on ajoute le tableau au state Temporaire
-            }
-    
             const fusionToArray = (InitSources, Temporary) => {
+
             let CompletedSources = [];
             for (let index = 0; index < InitSources.length; index++) {
                 CompletedSources.push({
@@ -40,20 +34,30 @@ export default function CreatePicture(rep, src_default, sources, alt) {
                     'srcset': Temporary[index]
                 })
             }
-            setDataSourceState(CompletedSources);
+            setDataSourceState(DataSourceState => ({...DataSourceState, CompletedSources}));
             }
-            
-            temporaryImportSources ? fusionToArray(sources, temporaryImportSources) : AllSources(sources)
-            fetchSrc_default();
-        }, [rep, sources, src_default.format, src_default.name, temporaryImportSources])
-
     
+            
+            
+    
+            const AllSources = (Sources) => {
+                
+            // On vient map le tableau de data sources afin de créer pour chaque element un nouveau tableau avec les promesses.
+            let importSources = Sources.map(element => CreateSrc(element.src.name, element.src.format, rep).then(v => v.default));
+            // Permet de ressoudre toutes les promesses dans l'Array de promesse.
+            Promise.all(importSources).then(value => setTemorarySources(value)) // -> on ajoute le tableau au state Temporaire
+            }
+
+            temporaryImportSources ? fusionToArray(sources, temporaryImportSources) : AllSources(sources);
+
+            
+        }, [temporaryImportSources])
+
     return (
         <picture>
-                {temporaryImportSources ? (DataSourceState ? DataSourceState.map(s => <source key={uuid.v4()} srcSet={s.srcset} media={s.media} />) : null ) : null}
-                <img ref={ref} className="img" loading="lazy" src={SrcState} alt= {alt}  />
-                {console.log('create')}
+                {temporaryImportSources ? (DataSourceState ? DataSourceState.CompletedSources.map(s => <source key={uuid.v4()} srcSet={s.srcset} media={s.media} />) : null ) : null}
+                <img className="img" loading="lazy" src={SrcState} alt= {alt}  />
         </picture>
     )
 }
-
+export default React.memo(CreatePicture);

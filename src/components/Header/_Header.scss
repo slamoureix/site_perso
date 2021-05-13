@@ -2,7 +2,7 @@
 @use '../../scss/abstracts/mixins' as *;
 
 header{
-    @include display($justify : space-between);
+    @include display($justify : space-between, $align : top);
     flex-wrap: wrap;
     margin-top: clamp(2.5rem, 2.778vw, 4rem);
     
@@ -13,8 +13,8 @@ header{
 
     nav {
         font-family: $popins_regular;
-        font-size: clamp(1.2rem, 1.042vw, 1.5rem);
-        line-height: clamp(1.6rem, 1.736vw, 2.5rem);
+        font-size: clamp(1.5rem, 1.389vw, 2rem);
+        // line-height: clamp(2rem, 2.5vw, 3.6rem);
         width: 50%;
 
         //min-width : 1280px
@@ -28,7 +28,7 @@ header{
                 display: inherit;
 
                 li {
-                    margin-bottom: .5rem;
+                    margin-bottom: 1.2rem;
                     text-align: right;
                 }
             }
@@ -36,3 +36,20 @@ header{
 
     }
 }
+.link__home{
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.animate{
+    animation: little_move .1s $ease-material forwards;
+}
+
+
+@keyframes little_move {
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+

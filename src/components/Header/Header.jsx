@@ -32,24 +32,29 @@ export default function Header() {
     
     // retour à l'accueil et switch to projets to home.
     const location = useLocation(); // permet de recupérer l'url courant.
+    const homeRef = useRef();
+    const anchorRef = useRef();
     const history = useHistory();
     const [locationState, setLocation] = useState(location);
 
-    const home = <button style={{cursor:'pointer'}} onClick={() => history.push('/')} className="link">Accueil</button>
-    const anchor = <a className= "link" href= "#projet">Projets</a>
+    const home = <button ref={homeRef} style={{cursor:'pointer'}} onClick={() => history.push('/')} className="link link__home">Accueil</button>
+    const anchor = <a ref={anchorRef} className= "link" href= "#projet">Mes projets</a>
 
     // useAnimHomePage(LocalState, contentRef);
+    
 
-    useEffect(() => { setLocation(location)}, [location])
+    useEffect(() => {setLocation(location)}, [location])
+
+    useEffect(() => { if (locationState.pathname !== '/') homeRef.current.classList.add('animate') }, [locationState.pathname])
 
     return (
         <header>
             <Logo/>
             <nav ref= {navMenu} className="NavMenu">
-            <ul>
-                <li>{locationState.pathname === '/'? anchor : home}</li>
+                <ul>
+                    <li>{locationState.pathname === '/'? anchor : home}</li>
                 {linksNav}
-            </ul>
+                </ul>
             </nav>
         </header>
     )

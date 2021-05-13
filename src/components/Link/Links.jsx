@@ -31,7 +31,7 @@ export default function Links(props) {
             >
                 <span className="link link__project_name">{props.name}</span>
                 <div className ="link link__project_cover" >
-                {CreatePicture(props.rep, props.cover.src_default, props.cover.sources, props.cover.alt)}
+                {CreatePicture.type(props.rep, props.cover.src_default, props.cover.sources, props.cover.alt)}
                 </div>
             </NavLink>
             </div>

@@ -6,7 +6,7 @@ import Nav from '../../../components/Navigation/Navigation';
 
 import { numberData as nameProject } from './data';
 
-import CreateImageGrid from '../../../scripts/CreateImageGrid.js';
+import useCreateImageGrid from '../../../useCreateImageGrid';
 
 import './_Number.scss';
 
@@ -29,7 +29,7 @@ export default function Letter() {
                 </div>
 
             </section>
-            <section className= {`${nameProject.name}__grid`}>{CreateImageGrid(DatasImgState, nameProject.name)}</section>
+            <section className= {`${nameProject.name}__grid`}>{useCreateImageGrid(DatasImgState, nameProject.name)}</section>
             <Nav rep= {nameProject.rep} routes= {TypographieRoutes}/>
         </article>
     )

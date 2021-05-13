@@ -18,7 +18,7 @@ import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 
 export default function App() {
-  const Title = 'Sebastien Lamoureix Designer && Développeur Front-End'
+  // const Title = 'Sebastien Lamoureix Designer && Développeur Front-End'
   const ObjRoutes = useSelector(({AllRoutesReducer}) => ({...AllRoutesReducer}))
 
   // useEffect(() => {
@@ -30,7 +30,7 @@ export default function App() {
   
   
   return (
-  <DocumentTitle title= {Title}>
+  // <DocumentTitle title= {Title}>
     <Router>
       <>
         <Cursor/> 
@@ -45,7 +45,7 @@ export default function App() {
             <Footer/>
       </>
     </Router>
-  </DocumentTitle>
+  // </DocumentTitle>
 )
 }
 

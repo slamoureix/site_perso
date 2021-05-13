@@ -17,8 +17,7 @@ import EditionData from '../pages/Edition/data';
 import {uxUiData} from '../pages/UxUi/data';
 
 // Config
-import {anchor, external} from '../config.js'
-import Content from '../pages/Content/Content';
+import {external} from '../config.js'
 
 /*
     utilisation d'un tableau associatif -> utilisable avec la boucle for... In 
@@ -28,30 +27,30 @@ export const routes = {
     Home: {
         home: {
             path: '/',
-            name: 'home',
+            name: 'Accueil',
             component: Home,
             target: '_self',
         },
     },
     Nav: {
-        Legals: {
-            path: '/Legals',
-            name: 'Mentions Légales',
-            component: Legals,
-            target: '_self',
-        },
+        // Legals: {
+        //     path: '/Legals',
+        //     name: 'Mentions Légales',
+        //     component: Legals,
+        //     target: '_self',
+        // },
         Contact: {
             path: '/Contact',
             name: 'Contact',
             component: Contact,
             target: '_self',
         },
-        Lab: {
-            path: 'https://codepen.io/your-work',
-            name: 'Lab',
-            target: '_blank',
-            typeofLink: external
-        }
+        // Lab: {
+        //     path: 'https://codepen.io/your-work',
+        //     name: 'Lab',
+        //     target: '_blank',
+        //     typeofLink: external
+        // }
     },
     Projects: {
         Developpement: {
