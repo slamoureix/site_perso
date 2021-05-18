@@ -5,51 +5,48 @@
 
 [class*="__project_container"]{
     width: calc(100% - #{$col-left} - #{$col-right});
-    margin: 25px $col-left auto;
+    margin: 75px $col-left;
 }
 
-[class*="__title"] {
+[class*="_box"] {
+    @extend .row;
+    align-items: baseline;
+}
+
+.title {
     @extend 
     .col-6,
     .col-sm-3,
-    .col-md-2,
-    .col-md-offset-1,
-    .col-lg-2,
-    .col-lg-offset-1,
-    .col-xl-2,
-    .col-xl-offset-1,
-    .col-xxl-2,
-    .col-xxl-offset-1;
-
+    .col-md-3,
+    .col-lg-3,
+    .col-xl-3,
+    .col-xxl-3;
 
     h1 {
-        font-family: $popins_regular;
-        font-size: 35px;
-        padding: 5px 0
+        font-family: $popins_black;
+        font-size: 50px;
+        padding: 5px 0;
     }
 }
 
-[class*="__year"] {
+.year{
     @extend .col-3,
     .col-sm-1,
     .col-md-1,
     .col-lg-1,
     .col-xl-1,
-    .col-xxl-1;
+    .col-xxl-1,
+    .col-xxl-offset-2;
 
     p {
-        font-family: $popins_bold;
-        font-size: 20px;
+        text-align: right;
+        font-family: $popins_regular;
+        font-size: 15px;
+        color: $C_71816D;
+        border-bottom: 2px solid $C_71816D;
     }
-
 }
 
-
-[class*="__presentation"] {
-    @extend .row;
-    margin: 20px 0;
-    align-items: baseline;
-}
 
 [class*="__type"] {
     @extend .col-3,
@@ -70,7 +67,9 @@
 
 }
 
-[class*="__content"] {
+
+
+.content {
     @extend .col-6,
     .col-sm-3,
     .col-sm-offset-3,
@@ -82,20 +81,23 @@
     .col-xl-offset-3,
     .col-xxl-3,
     .col-xxl-offset-3;
+
+    margin-top: 50px;
     margin-bottom: 50px;
 
-    p {
-        color: $C_461108;
+    p{
+        color: $C_E84E32;
         font-size: 25px;
         line-height: 1.15;
     }
-
 }
+
+
 
 [class*="__grid"] {
     @extend .row;
     margin-bottom: 25px;
-
+    
     // [class*="__item-"] {
     //     &:first-child{
     //         padding-left: 0;
@@ -122,7 +124,6 @@
     display: flex;
     flex-direction: column;
 
-
     .separation {
         @include Separation($Color : $C_71816D);
     }
@@ -134,3 +135,32 @@ Pour gerer l'order des différentes div il est nécessaire d'utiliser la proprie
 Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image différente (img). 
 
 */
+
+[class*="__category_container"]{
+    width: 90%;
+    margin: 0 auto 50px;
+}
+
+[class*='__category_presentation']{
+    @extend .col-6,
+    .col-sm-3,
+    .col-sm-offset-3,
+    .col-md-3,
+    .col-md-offset-3,
+    .col-lg-2,
+    .col-lg-offset-4,
+    .col-xl-2,
+    .col-xl-offset-4,
+    .col-xxl-2,
+    .col-xxl-offset-4;
+    padding-left: 0;
+    border-bottom: 10px solid $C_E84E32;
+
+
+    h1 {
+        font-family: $popins_regular;
+        font-size: 35px;
+        padding: 5px 0;
+        text-align: right;
+    }
+}

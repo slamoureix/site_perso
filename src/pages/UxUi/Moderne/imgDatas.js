@@ -7,7 +7,7 @@ import {colorAndFont} from './ImgsDatas/colorAndFont';
 
 
 export const img = {
-    "cover": cover,
+    "cover": webPresentation,
     "content": [
         colorAndFont,
         webPresentation,

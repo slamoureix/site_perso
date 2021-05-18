@@ -5,7 +5,7 @@ import {
 export const modishcolorAndFont = {
     "src_default": {
         name: "ModishcolorAndFont",
-        format: "jpg"
+        format: "webp"
     },
     "sources": [{
         "src": {
@@ -13,6 +13,14 @@ export const modishcolorAndFont = {
             format: "webp"
         },
         "media": All
-    }, ],
+    }, {
+        "src": {
+            name: "ModishcolorAndFont",
+            format: "jpg"
+        },
+        "media": All
+    },
+
+],
     "alt": "interieur du portfolio"
 }

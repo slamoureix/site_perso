@@ -1,12 +1,12 @@
 import OceanForLife from './OceanForLife';
 
 import {img} from './imgDatas';
-import {underProject, uxUi} from './../../../config';
+import {project, uxUi} from './../../../config';
 
 export const oceanForLifeData = {
     "routes": {
         "path": "/OceanForLife",
-        "typeofLink": underProject,
+        "typeofLink": project,
         "component" : OceanForLife
     },
     "name": "Ocean For Life",

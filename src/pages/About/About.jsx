@@ -6,7 +6,7 @@ import src from './photo_CV.webp';
 export default function about() {
     return (
         <section className="me">
-            <div className="content">
+            <div className="me_content">
                 <hr></hr>
                 <img src={src} loading="lazy" alt=""></img>
                     <p className="presentation">

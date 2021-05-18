@@ -2,7 +2,7 @@ import {YligMockUp} from './imgDatas/yourLookIsGoodMockUp'
 
 
 export const img = {
-    "cover": 'cover',
+    "cover": YligMockUp,
     "content": [
         YligMockUp,
     ]

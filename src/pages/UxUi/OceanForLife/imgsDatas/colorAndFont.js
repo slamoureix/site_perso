@@ -5,12 +5,18 @@ import {
 export const colorAndFont = {
     "src_default": {
         name: "colorAndFont",
-        format: "jpg"
+        format: "webp"
     },
     "sources": [{
         "src": {
             name: "colorAndFont",
             format: "webp"
+        },
+        "media": All
+    }, {
+        "src": {
+            name: "colorAndFont",
+            format: "jpg"
         },
         "media": All
     }, ],

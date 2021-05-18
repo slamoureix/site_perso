@@ -3,12 +3,12 @@ import {
     useSelector
 } from 'react-redux';
 
-import Nav from '../../components/Navigation/Navigation';
-import CreateImageGrid from '../../scripts/CreateImageGrid';
+// import Nav from '../../components/Navigation/Navigation';
+
 
 // datas 
 import {
-    default as nameProject
+    cyrilJournetData as nameProject
 } from './data.js';
 
 
@@ -31,7 +31,7 @@ export default function CyrilJournet() {
                 <p>{nameProject.content}</p></div>
             </section>
             {/* <section className={`${nameProject.rep}__grid`}>{CreateImageGrid(DatasImgState, nameProject.rep)}</section> */}
-            <Nav rep= {nameProject.rep} routes= {ProjectsRoutes}/>
+            {/* <Nav rep= {nameProject.rep} routes= {ProjectsRoutes}/> */}
         </article>
     )
 }

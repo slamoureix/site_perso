@@ -10,6 +10,7 @@ export const TypoRoutes = {
             component: letterData.routes.component, 
             rep: letterData.rep,
             typeofLink: letterData.routes.typeofLink,
+            cover: letterData.img.cover,
         },
         Words: {
             path: wordsData.routes.path,
@@ -17,6 +18,7 @@ export const TypoRoutes = {
             rep: wordsData.rep,
             typeofLink: wordsData.routes.typeofLink,
             component: wordsData.routes.component,
+            cover: wordsData.img.cover,
         },
         Number: {
             path: numberData.routes.path,
@@ -24,6 +26,7 @@ export const TypoRoutes = {
             rep: numberData.rep,
             typeofLink: numberData.routes.typeofLink,
             component: numberData.routes.component,
+            cover: numberData.img.cover,
         },
     },
 }

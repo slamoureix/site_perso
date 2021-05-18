@@ -1,12 +1,12 @@
 import Words from './Words';
 import {img} from './imgDatas';
 
-import {underProject, typographie } from '../../../config';
+import {underProject, typographie, project } from '../../../config';
 
 export const wordsData = {
     routes: {
         path: "/Words",
-        typeofLink: underProject,
+        typeofLink: project,
         component: Words
     },
     name: "Words",

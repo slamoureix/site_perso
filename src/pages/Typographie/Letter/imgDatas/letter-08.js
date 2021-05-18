@@ -43,6 +43,13 @@ export const letter08 = {
             },
             "media": xl
         },
+        {
+            "src": {
+                name: `${name}_xxl`,
+                format: webp
+            },
+            "media": xxl
+        },
 
         // jpg 
         {

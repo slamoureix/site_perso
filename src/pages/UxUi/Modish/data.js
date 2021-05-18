@@ -1,14 +1,14 @@
 import Modish from './Modish';
 import {img }from './imgDatas';
 import {
-    underProject,
+    project,
     uxUi
 } from './../../../config';
 
 export const modishData = {
     "routes": {
         "path": "/Modish",
-        "typeofLink": underProject,
+        "typeofLink": project,
         "component" : Modish
     },
     "name": "Modish",

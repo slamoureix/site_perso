@@ -5,16 +5,16 @@ import Legals from '../pages/Legals/Legals';
 
 import Home from '../pages/Home/Home';
 
-import Edition from '../pages/Edition/Edition';
-import Divers from '../pages/Divers/Divers';
+// import Edition from '../pages/Edition/Edition';
+// import Divers from '../pages/Divers/Divers';
 
-// DATAS //
+// // DATAS //
 
-import {developpementData} from '../pages/Developpement/data';
-import DiversData from '../pages/Divers/data';
-import {typoData} from '../pages/Typographie/data';
-import EditionData from '../pages/Edition/data';
-import {uxUiData} from '../pages/UxUi/data';
+// import {developpementData} from '../pages/Developpement/data';
+// import DiversData from '../pages/Divers/data';
+// import {typoData} from '../pages/Typographie/data';
+// import EditionData from '../pages/Edition/data';
+// import {uxUiData} from '../pages/UxUi/data';
 
 // Config
 import {external} from '../config.js'
@@ -33,12 +33,12 @@ export const routes = {
         },
     },
     Nav: {
-        // Legals: {
-        //     path: '/Legals',
-        //     name: 'Mentions Légales',
-        //     component: Legals,
-        //     target: '_self',
-        // },
+        Legals: {
+            path: '/Legals',
+            name: 'Mentions Légales',
+            component: Legals,
+            target: '_self',
+        },
         Contact: {
             path: '/Contact',
             name: 'Contact',
@@ -53,56 +53,56 @@ export const routes = {
         // }
     },
     Projects: {
-        Developpement: {
-            path: developpementData.routes.path,
-            name: developpementData.name,
-            type: developpementData.type,
-            typeofLink: developpementData.routes.typeofLink,
-            rep: developpementData.rep,
-            cover: developpementData.img.cover,
-            component: developpementData.routes.component,
-            target: '_self',
-        },
-        Typographie: {
-            path: typoData.routes.path,
-            name: typoData.name,
-            type: typoData.type,
-            typeofLink: typoData.routes.typeofLink,
-            rep: typoData.rep,
-            cover: typoData.img.cover,
-            component: typoData.routes.component,
-            target: '_self',
-        },
-        UiUx: {
-            path: uxUiData.routes.path,
-            name: uxUiData.name,
-            type: uxUiData.type,
-            typeofLink: uxUiData.routes.typeofLink,
-            rep: uxUiData.rep,
-            cover: uxUiData.img.cover,
-            component: uxUiData.routes.component,
-            target: '_self',
-        },
-        Edition: {
-            path: EditionData.routes.path,
-            name: EditionData.name,
-            type: EditionData.type,
-            typeofLink: EditionData.routes.typeofLink,
-            rep: EditionData.rep,
-            cover: EditionData.img.cover,
-            component: Edition,
-            target: '_self',
-        },
-        Divers: {
-            path: DiversData.routes.path,
-            name: DiversData.name,
-            type: DiversData.type,
-            typeofLink: DiversData.routes.typeofLink,
-            rep: DiversData.rep,
-            cover: DiversData.img.cover,
-            component: Divers,
-            target: '_self',
-        }
+        // Developpement: {
+        //     path: developpementData.routes.path,
+        //     name: developpementData.name,
+        //     type: developpementData.type,
+        //     typeofLink: developpementData.routes.typeofLink,
+        //     rep: developpementData.rep,
+        //     cover: developpementData.img.cover,
+        //     component: developpementData.routes.component,
+        //     target: '_self',
+        // },
+        // Typographie: {
+        //     path: typoData.routes.path,
+        //     name: typoData.name,
+        //     type: typoData.type,
+        //     typeofLink: typoData.routes.typeofLink,
+        //     rep: typoData.rep,
+        //     cover: typoData.img.cover,
+        //     component: typoData.routes.component,
+        //     target: '_self',
+        // },
+        // UiUx: {
+        //     path: uxUiData.routes.path,
+        //     name: uxUiData.name,
+        //     type: uxUiData.type,
+        //     typeofLink: uxUiData.routes.typeofLink,
+        //     rep: uxUiData.rep,
+        //     cover: uxUiData.img.cover,
+        //     component: uxUiData.routes.component,
+        //     target: '_self',
+        // },
+        // Edition: {
+        //     path: EditionData.routes.path,
+        //     name: EditionData.name,
+        //     type: EditionData.type,
+        //     typeofLink: EditionData.routes.typeofLink,
+        //     rep: EditionData.rep,
+        //     cover: EditionData.img.cover,
+        //     component: Edition,
+        //     target: '_self',
+        // },
+        // Divers: {
+        //     path: DiversData.routes.path,
+        //     name: DiversData.name,
+        //     type: DiversData.type,
+        //     typeofLink: DiversData.routes.typeofLink,
+        //     rep: DiversData.rep,
+        //     cover: DiversData.img.cover,
+        //     component: Divers,
+        //     target: '_self',
+        // }
     },
     Social: {
         Instagram: {

@@ -7,7 +7,7 @@ import {modishcolorAndFont} from './imgsDatas/modishcolorAndFont';
 
 
 export const img = {
-    "cover": cover,
+    "cover": webPresentation,
     "content": [
         modishcolorAndFont,
         webPresentation,

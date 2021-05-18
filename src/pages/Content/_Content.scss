@@ -5,10 +5,9 @@ $coeff: 10vw; // 13 rem // 9.028vw
 $numOfelement : 5;
 
 .project_container {
-    // @extend .height-content;
     height: clamp(25rem, 24.306vw, 35rem);
+    // height: 150px;
     position: relative;
-    
 
     @include media-breakpoint-down(lg) {
         width: 95%;
@@ -19,6 +18,7 @@ $numOfelement : 5;
 
 // .project agit sur la UL
 .project {
+    
     // agit sur la li .link__project{}
 
     .link__project_name {
@@ -44,14 +44,12 @@ $numOfelement : 5;
 
     // pour les écrans supérieurs à 1024
     @include media-breakpoint-up(lg) {
-        
         .link__project {
             position: absolute;
             top: 85%;
             transform-origin: top left;
-            transform: rotate(-40deg);
-            // transform: translateX(-#{$coeff}) rotate(-45deg);
-            
+            // transform: rotate(-30deg);
+            transform: translateX(-#{$coeff}) rotate(-30deg);
         }
 
         @for $i from 1 through $numOfelement {
@@ -84,7 +82,7 @@ $numOfelement : 5;
                 font-size: clamp(2rem, 3.125vw, 3rem);
                 font-family: $popins--italic;
                 display: block;
-                transform: translateX((calc(23vw - #{$coeff}))); //20vw
+                transform: translateX((calc(25vw - #{$coeff}))); //20vw
                 padding: 1.05vw .52vw 1.05vw 3.13vw; // padding: 20px 10px 20px 60px;
                 transition: all .5s $ease-material;
             }
@@ -93,17 +91,14 @@ $numOfelement : 5;
                 position: absolute;
                 left: 0;
                 top: -11vw;
-                width: 16vw;
-                height: 16vw;
+                width: 18vw;
+                height: 18vw;
 
                 img {
                     display: block;
                     position: relative;
+                    object-fit: cover;
                 }
-            }
-
-            .typeOfLink {
-                display: none;
             }
         }
 
@@ -131,7 +126,7 @@ $numOfelement : 5;
             mix-blend-mode: darken;
             opacity: .8;
             border-radius: 0%;
-            transform: scale(18);
+            transform: scale(20);
         }
 
         //~ permet d'agir sur des classes css de même niveau dans l'arbre.

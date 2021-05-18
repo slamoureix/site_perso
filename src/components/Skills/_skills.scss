@@ -1,0 +1,61 @@
+@use '../../scss/abstracts/'as *;
+
+.skills_box {
+    margin-bottom: 25px;
+
+
+    .title {
+        @extend .col-1,
+        .col-sm-1,
+        .col-md-1,
+        .col-lg-1,
+        .col-xl-1,
+        .col-xxl-1,
+        .col-xxl-offset-3;
+        display: block;
+
+        h3 {
+            font-family: $popins_bold;
+            color: $C_461108;
+            font-size: 15px;
+            border-bottom: 2px solid $C_742719;
+        }
+    }
+
+    ul {
+        @extend .col-2,
+        .col-sm-2,
+        .col-md-2,
+        .col-lg-2,
+        .col-xl-2,
+        .col-xxl-2;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    li {
+        font-family: $popins_regular;
+        color: $C_461108;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+
+        span {
+            display: block;
+            @include Separation(0px, 0px, 0px, 5px, 5px, 5px, 5px);
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+    }
+
+    li:last-child {
+        span {
+            display: none;
+        }
+    }
+}
+
+.skills_box:last-of-type{
+    margin-bottom: 0px;
+}

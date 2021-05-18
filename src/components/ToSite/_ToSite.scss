@@ -1,0 +1,17 @@
+@use '../../scss/abstracts/variables'as *;
+
+
+
+
+.ToSite{
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: paleturquoise;
+    svg{
+        width: 60px;
+        fill: $C_E84E32;
+    }
+}

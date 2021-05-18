@@ -1,27 +1,31 @@
 @use '../abstracts/variables'as *;
 @use '../abstracts/anim'as *;
 
-.arrow{
-        fill: $C_E84E32;
-        width: 40px;
-        height: 40px;
+.arrow {
+    fill: $C_E84E32;
+    width: 40px;
+    height: 40px;
 
-        &:hover {
-            animation: $rotate .5s ease-in-out forwards;
-        }
+    &:hover {
+        animation: $rotate .5s ease-in-out forwards;
+    }
 }
 
 [class*="__navigation"] {
+
     display: flex;
     justify-content: space-between;
+    border-top: 5px solid $C_E84E32;
+    padding: 25px 0 10px;
     margin: 0 auto;
-    width: 30%;
-    a{
-            display: inherit;
-            align-items: center;
-            p{
+    width: 50%;
 
-                font-size: 20px;
-            }
+    a {
+        display: inherit;
+        align-items: center;
+
+        p {
+            font-size: 20px;
         }
+    }
 }

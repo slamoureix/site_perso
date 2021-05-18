@@ -27,14 +27,6 @@ export default function Letter() {
         <article className= {`${nameProject.name}__project_container`}>
             <section className= {`${nameProject.name}__presentation`}>
                 <div className= {`${nameProject.name}__title`}><h1>{nameProject.name}</h1></div>
-
-                <div className = {`${nameProject.name}__preview`} > 
-
-                <Preview 
-                path = '/Typographie'
-                typeName = {nameProject.type}/>
-                </div>
-
             </section>
             <section className= {`${nameProject.name}__grid`}>
             {CreateImageGrid(DatasImgState, nameProject.name)}

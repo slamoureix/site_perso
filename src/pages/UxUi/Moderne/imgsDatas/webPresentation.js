@@ -10,7 +10,7 @@ import {
 export const webPresentation = {
     "src_default": {
         name: "web_presentation_xxl",
-        format: "jpg"
+        format: "webp"
     },
     "sources": [
         {

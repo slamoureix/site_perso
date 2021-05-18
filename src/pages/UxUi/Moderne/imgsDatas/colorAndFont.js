@@ -5,7 +5,7 @@ import {
 export const colorAndFont = {
     "src_default": {
         name: "colorAndFont",
-        format: "jpg"
+        format: "webp"
     },
     "sources": [{
         "src": {
@@ -13,6 +13,13 @@ export const colorAndFont = {
             format: "webp"
         },
         "media": All
-    }, ],
+    }, {
+        "src": {
+            name: "colorAndFont",
+            format: "jpg"
+        },
+        "media": All
+    },
+ ],
     "alt": "interieur du portfolio"
 }

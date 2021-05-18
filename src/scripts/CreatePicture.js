@@ -56,7 +56,7 @@ function CreatePicture(rep, src_default, sources, alt) {
     return (
         <picture>
                 {temporaryImportSources ? (DataSourceState ? DataSourceState.CompletedSources.map(s => <source key={uuid.v4()} srcSet={s.srcset} media={s.media} />) : null ) : null}
-                <img className="img" loading="lazy" src={SrcState} alt= {alt}  />
+                <img id={uuid.v4()} className="img" loading="lazy" src={SrcState} alt= {alt}  />
         </picture>
     )
 }

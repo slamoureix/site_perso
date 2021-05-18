@@ -1,14 +1,21 @@
-const CyrilJournetData = {
+import {
+    developement,
+    project
+} from './../../../config';
+
+import CyrilJournet from './CyrilJournet'
+
+
+export const cyrilJournetData = {
     "routes": {
         "path": "/CyrilJournet",
-        "typeofLink": "project"
+        "typeofLink": project,
+        "component" : CyrilJournet
     },
     "name": "Cyril Journet",
-    "type": "développement",
+    "type": developement,
     "year": "2021",
-    "format": "",
     "content": "lorem",
-    "photographies": "",
     "rep": "CyrilJournet",
     "img": {
         "rep": "CyrilJournet",
@@ -316,5 +323,3 @@ const CyrilJournetData = {
         ]
     }
 }
-
-export default CyrilJournetData;

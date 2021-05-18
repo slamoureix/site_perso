@@ -1,14 +1,14 @@
 import Moderne from './Moderne';
 import {img} from './imgDatas';
 import {
-    underProject,
+    project,
     uxUi
 } from './../../../config';
 
 export const moderneData = {
     "routes": {
         "path": "/Moderne",
-        "typeofLink": underProject,
+        "typeofLink": project,
         "component" : Moderne
     },
     "name": "Moderne",
