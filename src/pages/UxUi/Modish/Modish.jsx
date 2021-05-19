@@ -20,15 +20,10 @@ export default function Modish() {
 
     return (
         <article className= {`${nameProject.name}__project_container`}>
-            <section className= {`${nameProject.name}__presentation`}>
-                <div className= {`${nameProject.name}__title`}><h1>{nameProject.name}</h1></div>
-
-                <div className = {`${nameProject.name}__preview`} > 
-                    <Preview 
-                path = '/UxUi'
-                typeName = {nameProject.type}/>
+            <section>
+                <div className="head_row">
+                    <div className= "title"><h1>{nameProject.name}</h1></div>
                 </div>
-
             </section>
             <section className= {`${nameProject.name}__grid`}>{useCreateImageGrid(DatasImgState, nameProject.rep)}</section>
             <Nav rep= {nameProject.rep} routes= {UxUiRoutes}/>

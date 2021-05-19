@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import Nav from '../../../components/Navigation/Navigation';
+
 import useCreateImageGrid from '../../../useCreateImageGrid';
 
 
@@ -16,16 +17,13 @@ export default function Landscape() {
 
     return (
         <article className= {`${nameProject.rep}__project_container`}>
-            <section className= {`${nameProject.rep}__presentation`}>
-                <div className= {`${nameProject.rep}__title`}><h1>{nameProject.name}</h1></div>
-                <div className= {`${nameProject.rep}__year`}><p>{nameProject.year}</p></div>
+            <section>
+                <div className="head_row">
 
-                <div className = {`${nameProject.rep}__content`}>
-                <p>{nameProject.content}</p>
-                <br/>
-                <p>{nameProject.techno}</p>
-                
+                <div className="title"><h1>{nameProject.name}</h1></div>
+                <div className= "year"><p>{nameProject.year}</p></div>
                 </div>
+                <div className = "content"><p>{nameProject.content}</p></div>
             </section>
             {/* <section className={`${nameProject.rep}__grid`}>{useCreateImageGrid(DatasImgState, nameProject.rep)}</section>
             <Nav rep= {nameProject.rep} routes= {DeveloppementRoutes}/> */}

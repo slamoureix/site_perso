@@ -69,14 +69,14 @@ $numOfelement : 5;
 
         // classe ajoutée sur les liens inactifs
         .blur {
-            opacity: .25;
-            transition: all .8 $ease-material;
+            opacity: .5;
+            transition: all .8s $ease-material;
         }
 
         // classe ajoutée que la souris entre sur la box
         .link__project_box--hover {
             position: relative;
-            transition: opacity .3s ease-in-out;
+            transition: all .3s ease-in-out;
 
             .link__project_name {
                 font-size: clamp(2rem, 3.125vw, 3rem);
@@ -97,7 +97,7 @@ $numOfelement : 5;
                 img {
                     display: block;
                     position: relative;
-                    object-fit: cover;
+                    object-fit: contain;
                 }
             }
         }
@@ -114,22 +114,23 @@ $numOfelement : 5;
                 width: 1vw;
                 height: 1vw;
                 border-radius: 50%;
-                top: calc(50% - 0.5vw);
-                left: calc(50% - 0.5vw);
+                top: calc(50% - .5vw);
+                left: calc(50% - .5vw);
                 z-index: 999999;
-                
                 transition: all .5s $ease-material;
             }
         }
 
         a:hover>.link__project_cover:hover::before {
-            mix-blend-mode: darken;
-            opacity: .8;
+            mix-blend-mode: color-dodge;
+            opacity: 1;
             border-radius: 0%;
-            transform: scale(20);
+            transform: scale(18);
+            border: 10px solid $C_E84E32;
         }
 
-        //~ permet d'agir sur des classes css de même niveau dans l'arbre.
+        //  ~ permet d'agir sur des classes css de même niveau dans l'arbre.
+        // permet de virer l'opacité du before sur la cover
         .link__project_name:hover~.link__project_cover::before {
             opacity: 0;
         }

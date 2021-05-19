@@ -1,9 +1,9 @@
 import Letter from './Letter';
 
-import { underProject, typographie, project } from '../../../config';
+import { typographie, project } from '../../../config';
 
 // iMGS 
-
+import {cover} from './imgDatas/cover';
 import {letter01} from './imgDatas/letter-01';
 import {letter02} from './imgDatas/letter-02';
 import {letter03} from './imgDatas/letter-03';
@@ -24,10 +24,10 @@ export const letterData = {
     "name": "Letter",
     "type": typographie,
     "content": "",
-    "outils": "",
+    "outils": "illustrator - photoshop",
     "rep": "Letter",
     "img": {
-        "cover": letter01,
+        "cover": cover,
         "content": [
             letter01,
             letter02,

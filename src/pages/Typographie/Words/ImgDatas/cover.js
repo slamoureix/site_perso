@@ -1,27 +1,35 @@
 import {
-    xs,
-    md
+    All,
+    webp,
+    jpg
 } from '../../../../config';
 
+const name = "CoverProjectTypoAll";
+
 export const cover = {
+
     "src_default": {
-        name: "J5_construire_md",
-        format: "jpg"
+        name: name,
+        format: webp
     },
+
     "sources": [{
             "src": {
-                name: "J5_construire_xs",
-                format: "webp"
+                name: name,
+                format: webp
             },
-            "media": xs
+            "media": All
         },
+        /* jpg */
         {
             "src": {
-                name: "J5_construire_md",
-                format: "webp"
+                name: name,
+                format: jpg
             },
-            "media": md
+            "media": All
         }
+
     ],
-    "alt": "interieur du portfolio"
+
+    "alt": "Page principale du site internet qui represente un site de mode"
 }

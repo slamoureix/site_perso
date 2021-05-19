@@ -1,7 +1,7 @@
 import Words from './Words';
 import {img} from './imgDatas';
 
-import {underProject, typographie, project } from '../../../config';
+import {typographie, project } from '../../../config';
 
 export const wordsData = {
     routes: {

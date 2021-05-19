@@ -1,5 +1,5 @@
 import Number from './Number';
-import { underProject, typographie, project } from '../../../config';
+import { typographie, project } from '../../../config';
 
 // iMGS 
 
@@ -8,6 +8,7 @@ import {number2} from './imgDatas/number2';
 import {number3} from './imgDatas/number3';
 import {number4} from './imgDatas/number4';
 import {number5} from './imgDatas/number5';
+import { cover } from './imgDatas/cover';
 
 export const numberData = {
     "routes": {
@@ -15,11 +16,12 @@ export const numberData = {
         "typeofLink": project,
         "component" : Number
     },
+    
     "name": "Number",
     "type": typographie,
     "rep": "Number",
     "img": {
-        "cover": number1,
+        "cover": cover,
         "content": [
             number1,
             number2,

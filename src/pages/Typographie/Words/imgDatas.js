@@ -3,7 +3,7 @@ import {construire} from './ImgDatas/construire'
 import {lifeIsLife} from './ImgDatas/lifeIsLife'
 
 export const img = {
-    "cover": lifeIsLife,
+    "cover": cover,
     "content": [
         construire,
         lifeIsLife,

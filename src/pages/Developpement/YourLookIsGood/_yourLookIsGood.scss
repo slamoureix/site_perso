@@ -1,0 +1,18 @@
+@use '../../../scss/abstracts/'as *;
+
+.YourLookIsGood{
+
+    &__item-0{
+    @extend .col-6,
+    .col-sm-1,
+    .col-md-1,
+    .col-lg-5,
+    .col-xl-5,
+    .col-xxl-5;
+}
+    
+    &_row_test{
+        align-items: flex-end;
+        
+    }
+}

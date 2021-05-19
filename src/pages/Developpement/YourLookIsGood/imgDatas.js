@@ -1,8 +1,9 @@
+import { cover } from './imgDatas/cover'
 import {YligMockUp} from './imgDatas/yourLookIsGoodMockUp'
 
 
 export const img = {
-    "cover": YligMockUp,
+    "cover": cover,
     "content": [
         YligMockUp,
     ]

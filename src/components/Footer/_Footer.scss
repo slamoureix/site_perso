@@ -5,8 +5,10 @@
 footer {
     @include display();
     justify-content: flex-end;
+    flex-direction: column;
     margin-top: auto;
     padding-bottom: 25px;
+    font-family: $popins_regular;
     // max-width : 1279.98px
     @include media-breakpoint-down(md) {
         margin: 0 auto;
@@ -14,7 +16,7 @@ footer {
     }
 
     nav {
-        font-family: $popins_regular;
+        align-self: flex-end;
         font-size: clamp(1.2rem, 1.042vw, 1.5rem);
         line-height: clamp(1.6rem, 1.736vw,2.5rem);
         position: relative;
@@ -32,7 +34,9 @@ footer {
         }
         .svg_box{
             max-width: 75%;
+            width: 75%;
             max-height: 75%;
+            height: 75%;
             position: relative;
             overflow: hidden;
 
@@ -40,6 +44,7 @@ footer {
                 stroke: $C_E84E32;
                 fill: none;
                 animation: $rotate 8s linear infinite;
+                
             }
         }
         ul {
@@ -49,5 +54,20 @@ footer {
             transform: translate(-50%, -50%) rotate(30deg);
             text-align: center;
         }
+    }
+
+    .copyright{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top-left-radius: 50px;
+        margin-top: 50px;
+        padding: 25px 0 10px; 
+        border-top: 4px solid $C_E84E32;
+        border-left: 4px solid $C_E84E32;
+        color: $C_E84E32;
+        width: 100%;
+        font-size: 15px;
+        text-transform: uppercase;
     }
 }

@@ -20,14 +20,16 @@ export default function Moderne() {
 
     return (
         <article className= {`${nameProject.name}__project_container`}>
-            <section className= {`${nameProject.name}__presentation`}>
-                <div className= {`${nameProject.name}__title`}><h1>{nameProject.name}</h1></div>
+            <section>
+                <div className="head_row">
+                    <div className= "title"><h1>{nameProject.name}</h1></div>
+                </div>
 
-                <div className = {`${nameProject.name}__preview`} > 
+                {/* <div className = {`${nameProject.name}__preview`} > 
                     <Preview 
                 path = '/UxUi'
                 typeName = {nameProject.type}/>
-                </div>
+                </div> */}
 
             </section>
             <section className= {`${nameProject.name}__grid`}>{useCreateImageGrid(DatasImgState, nameProject.rep)}</section>

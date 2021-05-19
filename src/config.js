@@ -28,33 +28,36 @@ export const gif = "gif";
 
 // Compétences 
 
-export const devFrontBack = `Développement Front\u2011End & Back\u2011End`;
-export const devFront = `Développement Front\u2011End`;
-export const devBack = `Développement Back\u2011End`;
-export const integration = "Intégration";
-export const responsive = "Responsive";
-export const animCss = "Animations CSS";
-export const animJavascript = "Animations JS";
+export const comp = "Compétences"
+export const devFrontBack = `Développement Front\u2011End & Back\u2011End`
+export const devFront = `Développement Front\u2011End`
+export const devBack = `Développement Back\u2011End`
+export const integration = "Intégration"
+export const responsive = "Responsive"
+export const animCss = "Animations CSS "
+export const animJavascript = "Animations JS"
+export const animations = "Animations"
 
 // tools
+export const techno = "Technologies"
 export const php = "PHP";
-export const javascript = "Javascript";
+export const javascript = "Javascript"
 
 export const css = "CSS";
 export const sass = "Préprocesseur Sass"
 
-export const wordpress = "Wordpress";
-export const acf = "Advanced Custom Fields";
-export const cptUi ="Custom Post Type UI";
+export const wordpress = "Wordpress"
+export const acf = "Advanced Custom Fields"
+export const cptUi ="Custom Post Type UI"
 
-export const react = "React js";
-export const jsx = "JSX";
+export const react = "React js"
+export const jsx = "JSX"
 
-export const bootstrap = "Bootstrap";
+export const bootstrap = "Bootstrap"
 
-export const greenSock = "GreenSock";
-export const scrollMagic = "ScrollMagic";
-export const simpleParallax = "SimpleParallax";
+export const greenSock = "GreenSock"
+export const scrollMagic = "ScrollMagic"
+export const simpleParallax = "SimpleParallax"
 
 
 

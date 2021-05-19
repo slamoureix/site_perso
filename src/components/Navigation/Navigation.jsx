@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
+
+import ButtonHome from '../Buttons/ButtonHome';
 import Arrow from '../Navigation/Arrow';
 
 
@@ -9,10 +11,7 @@ export default function Navigation(props) {
             last: {path : '/', name : 'name'}, 
             next: {path : '/', name : 'name'}
         });
-    const history = useHistory();
-
-    
-
+        
     useEffect(() => {
         for (let index = 0; index < Object.values(props.routes).length; index++) {
             const element = Object.values(props.routes)[index];
@@ -22,7 +21,6 @@ export default function Navigation(props) {
                     last: switchIndex(index, props.routes, "LAST"),
                     next: switchIndex(index, props.routes, "NEXT")}
                 ))
-
             }
         }
     }, [props.rep, props.routes])
@@ -34,7 +32,7 @@ export default function Navigation(props) {
                     <p>{navState.last.name}</p>
                     </Link>
 
-                    <button onClick={() => history.push('/')} className="button_home">Accueil</button>
+                    <ButtonHome/>
             
                     <Link className = "next" to = {navState.next.path} replace>
                     <p>{navState.next.name}</p>

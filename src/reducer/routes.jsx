@@ -17,7 +17,9 @@ import Home from '../pages/Home/Home';
 // import {uxUiData} from '../pages/UxUi/data';
 
 // Config
-import {external} from '../config.js'
+import {
+    external
+} from '../config.js'
 
 /*
     utilisation d'un tableau associatif -> utilisable avec la boucle for... In 
@@ -32,13 +34,22 @@ export const routes = {
             target: '_self',
         },
     },
-    Nav: {
+    Legals: {
         Legals: {
             path: '/Legals',
             name: 'Mentions Légales',
             component: Legals,
             target: '_self',
         },
+        Political: {
+            path: '/Legals',
+            name: 'Mentions Légales',
+            component: Legals,
+            target: '_self',
+        }
+    },
+
+    Nav: {
         Contact: {
             path: '/Contact',
             name: 'Contact',

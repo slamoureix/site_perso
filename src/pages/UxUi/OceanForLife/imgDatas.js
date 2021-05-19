@@ -5,10 +5,11 @@ import {webPresentation3} from './imgsDatas/webPresentation3';
 import {webPresentation4} from './imgsDatas/webPresentation4';
 import {webPresentation5} from './imgsDatas/webPresentation5';
 import {colorAndFont} from './imgsDatas/colorAndFont';
+import {cover} from './imgsDatas/cover';
 
 
 export const img = {
-    cover: webPresentation,
+    cover: cover,
     content: [
         colorAndFont,
         webPresentation,
