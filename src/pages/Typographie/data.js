@@ -9,6 +9,5 @@ export const typoData = {
     },
     name: "Typographie",
     type: typographie,
-    skills: "Illustrator - Photoshop",
     rep: "Typographie"
 }

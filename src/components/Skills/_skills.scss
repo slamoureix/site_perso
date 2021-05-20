@@ -13,14 +13,11 @@
         .col-lg-offset-2,
         .col-xl-offset-2,
         .col-xxl-offset-3;
-        display: block;
 
-        h3 {
-            font-family: $popins_bold;
-            color: $C_461108;
-            font-size: 15px;
-            border-bottom: 2px solid $C_742719;
-        }
+        font-family: $popins_bold;
+        color: $C_461108;
+        font-size: 15px;
+        border-bottom: 2px solid $C_742719;
     }
 
     ul {

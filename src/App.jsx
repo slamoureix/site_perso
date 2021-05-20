@@ -27,9 +27,11 @@ export default function App() {
       <ScrollToTop/> {/* composant qui gère le scroll vers le top */ }
       <Cursor/> 
         <Header/>
-          <Switch>
+          <main>
+            <Switch>
             {CreateRoutes(ObjRoutes)}
-          </Switch>
+            </Switch>
+          </main>
         <Footer/>
     </Router>
 )

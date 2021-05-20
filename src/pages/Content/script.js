@@ -1,8 +1,11 @@
+const classes = ".links_project>.link__project>.link__project_box"
+
+
 export const AddHoverEffectOnLink = () => {
     // Array Links projects
-    const DevArrLinks = Array.from(document.querySelectorAll('#developpement>.project>.link__project>.link__project_box'));
-    const TypoArrLinks = Array.from(document.querySelectorAll('#typographie>.project>.link__project>.link__project_box'));
-    const UxuiArrLinks = Array.from(document.querySelectorAll('#uxui>.project>.link__project>.link__project_box'));
+    const DevArrLinks = Array.from(document.querySelectorAll(`#Developpement>${classes}`));
+    const TypoArrLinks = Array.from(document.querySelectorAll(`#Typographie>${classes}`));
+    const UxuiArrLinks = Array.from(document.querySelectorAll(`#UxUi>${classes}`));
 
     //
     const AllLinks = [];

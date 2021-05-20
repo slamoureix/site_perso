@@ -1,6 +1,6 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
-@use "../components/separation" as *;
+@use "../abstracts/variables"as *;
+@use "../abstracts/mixins"as *;
+@use "../components/separation"as *;
 
 /* 
 Pour gerer l'order des différentes div il est nécessaire d'utiliser la proprieté : order.
@@ -8,7 +8,7 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
 */
 
 
-[class*="__project_container"]{
+[class*="__project_container"] {
     width: calc(100% - #{$col-left} - #{$col-right});
     margin: 75px $col-left;
 }
@@ -22,14 +22,13 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
     align-items: baseline;
 
     .title {
-        @extend 
-        .col-6,
+        @extend .col-6,
         .col-sm-6,
         .col-md-6,
         .col-lg-4,
         .col-xl-3,
         .col-xxl-3;
-    
+
         h1 {
             font-family: $popins_black;
             font-size: 50px;
@@ -37,7 +36,7 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
         }
     }
 
-    .year{
+    .year {
         @extend .col-3,
         .col-offset-3,
         .col-sm-2,
@@ -50,14 +49,12 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
         .col-xl-offset-2,
         .col-xxl-1,
         .col-xxl-offset-2;
-    
-        p {
-            text-align: right;
-            font-family: $popins_regular;
-            font-size: 15px;
-            color: $C_71816D;
-            border-bottom: 2px solid $C_71816D;
-        }
+        
+        text-align: right;
+        font-family: $popins_regular;
+        font-size: 15px;
+        color: $C_71816D;
+        border-bottom: 2px solid $C_71816D;
     }
 }
 
@@ -94,7 +91,7 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
     margin-top: 50px;
     margin-bottom: 50px;
 
-    p{
+    p {
         color: $C_E84E32;
         font-size: 25px;
         line-height: 1.15;
@@ -106,7 +103,7 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
 [class*="__grid"] {
     @extend .row;
     margin-bottom: 25px;
-    
+
     // [class*="__item-"] {
     //     &:first-child{
     //         padding-left: 0;
@@ -118,7 +115,7 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
     // }
 }
 
-[class*="__preview"]{
+[class*="__preview"] {
     @extend .col-3,
     .col-sm-2,
     .col-md-2,
@@ -140,31 +137,3 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
 
 
 
-[class*="__category_container"]{
-    width: 90%;
-    margin: 0 auto 50px;
-}
-
-[class*='__category_presentation']{
-    @extend .col-6,
-    .col-sm-3,
-    .col-sm-offset-3,
-    .col-md-3,
-    .col-md-offset-3,
-    .col-lg-2,
-    .col-lg-offset-4,
-    .col-xl-2,
-    .col-xl-offset-4,
-    .col-xxl-2,
-    .col-xxl-offset-4;
-    padding-left: 0;
-    border-bottom: 10px solid $C_E84E32;
-
-
-    h1 {
-        font-family: $popins_regular;
-        font-size: 35px;
-        padding: 5px 0;
-        text-align: right;
-    }
-}

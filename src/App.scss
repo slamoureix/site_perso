@@ -2,11 +2,15 @@
 @use '../src/scss/abstracts/base'as *;
 @use '../src/scss/abstracts/index'as *;
 
+html{
+    background-color: $Bg;
+}
+
 #root{
     display: flex;
     min-height: 100%;
     flex-direction: column;
-
+    
     margin: 0 auto;
     width: 93.05vw;
 }
@@ -36,9 +40,9 @@
     visibility: visible;
 }
 
-.MoveTo{
-    animation: $LetterMove 3s $ease-material;
-}
+// .MoveTo{
+//     animation: $LetterMove 3s $ease-material;
+// }
 
 @keyframes ToScaleTransition{
     100%{

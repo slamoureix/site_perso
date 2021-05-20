@@ -1,15 +1,60 @@
-@use '../../scss/abstracts/variables' as *;
-@use '../../scss/abstracts/mixins' as *;
+@use '../../scss/abstracts/variables'as *;
+@use '../../scss/abstracts/mixins'as *;
 
 $coeff: 10vw; // 13 rem // 9.028vw
 $numOfelement : 5;
 
+#projet {
+    header {
+        margin-bottom: clamp(15px, 5.208vw, 75px);
+        border-top: 4px solid $C_E84E32;
+
+        h1 {
+            font-family: $popins_black;
+            text-transform: uppercase;
+            color: $C_E84E32;
+            font-size: clamp(5rem, 10.417vw, 15rem);
+        }
+    }
+    border-bottom: 4px solid $C_E84E32;
+    margin-bottom: 50px;
+}
+
+[class*="__category_container"] {
+    width: 90%;
+    margin: 0 auto 50px;
+}
+
+[class*='__category_presentation'] {
+    @extend .col-6,
+    .col-sm-3,
+    .col-sm-offset-3,
+    .col-md-3,
+    .col-md-offset-3,
+    .col-lg-2,
+    .col-lg-offset-4,
+    .col-xl-2,
+    .col-xl-offset-4,
+    .col-xxl-2,
+    .col-xxl-offset-4;
+    padding-left: 0;
+    border-bottom: 10px solid $C_E84E32;
+
+
+    h1 {
+        font-family: $popins_regular;
+        font-size: 35px;
+        padding: 5px 0;
+        text-align: right;
+    }
+}
+
+
 .project_container {
-    height: clamp(25rem, 24.306vw, 35rem);
-    // height: 150px;
+    height: clamp(20rem, 24.306vw, 35rem);
     position: relative;
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
         width: 95%;
         height: auto;
         margin: 10px auto;
@@ -17,8 +62,8 @@ $numOfelement : 5;
 }
 
 // .project agit sur la UL
-.project {
-    
+.links_project {
+
     // agit sur la li .link__project{}
 
     .link__project_name {
@@ -107,15 +152,13 @@ $numOfelement : 5;
 
             &::before {
                 content: '';
-                font-family: $popins_light;
-                font-size: 5rem;
                 background-color: $C_E84E32;
                 position: absolute;
-                width: 1vw;
-                height: 1vw;
+                width: 1%;
+                height: 1%;
                 border-radius: 50%;
-                top: calc(50% - .5vw);
-                left: calc(50% - .5vw);
+                top: calc(50% - .5%);
+                left: calc(50% - .5%);
                 z-index: 999999;
                 transition: all .5s $ease-material;
             }
@@ -125,8 +168,7 @@ $numOfelement : 5;
             mix-blend-mode: color-dodge;
             opacity: 1;
             border-radius: 0%;
-            transform: scale(18);
-            border: 10px solid $C_E84E32;
+            transform: scale(110);
         }
 
         //  ~ permet d'agir sur des classes css de même niveau dans l'arbre.
@@ -137,9 +179,9 @@ $numOfelement : 5;
 
 
     }
-    
+
     // pour les écrans supérieurs à 1441
-    @include media-breakpoint-up(xxl){
+    @include media-breakpoint-up(xxl) {
         .link__project_name {
             font-size: clamp(2rem, 3.125vw, 5rem);
         }

@@ -2,16 +2,16 @@
 
 html {
     // permet d'enlever la barre de défilement vérticale.
-    scrollbar-color: none;
+    scrollbar-color: unset;
     scrollbar-width: none;
 
     ::-webkit-scrollbar {
         width: 0px;
-        color: none;
+        color: unset;
     }
 
     ::-webkit-scrollbar-button {
-        color: none;
+        color: unset;
     }
 
     scroll-behavior: smooth;

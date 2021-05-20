@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 
 import Typographie from '../Typographie/Typographie'
 import Developement from '../Developpement/Developpement'
@@ -8,18 +8,15 @@ import {AddHoverEffectOnLink} from './script'
 import './_Content.scss'
 
 export default function Content() {
-
-    const [inProp, setInProp] = useState(false)
-
-
     useEffect(() => {AddHoverEffectOnLink()}, [])
 
     return (
-        <div id="projet">
+        <article id="projet">
+            <header><h1> Mes Projets</h1></header>
             <Developement/>
             <Typographie/>
             <UxUi/>
-        </div>
+        </article>
     )
 }
 

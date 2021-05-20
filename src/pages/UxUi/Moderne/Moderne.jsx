@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 
-import Preview from '../../../components/Preview/Preview';
+// import Preview from '../../../components/Preview/Preview';
+
 import Nav from '../../../components/Navigation/Navigation';
 import useCreateImageGrid from '../../../useCreateImageGrid';
 

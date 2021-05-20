@@ -5,16 +5,16 @@ import src from './photo_CV.webp';
 
 export default function about() {
     return (
-        <section className="me">
+        <article className="me">
             <div className="me_content">
-                <hr></hr>
-                <img src={src} loading="lazy" alt=""></img>
+                <span className="separate" />
+                <img src={src} loading="lazy" alt="" />
                     <p className="presentation">
                         Passionné par le <strong>design graphique</strong>, l'<strong>édition</strong>,<br></br> 
                         la <strong> création web </strong> et le <strong>développement front&#8209;end</strong><br></br> 
                         je suis <span><strong>Freelance</strong></span> depuis <span className="date">2016</span>. 
                     </p>
-                <hr></hr>
+                <span className="separate" />
                     {/* <p className="competence">
                         
                         J'associe fonds, formes, couleurs et typographies dans un esprit de symbiose afin de rendre l'expérience visuelle forte 
@@ -31,6 +31,6 @@ export default function about() {
                     </p>
                 <hr></hr> */}
             </div>
-        </section>
+        </article>
     )
 }

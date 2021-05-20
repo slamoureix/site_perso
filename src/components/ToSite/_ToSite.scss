@@ -27,8 +27,7 @@
         transition: all .3s $ease-material;
 
 
-        span {
-            display: block;
+        p {
             font-family: $popins_bold;
             text-transform: uppercase;
             letter-spacing: 1.5px;
@@ -48,7 +47,7 @@
 
         &:hover{
             svg{fill: white}
-            span{color: white;}
+            p{color: white;}
             background-color: $C_E84E32;
         }
     }

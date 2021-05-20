@@ -29,8 +29,8 @@ export default function Links(props) {
             to = {props.path}
             replace // replace current entry in the history stack
             >
-                <span className="link link__project_name">{props.name}</span>
-                <div className ="link link__project_cover" >
+                <p className="link link__project_name">{props.name}</p>
+                <div className ="link__project_cover" >
                 {CreatePicture.type(props.rep, props.cover.src_default, props.cover.sources, props.cover.alt)}
                 </div>
             </NavLink>

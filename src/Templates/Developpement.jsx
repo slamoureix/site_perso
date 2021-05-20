@@ -13,28 +13,35 @@ export default function DeveloppementTemplate({
     return (
         <>
         <article className= {`${nameProject.rep}__project_container`}>
-            <section>
-                    <div className = {`${nameProject.rep}__head_row`}>
+            
+                    <header className = {`${nameProject.rep}__head_row`}>
                         <div className= "title"><h1>{nameProject.name}</h1></div>
-                        <div className= "year"><p>{nameProject.year}</p></div>
-                    </div>
+                        <time dateTime= "2020" className= "year">{nameProject.year}</time>
+                    </header>
 
-                    <div className= {`${nameProject.rep}__content`}><p>{nameProject.content}</p></div>
+                    <section className= {`${nameProject.rep}__content`}>
+                    <p>{nameProject.content}</p>
+                    </section>
 
-                    <div className = {`${nameProject.rep}__skills_row`}>
+                    <section className = {`${nameProject.rep}__skills_row`}>
                     <Skills title= {nameProject.competence.title} skills={nameProject.competence.comp}/>
-                    </div>
+                    </section>
 
-                    <div className = {`${nameProject.rep}__skills_row`}>
+                    <section className = {`${nameProject.rep}__skills_row`}>
                         <Skills title= {nameProject.techno.title} skills={nameProject.techno.technos}/>
-                    </div>
+                    </section>
 
-                    <div className= {`${nameProject.rep}_row`}>
+                    <section className= {`${nameProject.rep}_row`}>
+                        
+
+                    <ul className = {`${nameProject.rep}_imgContainer` }>
+                    {useCreateImageGrid(datasImgState, nameProject.rep)} {/* à voir en fonction du nombre d'image */}
+                    </ul>
 
                     <ToSite toSite= {nameProject.adress}/>
-                    {useCreateImageGrid(datasImgState, nameProject.rep)} {/* à voir en fonction du nombre d'image */}
-                    </div>
-            </section>
+                    
+                    </section>
+            
         </article>
         <Nav rep= {nameProject.rep} routes={routesDeveloppement}/>
     </>

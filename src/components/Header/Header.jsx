@@ -48,7 +48,7 @@ export default function Header() {
     useEffect(() => { if (locationState.pathname !== '/') homeRef.current.classList.add('animate') }, [locationState.pathname])
 
     return (
-        <header>
+        <header className="header">
             <Logo/>
             <nav ref= {navMenu} className="NavMenu">
                 <ul>
