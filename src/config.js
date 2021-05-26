@@ -15,6 +15,7 @@ export const anchor = "anchor";
 // Types de projets
 export const developement = "Developement";
 export const typographie = "Typographie";
+export const edition = "Édition";
 export const webdesign = "Webdesign";
 export const uxUi = "Ux - Ui";
 export const divers = "Divers";
@@ -72,10 +73,8 @@ import {...} from './...'
 
 export default -> quand tu exportes une fonctionnalités plus complexe
 import .... from './...'
-
 */
 
 /*
 trait d 'union insécable => html : &#8209; JS > \u2011 css > \002011
-
 */

@@ -8,7 +8,7 @@ import { numberData as nameProject } from './data';
 
 import useCreateImageGrid from '../../../useCreateImageGrid';
 
-import './_Number.scss';
+
 
 import Preview from '../../../components/Preview/Preview';
 

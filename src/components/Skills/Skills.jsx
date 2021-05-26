@@ -1,8 +1,6 @@
 import React from 'react';
 import uuid from 'react-native-uuid';
 
-import "./_skills.scss";
-
 export default function Skills({title, skills}) {
     return (
         <>

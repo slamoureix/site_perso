@@ -4,9 +4,6 @@ import { useSelector } from 'react-redux';
 // datas 
 import { default as nameProject } from './data.js';
 
-// SCSS
-import './_Edition.scss';
-
 //Components
 import { useLinksCreate } from '../../uselinksCreate.jsx';
 

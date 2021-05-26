@@ -31,7 +31,7 @@ export default function DeveloppementTemplate({
                         <Skills title= {nameProject.techno.title} skills={nameProject.techno.technos}/>
                     </section>
 
-                    <section className= {`${nameProject.rep}_row`}>
+                    <section className= {`${nameProject.rep}__images_row`}>
                         
 
                     <ul className = {`${nameProject.rep}_imgContainer` }>

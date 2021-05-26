@@ -1,5 +1,5 @@
-@use './variables' as *;
-@use './mixins' as *;
+@use './variables'as*;
+@use './../mixins/breakpoints'as*;
 
 .height-content {
     min-height: calc(100vh - #{$height-max});

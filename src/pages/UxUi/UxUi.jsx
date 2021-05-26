@@ -1,11 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-
 // datas 
 import { uxUiData as nameProject } from './data.js';
-
-// SCSS
-
 //Components
 import HomeSection from '../../Templates/HomeSection';
 

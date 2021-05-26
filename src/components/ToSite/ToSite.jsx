@@ -1,5 +1,4 @@
 import React from 'react'
-import './_ToSite.scss'
 
 export default function ToSite({toSite}) {
     return (

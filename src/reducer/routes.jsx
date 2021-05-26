@@ -63,58 +63,6 @@ export const routes = {
         //     typeofLink: external
         // }
     },
-    Projects: {
-        // Developpement: {
-        //     path: developpementData.routes.path,
-        //     name: developpementData.name,
-        //     type: developpementData.type,
-        //     typeofLink: developpementData.routes.typeofLink,
-        //     rep: developpementData.rep,
-        //     cover: developpementData.img.cover,
-        //     component: developpementData.routes.component,
-        //     target: '_self',
-        // },
-        // Typographie: {
-        //     path: typoData.routes.path,
-        //     name: typoData.name,
-        //     type: typoData.type,
-        //     typeofLink: typoData.routes.typeofLink,
-        //     rep: typoData.rep,
-        //     cover: typoData.img.cover,
-        //     component: typoData.routes.component,
-        //     target: '_self',
-        // },
-        // UiUx: {
-        //     path: uxUiData.routes.path,
-        //     name: uxUiData.name,
-        //     type: uxUiData.type,
-        //     typeofLink: uxUiData.routes.typeofLink,
-        //     rep: uxUiData.rep,
-        //     cover: uxUiData.img.cover,
-        //     component: uxUiData.routes.component,
-        //     target: '_self',
-        // },
-        // Edition: {
-        //     path: EditionData.routes.path,
-        //     name: EditionData.name,
-        //     type: EditionData.type,
-        //     typeofLink: EditionData.routes.typeofLink,
-        //     rep: EditionData.rep,
-        //     cover: EditionData.img.cover,
-        //     component: Edition,
-        //     target: '_self',
-        // },
-        // Divers: {
-        //     path: DiversData.routes.path,
-        //     name: DiversData.name,
-        //     type: DiversData.type,
-        //     typeofLink: DiversData.routes.typeofLink,
-        //     rep: DiversData.rep,
-        //     cover: DiversData.img.cover,
-        //     component: Divers,
-        //     target: '_self',
-        // }
-    },
     Social: {
         Instagram: {
             path: 'https://www.instagram.com/slamoureix/?hl=fr',

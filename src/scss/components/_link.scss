@@ -5,7 +5,7 @@
     animation-delay: .2s;
 
     &__current {
-        
+
         transform-origin: right;
         border-bottom: 4px solid $C_E84E32;
         transition: all .2s $ease-material;
@@ -35,9 +35,9 @@
     color: $C_E84E32;
     font-size: clamp(10rem, 10.361vw, 20rem);
 
-    .link__underProject{
+    .link__underProject {
 
-        &:hover{
+        &:hover {
             opacity: 0.85;
             color: $C_742719;
             background-color: $C_E84E32;

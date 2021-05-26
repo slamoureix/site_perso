@@ -1,14 +1,14 @@
 import React from 'react';
 
-import './_About.scss';
-import src from './photo_CV.webp';
+/* IMG */
+import src from './photo_CV_5.webp';
 
 export default function about() {
     return (
         <article className="me">
             <div className="me_content">
                 <span className="separate" />
-                <img src={src} loading="lazy" alt="" />
+                <img src={`${src}`} loading="lazy" alt="" />
                     <p className="presentation">
                         Passionné par le <strong>design graphique</strong>, l'<strong>édition</strong>,<br></br> 
                         la <strong> création web </strong> et le <strong>développement front&#8209;end</strong><br></br> 

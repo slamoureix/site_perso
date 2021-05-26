@@ -9,7 +9,6 @@ import { letterData as nameProject } from './data';
 
 import CreateImageGrid from '../../../useCreateImageGrid.jsx';
 
-import './_letter.scss';
 
 
 

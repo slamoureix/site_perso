@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Logo from '../Logo/Logo';
-import './_Header.scss';
 
 import {
     useAnimHomePage

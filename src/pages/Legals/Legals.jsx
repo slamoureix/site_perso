@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './_legals.scss';
-
 export default function Legals() {
     return (
         <div className="legals">

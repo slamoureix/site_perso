@@ -6,7 +6,7 @@ import DeveloppementTemplate from '../../../Templates/Developpement';
 // datas 
 import {yourLookIsGoodData as nameProject } from './data.js';
 
-import './_yourLookIsGood.scss';
+
 
 export default function YourLookIsGood() {
     const [DatasImgState] = useState(nameProject.img.content);

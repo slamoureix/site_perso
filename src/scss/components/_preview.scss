@@ -1,5 +1,6 @@
 @use '../abstracts/variables'as *;
-@use '../abstracts/anim'as *;
+
+@use '../anim/rotate'as *;
 
 .preview{
     display: inline-flex;

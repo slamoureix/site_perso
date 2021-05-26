@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from 'react';
 import useMoussePosition from '../../useMoussePosition';
 
 
-import './_Cursor.scss';
+
 
 
 export default function Cursor() {
@@ -17,8 +17,10 @@ export default function Cursor() {
     }, [pageX, pageY])
 
     return (
+        <>
         <div ref={cursorRef} className="cursor">
         <span/>
         </div>
+        </>
     )
 }

@@ -1,5 +1,5 @@
 @use '../abstracts/variables'as *;
-@use '../abstracts/anim'as *;
+@use '../anim/rotate'as *;
 
 .arrow {
     fill: $C_E84E32;

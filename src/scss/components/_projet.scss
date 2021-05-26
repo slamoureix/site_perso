@@ -1,24 +1,25 @@
-@use "../abstracts/variables"as *;
-@use "../abstracts/mixins"as *;
-@use "../components/separation"as *;
+@use '../abstracts/variables'as*;
+@use '../mixins/col'as *;
+@use '../mixins/separation'as*;
+
+
+
 
 /* 
 Pour gerer l'order des différentes div il est nécessaire d'utiliser la proprieté : order.
 Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image différente (img). 
 */
-
-
 [class*="__project_container"] {
     width: calc(100% - #{$col-left} - #{$col-right});
     margin: 75px $col-left;
 }
 
 // posibilité d'ajout flex-items pour controler l'alignement dans la hauteur //
-[class*="_row"] {
+[class*=_row] {
     @extend .row;
 }
 
-[class*="head_row"] {
+[class*=head_row] {
     align-items: baseline;
 
     .title {
@@ -28,6 +29,8 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
         .col-lg-4,
         .col-xl-3,
         .col-xxl-3;
+
+        padding-left: 0;
 
         h1 {
             font-family: $popins_black;
@@ -49,13 +52,18 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
         .col-xl-offset-2,
         .col-xxl-1,
         .col-xxl-offset-2;
-        
+        padding-right: 0;
         text-align: right;
         font-family: $popins_regular;
         font-size: 15px;
         color: $C_71816D;
         border-bottom: 2px solid $C_71816D;
     }
+}
+[class*=__images_row]{
+    margin-top: 50px;
+    padding-left: 0;
+    padding-right: 0; 
 }
 
 [class*="__type"] {
@@ -90,6 +98,7 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
 
     margin-top: 50px;
     margin-bottom: 50px;
+    padding-left: 0;
 
     p {
         color: $C_E84E32;
@@ -133,7 +142,3 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
         @include Separation($Color : $C_71816D);
     }
 }
-
-
-
-

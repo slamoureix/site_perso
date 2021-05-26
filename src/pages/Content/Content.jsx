@@ -5,7 +5,7 @@ import Developement from '../Developpement/Developpement'
 import UxUi from '../UxUi/UxUi'
 import {AddHoverEffectOnLink} from './script'
 
-import './_Content.scss'
+
 
 export default function Content() {
     useEffect(() => {AddHoverEffectOnLink()}, [])

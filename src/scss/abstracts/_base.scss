@@ -2,6 +2,7 @@
 
 html {
     // permet d'enlever la barre de défilement vérticale.
+
     scrollbar-color: unset;
     scrollbar-width: none;
 
@@ -9,32 +10,32 @@ html {
         width: 0px;
         color: unset;
     }
-
+    
     ::-webkit-scrollbar-button {
         color: unset;
     }
 
     scroll-behavior: smooth;
 
+    // personne qui on des soucis de motricité
+    @media (prefers-reduced-motion: reduce) {
+        scroll-behavior: auto;
+    }
+
     cursor: none;
     color: $C_E84E32;
-
+    background-color: $Bg; // couleur de l'élément racine pour le contexte d'empilement //
+    
+    overflow-x: hidden; // evite les décalages horizontales 
+    
     ::selection{
         background-color:  $C_170805;
         color: $C_71816D;
+
     }
-
-    /* La height 100% est nécessaire pour placer le footer à l'aide d'une marge-top:auto */
-    height: 100%;
-
     body{
-        height: 100%;
+        background-color: inherit; // couleur de l'élément pour le contexte d'empilement //
     }
-
-    // h1{
-    //     font-family: $popins_black;
-    //     font-size: 2.5rem;
-    // }
 
     h2, h1{
         font-family: $popins_bold;
@@ -54,6 +55,7 @@ html {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        image-rendering: auto;
     }
 }
 
