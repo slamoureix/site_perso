@@ -4,7 +4,8 @@ import {
     jpg
 } from '../../../../config';
 
-const name = "CoverProject";
+const name = "YligCoverProject";
+
 
 export const cover = {
 

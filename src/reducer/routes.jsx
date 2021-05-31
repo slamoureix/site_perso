@@ -5,17 +5,6 @@ import Legals from '../pages/Legals/Legals';
 
 import Home from '../pages/Home/Home';
 
-// import Edition from '../pages/Edition/Edition';
-// import Divers from '../pages/Divers/Divers';
-
-// // DATAS //
-
-// import {developpementData} from '../pages/Developpement/data';
-// import DiversData from '../pages/Divers/data';
-// import {typoData} from '../pages/Typographie/data';
-// import EditionData from '../pages/Edition/data';
-// import {uxUiData} from '../pages/UxUi/data';
-
 // Config
 import {
     external
@@ -56,12 +45,6 @@ export const routes = {
             component: Contact,
             target: '_self',
         },
-        // Lab: {
-        //     path: 'https://codepen.io/your-work',
-        //     name: 'Lab',
-        //     target: '_blank',
-        //     typeofLink: external
-        // }
     },
     Social: {
         Instagram: {
@@ -89,11 +72,9 @@ export default function RoutesReducer(state = routes) {
     return state;
 }
 
-// Projets: {
-//     path: '/',
-//     anchor: '#projet',
-//     name: 'Mes projets',
-//     component: Content,
-//     target: '_self',
-//     typeofLink: anchor
-// },
+// Lab: {
+//     path: 'https://codepen.io/your-work',
+//     name: 'Lab',
+//     target: '_blank',
+//     typeofLink: external
+// }

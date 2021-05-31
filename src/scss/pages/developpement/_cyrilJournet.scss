@@ -1,10 +1,20 @@
-// .CyrilJournet__project_container{
-    
-// }
+@use "../../mixins/col"as *;
 
-// .CyrilJournet_imgContainer{
-    
-// }
-[class*="CyrilJournet__item-"]{
-    margin-bottom: 75px;
+
+.CyrilJournet__images_row{
+
+    .CyrilJournet__item-{
+        &3,
+        &2 {
+            @extend .col-xxl-3,
+            .col-xl-3,
+            .col-lg-6,
+            .col-md-6,
+            .col-xs-6;
+            
+            img {
+                object-fit: contain;
+            }
+        }
+    }
 }

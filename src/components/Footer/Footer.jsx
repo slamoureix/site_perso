@@ -45,7 +45,8 @@ const navSocial = useRef();
                 </ul>
             </nav>
             <div className="copyright">
-                © Design & Développement - Tous droits réservés - <strong>Sebastien Lamoureix</strong> / {useLinksCreate(LinkLegals)}
+                © Design & Développement - Tous droits réservés - <strong>Sebastien Lamoureix</strong>  
+                {/* {useLinksCreate(LinkLegals)} */}
             </div>
         </footer>
     )

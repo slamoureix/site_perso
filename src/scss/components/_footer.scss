@@ -19,8 +19,6 @@ footer {
 
     nav {
         align-self: flex-end;
-        font-size: clamp(1.2rem, 1.042vw, 1.5rem);
-        line-height: clamp(1.6rem, 1.736vw,2.5rem);
         position: relative;
         display: inherit;
         justify-content: center;
@@ -46,13 +44,14 @@ footer {
                 stroke: $C_E84E32;
                 fill: none;
                 animation: $rotate 8s linear infinite;
-                
             }
         }
         ul {
             position: absolute;
             top: 50%;
             left: 50%;
+            font-size: clamp(1.3rem, 1.042vw, 1.5rem);
+            line-height: clamp(1.6rem, 1.736vw, 2.5rem);
             transform: translate(-50%, -50%) rotate(30deg);
             text-align: center;
         }
@@ -65,11 +64,19 @@ footer {
         border-top-left-radius: 50px;
         margin-top: 50px;
         padding: 25px 0 10px; 
-        border-top: 4px solid $C_E84E32;
-        border-left: 4px solid $C_E84E32;
-        color: $C_E84E32;
+        border-color: $C_E84E32;
+        border-style: solid;
+        border-top-width: 4px;
+        border-left-width: 4px ;
         width: 100%;
-        font-size: 15px;
+        font-size: clamp(1.2rem, 1.042vw, 1.5rem);
+        line-height: clamp(1.6rem, 1.736vw, 2.5rem);
         text-transform: uppercase;
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 20px;
+        }
     }
 }

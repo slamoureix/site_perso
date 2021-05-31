@@ -1,11 +1,12 @@
+import { cover } from './imgDatas/cover'
 import {
-    YligMockUp
-} from './imgDatas/yourLookIsGoodMockUp'
+    WebPresentationMobile
+} from './imgDatas/WebPresentationMobile'
 
 
 export const img = {
-    "cover": YligMockUp,
+    "cover": cover,
     "content": [
-        YligMockUp,
+        WebPresentationMobile,
     ]
 }

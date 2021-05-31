@@ -5,13 +5,15 @@ import ToSite from '../components/ToSite/ToSite';
 import Skills from '../components/Skills/Skills';
 import useCreateImageGrid from '../useCreateImageGrid';
 
+
+
 export default function DeveloppementTemplate({
     nameProject,
     datasImgState,
     routesDeveloppement
 }) {
     return (
-        <>
+        
         <article className= {`${nameProject.rep}__project_container`}>
             
                     <header className = {`${nameProject.rep}__head_row`}>
@@ -31,19 +33,16 @@ export default function DeveloppementTemplate({
                         <Skills title= {nameProject.techno.title} skills={nameProject.techno.technos}/>
                     </section>
 
-                    <section className= {`${nameProject.rep}__images_row`}>
-                        
-
-                    <ul className = {`${nameProject.rep}_imgContainer` }>
-                    {useCreateImageGrid(datasImgState, nameProject.rep)} {/* à voir en fonction du nombre d'image */}
+                    <section> 
+                    <ul className = {`${nameProject.rep}__images_row` }>
+                    {useCreateImageGrid(datasImgState, nameProject.rep)} {/*à voir en fonction du nombre d'image*/}
                     </ul>
 
                     <ToSite toSite= {nameProject.adress}/>
                     
                     </section>
             
-        </article>
         <Nav rep= {nameProject.rep} routes={routesDeveloppement}/>
-    </>
+        </article>
     )
 }

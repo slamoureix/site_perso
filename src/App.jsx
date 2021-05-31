@@ -4,8 +4,6 @@ import { useSelector } from 'react-redux';
 
 import {CreateRoutes} from './scripts/CreateRoutes';
 
-
-
 import './App.scss';
 
 import Header from './components/Header/Header';
@@ -14,12 +12,7 @@ import Cursor from './components/Cursor/Cursor';
 
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
-
-
 export default function App() {
-
-  
-
   const ObjRoutes = useSelector(({AllRoutesReducer}) => ({...AllRoutesReducer}))
 
   return (

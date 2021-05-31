@@ -6,9 +6,10 @@ import { uxUiData as nameProject } from './data.js';
 import HomeSection from '../../Templates/HomeSection';
 
 export default function UxUi() {
-    const UxUiRoutes = useSelector(({AllRoutesReducer}) => ({
-        ...AllRoutesReducer.UxUiReducer.UxUi
+    const AllRoutes = useSelector(({AllRoutesReducer}) => ({
+        ...AllRoutesReducer
     }));
-
-    return <HomeSection nameProject={nameProject} routes={UxUiRoutes} />
+    return <HomeSection nameProject = {nameProject} routes = {Object.values(AllRoutes.UxUiReducer.UxUi)}/>
 }
+
+

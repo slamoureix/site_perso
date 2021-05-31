@@ -35,6 +35,9 @@ export const devFront = `Développement Front\u2011End`
 export const devBack = `Développement Back\u2011End`
 export const integration = "Intégration"
 export const responsive = "Responsive"
+export const ui = "User interface"
+export const webdesigning = "Webdesign"
+export const branding = "Branding"
 export const animCss = "Animations CSS "
 export const animJavascript = "Animations JS"
 export const animations = "Animations"
@@ -53,6 +56,7 @@ export const cptUi ="Custom Post Type UI"
 
 export const react = "React js"
 export const jsx = "JSX"
+export const api = "Api"
 
 export const bootstrap = "Bootstrap"
 

@@ -23,13 +23,11 @@
 
 @mixin col($i) {
     flex: 0 0 auto;
-    width: percentage($i / $columns);
+    width: percentage($i / $columns); 
     max-width: 100%;
     padding-right: calc(#{$gutter} / 2);
     padding-left: calc(#{$gutter} / 2);
-        @if $i==$columns {
-            padding: 0;
-        }
+        
 }
 
 @mixin offset($i) {
@@ -47,6 +45,9 @@
         @for $i from 1 through $columns {
             .col-#{$i} {
                 @include col($i);
+                @if $i==$columns {
+                    padding: 0;
+                }
             }
 
             .col-offset-#{$i} {
@@ -74,6 +75,9 @@
             @for $i from 0 through $columns {
                 .col-#{$bk}-#{$i} {
                     @include col($i);
+                    @if $i==$columns {
+                        padding: 0;
+                    }
                 }
 
                 .col-#{$bk}-offset-#{$i} {

@@ -27,6 +27,7 @@ export const UxUiRoutes = {
             rep: oceanForLifeData.rep,
             typeofLink: oceanForLifeData.routes.typeofLink,
             cover: oceanForLifeData.img.cover,
+            
         },
     },
 }

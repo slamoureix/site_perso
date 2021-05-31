@@ -11,7 +11,7 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
 */
 [class*="__project_container"] {
     width: calc(100% - #{$col-left} - #{$col-right});
-    margin: 75px $col-left;
+    margin: 75px $col-left 25px;
 }
 
 // posibilité d'ajout flex-items pour controler l'alignement dans la hauteur //
@@ -29,8 +29,6 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
         .col-lg-4,
         .col-xl-3,
         .col-xxl-3;
-
-        padding-left: 0;
 
         h1 {
             font-family: $popins_black;
@@ -52,7 +50,6 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
         .col-xl-offset-2,
         .col-xxl-1,
         .col-xxl-offset-2;
-        padding-right: 0;
         text-align: right;
         font-family: $popins_regular;
         font-size: 15px;
@@ -60,10 +57,9 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
         border-bottom: 2px solid $C_71816D;
     }
 }
-[class*=__images_row]{
+
+[class*=__images_row] {
     margin-top: 50px;
-    padding-left: 0;
-    padding-right: 0; 
 }
 
 [class*="__type"] {
@@ -85,7 +81,7 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
 
 }
 
-[class*="__content"] {
+[class*=__content] {
     @extend .col-6,
     .col-sm-6,
     .col-md-6,
@@ -98,7 +94,7 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
 
     margin-top: 50px;
     margin-bottom: 50px;
-    padding-left: 0;
+
 
     p {
         color: $C_E84E32;
@@ -107,21 +103,21 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
     }
 }
 
+[class*=__item-] {
+    @extend .col-xxl-6,
+    .col-xl-6,
+    .col-lg-6,
+    .col-md-6,
+    .col-xs-6;
+
+    margin-bottom: clamp(2.5rem, 5.208vw, 7.5rem);
+}
+
 
 
 [class*="__grid"] {
     @extend .row;
     margin-bottom: 25px;
-
-    // [class*="__item-"] {
-    //     &:first-child{
-    //         padding-left: 0;
-    //     }
-    //     &:last-child {
-    //         padding-right: 0;
-    //         margin-bottom: 0px;
-    //     }
-    // }
 }
 
 [class*="__preview"] {
@@ -134,7 +130,7 @@ Possibilité de donner une taille au contenur (&__item-(numero)) et à l'image d
     .col-xxl-offset-1;
 }
 
-[class*="__links_container"] {
+[class*=__links_container] {
     display: flex;
     flex-direction: column;
 

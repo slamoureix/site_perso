@@ -10,19 +10,18 @@ import uuid from 'react-native-uuid';
  * @param {String} sources : sources of the file format
  * @param {String} alt : alt of the file format
  */
-function CreatePicture(rep, src_default, sources, alt) {
+export const CreatePicture = (rep, src_default, sources, alt) => {
     
-    
-
     /* SOURCES */ 
     const [DataSourceState, setDataSourceState] = useState(); // undefined vaut false lors d'un test bol
-    const [temporaryImportSources, setTemorarySources] = useState()
+    const [temporaryImportSources, setTemorarySources] = useState();
     
     /* pour src_default */
-    const [SrcState, SrcSetstate] = useState('');
+    const [SrcState, SrcSetstate] = useState();
 
     
     useEffect(() => {
+        
             CreateSrc(src_default.name, src_default.format, rep).then(value => (SrcSetstate(value.default)));
 
             const fusionToArray = (InitSources, Temporary) => {
@@ -56,8 +55,8 @@ function CreatePicture(rep, src_default, sources, alt) {
     return (
         <picture>
                 {temporaryImportSources ? (DataSourceState ? DataSourceState.CompletedSources.map(s => <source key={uuid.v4()} srcSet={s.srcset} media={s.media} />) : null ) : null}
-                <img id={uuid.v4()} className="img" loading="lazy" src={SrcState} alt= {alt}  />
+                <img id={uuid.v4()} className="img" loading="lazy" src={SrcState} alt= {alt} lazy="true" />
         </picture>
     )
 }
-export default React.memo(CreatePicture);
+

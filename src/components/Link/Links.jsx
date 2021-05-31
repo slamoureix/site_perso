@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom';
 import {external, project, underProject} from '../../config.js';
 
 
-import CreatePicture from '../../scripts/CreatePicture';
+import {CreatePicture} from '../../scripts/CreatePicture';
 
 
 const externalLink = forwardRef((props, ref) => (
@@ -31,7 +31,7 @@ export default function Links(props) {
             >
                 <p className="link link__project_name">{props.name}</p>
                 <div className ="link__project_cover" >
-                {CreatePicture.type(props.rep, props.cover.src_default, props.cover.sources, props.cover.alt)}
+                {CreatePicture(props.rep, props.cover.src_default, props.cover.sources, props.cover.alt)}
                 </div>
             </NavLink>
             </div>
@@ -62,4 +62,5 @@ export default function Links(props) {
         );
     }
 }
+
 

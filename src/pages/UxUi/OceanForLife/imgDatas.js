@@ -1,15 +1,14 @@
-// import Cover from './imgsDatas/cover';
+
 import {webPresentation} from './imgsDatas/webPresentation';
 import {webPresentation2} from './imgsDatas/webPresentation2';
 import {webPresentation3} from './imgsDatas/webPresentation3';
 import {webPresentation4} from './imgsDatas/webPresentation4';
 import {webPresentation5} from './imgsDatas/webPresentation5';
 import {colorAndFont} from './imgsDatas/colorAndFont';
-import {cover} from './imgsDatas/cover';
-
+import {OCFcover} from './imgsDatas/OCFcover';
 
 export const img = {
-    cover: cover,
+    cover: OCFcover,
     content: [
         colorAndFont,
         webPresentation,

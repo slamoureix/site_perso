@@ -140,18 +140,19 @@ $numOfelement : 5;
                 top: -11vw;
                 width: 18vw;
                 height: 18vw;
-
+                background-color: $Bg;
+                
                 img {
                     display: block;
                     position: relative;
                     object-fit: contain;
+                    
                 }
             }
         }
 
         // agit au hover des liens
         a:hover>.link__project_cover {
-
             &::before {
                 content: '';
                 background-color: $C_E84E32;
@@ -167,11 +168,18 @@ $numOfelement : 5;
         }
 
         a:hover>.link__project_cover:hover::before {
-            mix-blend-mode: color-dodge;
+            mix-blend-mode: color-dodge; // multiply // color-dodge
             opacity: 1;
             border-radius: 0%;
-            transform: scale(20);
+            transform: scale(19);
         }
+
+        // a:hover>.link__project_cover:hover {
+        //     img {
+        //         mix-blend-mode: exclusion;
+        //         transition: all .3s ease-in-out .3s;
+        //     }
+        // }
 
         //  ~ permet d'agir sur des classes css de même niveau dans l'arbre.
         // permet de virer l'opacité du before sur la cover

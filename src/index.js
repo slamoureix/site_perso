@@ -14,6 +14,7 @@ import RoutesReducer from './reducer/routes';
 import TypographieReducer from './reducer/typographie';
 import UxUiReducer from './reducer/uxui';
 import DeveloppementReducer from './reducer/developpement';
+import DiversReducer from './reducer/divers';
 
 //dernier reducer à être intégré dans les routes globales.
 import AdminReducer from './reducer/admin';
@@ -22,7 +23,8 @@ const AllRoutesReducer = combineReducers({
     RoutesReducer,
     UxUiReducer,
     TypographieReducer,
-    DeveloppementReducer,
+    DeveloppementReducer, 
+    DiversReducer,
     AdminReducer
 });
 const rootReducer = combineReducers({AnimReducer, AllRoutesReducer});
