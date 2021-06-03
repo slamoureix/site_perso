@@ -8,8 +8,6 @@ import {
 import Nav from '../../../components/Navigation/Navigation';
 
 import {wordsData as nameProject} from './data';
-
-import Preview from '../../../components/Preview/Preview';
 import useCreateImageGrid from '../../../useCreateImageGrid';
 
 export default function Words() {
@@ -25,11 +23,6 @@ export default function Words() {
                 <div className="head_row">
                     <div className= "title"><h1>{nameProject.name}</h1></div>
                 </div>
-
-                {/* <div className = {`${nameProject.name}__preview`}>
-                <Preview path = '/Typographie' typeName = {nameProject.type} />
-                </div> */}
-
             </section>
             <section className= {`${nameProject.name}__grid`}>{useCreateImageGrid(DatasImgState, nameProject.name)}</section>
             <Nav rep= {nameProject.rep} routes= {TypographieRoutes}/>

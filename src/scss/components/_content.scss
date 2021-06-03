@@ -30,15 +30,15 @@ $numOfelement : 5;
 [class*='__category_presentation'] {
     @extend .col-6,
     .col-sm-3,
-    .col-sm-offset-3,
+    .col-sm-offset-2,
     .col-md-3,
-    .col-md-offset-3,
+    .col-md-offset-2,
     .col-lg-2,
-    .col-lg-offset-4,
+    .col-lg-offset-3,
     .col-xl-2,
-    .col-xl-offset-4,
+    .col-xl-offset-3,
     .col-xxl-2,
-    .col-xxl-offset-4;
+    .col-xxl-offset-3;
     padding-left: 0;
     border-bottom: 10px solid $C_E84E32;
 
@@ -123,7 +123,7 @@ $numOfelement : 5;
         // classe ajoutée que la souris entre sur la box
         .link__project_box--hover {
             position: relative;
-            transition: all .3s ease-in-out;
+            transition: all .5s ease-in-out;
 
             .link__project_name {
                 font-size: clamp(2rem, 3.125vw, 3rem);
@@ -163,7 +163,7 @@ $numOfelement : 5;
                 top: calc(50% - 0.5vw);
                 left: calc(50% - 0.5vw);
                 z-index: 999999;
-                transition: all .5s $ease-material;
+                transition: all .6s $ease-material;
             }
         }
 

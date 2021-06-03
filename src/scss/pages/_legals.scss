@@ -19,6 +19,10 @@
         margin: 20px auto;
     }
 
+    h1, h2{
+        font-size: 40px;
+    }
+
     h2 {
         margin-top: 10px;
         margin-bottom: 5px;
@@ -28,8 +32,8 @@
         display: inline-block;
         margin: 5px 0px;
         padding: 5px 5px 5px 0px;
-        font-family: $popins_medium;
-        color: white;
+        font-family: $popins_bold;
+        color: $Bg;
         background-color: $C_E84E32;
         font-size: 1.5rem;
         line-height: 1.5rem;

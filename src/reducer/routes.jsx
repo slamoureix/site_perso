@@ -30,12 +30,12 @@ export const routes = {
             component: Legals,
             target: '_self',
         },
-        Political: {
-            path: '/Legals',
-            name: 'Mentions Légales',
-            component: Legals,
-            target: '_self',
-        }
+        // Political: {
+        //     path: '/Legals',
+        //     name: 'Mentions Légales',
+        //     component: Legals,
+        //     target: '_self',
+        // }
     },
 
     Nav: {
@@ -54,7 +54,7 @@ export const routes = {
             typeofLink: external
         },
         Behance: {
-            path: 'https://www.behance.net/cebastiens/projects',
+            path: 'https://www.behance.net/sebastien_lamoureix',
             name: 'Behance',
             target: '_blank',
             typeofLink: external

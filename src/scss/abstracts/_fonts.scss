@@ -5,11 +5,6 @@ $fontExts: eot woff2 woff svg;
 @include font-face('poppinsbold', '../../assets/fonts/poppins/', 'poppins-bold-webfont', normal, normal, $fontExts);
 @include font-face('poppinsregular', '../../assets/fonts/poppins/', 'poppins-regular-webfont', normal, normal, $fontExts);
 @include font-face('poppinsitalic', '../../assets/fonts/poppins/', 'poppins-italic-webfont', normal, normal, $fontExts);
-@include font-face('poppinslight', '../../assets/fonts/poppins/', 'poppins-light-webfont', normal, normal, $fontExts);
-@include font-face('poppins_light_italic', '../../assets/fonts/poppins/', 'poppins-lightitalic-webfont', normal, normal, $fontExts);
-@include font-face('poppinsthin', '../../assets/fonts/poppins/', 'poppins-thin-webfont', normal, normal, $fontExts);
-@include font-face('poppinsmedium', '../../assets/fonts/poppins/', 'poppins-medium-webfont', normal, normal, $fontExts);
-@include font-face('poppinssemibold', '../../assets/fonts/poppins/', 'poppins-semibold-webfont', normal, normal, $fontExts);
 @include font-face('poppinsblack', '../../assets/fonts/poppins/', 'poppins-black-webfont', normal, normal, $fontExts);
 
 

@@ -20,13 +20,11 @@ export default function OceanForLife() {
     }));
 
     return (
-        <article className= {`${nameProject.name}__project_container`}>
-            <section>
-                <div className="head_row">
+        <article className= {`${nameProject.rep}__project_container`}>
+                <header className="head_row">
                     <div className= "title"><h1>{nameProject.name}</h1></div>
-                </div>
-            </section>
-            <section className= {`${nameProject.name}__grid`}>{useCreateImageGrid(DatasImgState, nameProject.rep)}</section>
+                </header>
+            <section className= {`${nameProject.rep}__grid`}>{useCreateImageGrid(DatasImgState, nameProject.rep)}</section>
             <Nav rep= {nameProject.rep} routes= {UxUiRoutes}/>
         </article>
     )

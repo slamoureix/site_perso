@@ -10,6 +10,18 @@
     border-radius: 50%;
     pointer-events: none;
     mix-blend-mode: difference;
+
+    span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $Bg;
+        font-size: 15px;
+        font-family: $popins--italic;
+    }
+    @media screen and (max-width : 1024px) {
+        display: none;
+    }
 }
 
 .cursor::before {
@@ -25,3 +37,4 @@
     border: solid 1px $C_E84E32;
     animation: $Scale 3s linear .2s infinite alternate;
 }
+

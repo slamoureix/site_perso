@@ -1,14 +1,11 @@
 import React, { forwardRef } from 'react';
 import {NavLink} from 'react-router-dom';
-
 import {external, project, underProject} from '../../config.js';
-
-
 import {CreatePicture} from '../../scripts/CreatePicture';
 
 
 const externalLink = forwardRef((props, ref) => (
-<a ref={ref} href={props.props.path} target={props.props.target} className="link">{props.props.name}</a>))
+<a ref={ref} href={props.props.path} target={props.props.target} rel="noreferrer noopener" className="link">{props.props.name}</a>))
 
 export default function Links(props) {
 

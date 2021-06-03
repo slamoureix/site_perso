@@ -1,9 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Logo from '../Logo/Logo';
 
-import {
-    useAnimHomePage
-} from '../../useAnimHomePage';
 import { useLinksCreate } from '../../uselinksCreate';
 import { useSelector } from 'react-redux';
 import { useHistory, useLocation } from 'react-router';
@@ -12,13 +9,6 @@ import { useHistory, useLocation } from 'react-router';
 
 
 export default function Header() {
-    const InitialState = {
-        visibility: false,
-        transition: 'MoveTo',
-        duration: 450,
-        firstime: true,
-    };
-    const [LocalState] = useState(InitialState);
     const navMenu = useRef();
 
     
