@@ -39,6 +39,12 @@ export const routes = {
     },
 
     Nav: {
+        Lab: {
+            path: 'https://codepen.io/seb_lam',
+            name: 'Lab',
+            target: '_blank',
+            typeofLink: external
+        },
         Contact: {
             path: '/Contact',
             name: 'Contact',
@@ -46,6 +52,7 @@ export const routes = {
             target: '_self',
         },
     },
+    
     Social: {
         Instagram: {
             path: 'https://www.instagram.com/slamoureix/?hl=fr',
@@ -72,9 +79,3 @@ export default function RoutesReducer(state = routes) {
     return state;
 }
 
-// Lab: {
-//     path: 'https://codepen.io/your-work',
-//     name: 'Lab',
-//     target: '_blank',
-//     typeofLink: external
-// }

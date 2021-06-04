@@ -11,6 +11,7 @@ import {
 
 const name = 'vueDeCoteZoom';
 
+
 export const vueDeCoteZoom = {
     "src_default": {
         name: `${name}_xxl`,

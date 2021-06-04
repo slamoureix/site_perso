@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Header from '../components/TemplateComponent/Header';
+import Content from '../components/TemplateComponent/Content';
 import Nav from '../components/Navigation/Navigation';
 import ToSite from '../components/ToSite/ToSite';
 import Skills from '../components/Skills/Skills';
@@ -13,17 +15,9 @@ export default function DeveloppementTemplate({
     routesDeveloppement
 }) {
     return (
-        
         <article className= {`${nameProject.rep}__project_container`}>
-            
-                    <header className = {`${nameProject.rep}__head_row`}>
-                        <div className= "title"><h1>{nameProject.name}</h1></div>
-                        <time dateTime= "2020" className= "year">{nameProject.year}</time>
-                    </header>
-
-                    <section className= {`${nameProject.rep}__content`}>
-                    <p>{nameProject.content}</p>
-                    </section>
+            <Header nameProjectProps= {nameProject} />
+            <Content nameProjectProps= {nameProject} />
 
                     <section className = {`${nameProject.rep}__skills_row`}>
                     <Skills title= {nameProject.competence.title} skills={nameProject.competence.comp}/>

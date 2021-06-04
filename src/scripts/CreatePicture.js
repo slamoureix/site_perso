@@ -49,7 +49,8 @@ export const CreatePicture = (rep, src_default, sources, alt) => {
 
     return (
         <picture>
-                {temporaryImportSources ? (DataSourceState ? DataSourceState.CompletedSources.map(s => <source key={uuid.v4()} srcSet={s.srcset} media={s.media} />) : null ) : null}
+        
+        {temporaryImportSources ? (DataSourceState ? DataSourceState.CompletedSources.map(s => <source key={uuid.v4()} srcSet={s.srcset} type={`image/${s.src.format}`} media={s.media} />) : null ) : null}
                 <img id={uuid.v4()} className="img" loading="lazy" src={SrcState} alt= {alt} lazy="true" />
         </picture>
     )
