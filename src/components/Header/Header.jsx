@@ -29,8 +29,6 @@ export default function Header() {
     const home = <button ref={homeRef} style={{cursor:'pointer'}} onClick={() => history.push('/')} className="link link__home">Accueil</button>
     const anchor = <a ref={anchorRef} className= "link" href= "#projet">Mes projets</a>
 
-    // useAnimHomePage(LocalState, contentRef);
-    
 
     useEffect(() => {setLocation(location)}, [location])
 
@@ -41,7 +39,7 @@ export default function Header() {
             <Logo/>
             <nav ref= {navMenu} className="NavMenu">
                 <ul>
-                    <li>{locationState.pathname === '/'? anchor : home}</li>
+                <li>{locationState.pathname === '/'? anchor : home}</li>
                 {linksNav}
                 </ul>
             </nav>

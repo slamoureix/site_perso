@@ -19,6 +19,9 @@ export const edition = "Édition";
 export const webdesign = "Webdesign";
 export const uxUi = "Ux - Ui";
 export const divers = "Divers";
+export const art = "Art";
+export const photographie = "Photographie";
+export const ecriture = "Écriture";
 
 
 // Formats d'images

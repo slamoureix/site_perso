@@ -14,10 +14,11 @@
         width: $col-left;
     }
 
-    a{
+    .content_logo{
         @include display();
         flex-direction: column;
     }
+    
 
     svg {
         transform: rotate(-45deg);

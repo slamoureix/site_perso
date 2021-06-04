@@ -13,9 +13,9 @@ export default function Content() {
         <article id="projet">
             <header><h1> Mes Projets</h1></header>
             <Developement/> 
-            <Typographie/> 
             <UxUi/>
-            {/* <Divers/> */}
+            <Typographie/> 
+            <Divers/>
         </article>
     )
 }

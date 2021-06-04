@@ -1,4 +1,4 @@
-import {underProject} from '../../config';
+import {underProject, art, ecriture, photographie} from '../../config';
 import Divers from './Divers';
 
 export const diversData = {
@@ -8,6 +8,6 @@ export const diversData = {
         component : Divers
     },
     name: "Divers",
-    type: "Art, écriture, photographie",
+    type: [art, ecriture, photographie],
     rep: "Divers",
 }
