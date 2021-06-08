@@ -15,6 +15,7 @@ export const CreatePicture = (rep, src_default, sources, alt) => {
     /* SOURCES */ 
     const [DataSourceState, setDataSourceState] = useState(); // undefined vaut false lors d'un test bol
     const [temporaryImportSources, setTemorarySources] = useState();
+    
 
     /* pour src_default */
     const [SrcState, SrcSetstate] = useState();
@@ -49,9 +50,8 @@ export const CreatePicture = (rep, src_default, sources, alt) => {
 
     return (
         <picture>
-        
         {temporaryImportSources ? (DataSourceState ? DataSourceState.CompletedSources.map(s => <source key={uuid.v4()} srcSet={s.srcset} type={`image/${s.src.format}`} media={s.media} />) : null ) : null}
-                <img id={uuid.v4()} className="img" loading="lazy" src={SrcState} alt= {alt} lazy="true" />
+                <img id={uuid.v4()} className="img" loading="lazy" src={SrcState} alt= {alt}/>
         </picture>
     )
 }

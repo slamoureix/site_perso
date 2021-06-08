@@ -27,7 +27,7 @@ export default function Header() {
     const [locationState, setLocation] = useState(location);
 
     const home = <button ref={homeRef} style={{cursor:'pointer'}} onClick={() => history.push('/')} className="link link__home">Accueil</button>
-    const anchor = <a ref={anchorRef} className= "link" href= "#projet">Mes projets</a>
+    const anchor = <a ref={anchorRef} className= "link" href= "#projet">Réalisations</a>
 
 
     useEffect(() => {setLocation(location)}, [location])

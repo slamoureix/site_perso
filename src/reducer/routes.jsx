@@ -1,5 +1,5 @@
 // COMPONENTS //
-
+import Competences from '../pages/Competences/Competences'
 import Contact from '../pages/Contact/Contact';
 import Legals from '../pages/Legals/Legals';
 
@@ -39,6 +39,12 @@ export const routes = {
     },
 
     Nav: {
+        Comp: {
+            path: '/Competences',
+            name: 'Compétences',
+            component: Competences,
+            target: '_self',
+        },
         Lab: {
             path: 'https://codepen.io/seb_lam',
             name: 'Lab',

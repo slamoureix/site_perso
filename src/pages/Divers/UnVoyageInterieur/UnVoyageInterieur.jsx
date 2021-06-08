@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ButtonHome from '../../../components/Buttons/ButtonHome';
 // import {useSelector} from 'react-redux';
 import Skills from '../../../components/Skills/Skills';
 import Content from '../../../components/TemplateComponent/Content';
@@ -34,6 +35,9 @@ export default function UnVoyageInterieur() {
             <ul className = {`${nameProject.rep}__images_row`}>
                     {useCreateImageGrid(datasImgState, nameProject.rep)} 
             </ul>
+            <nav className={`${nameProject.rep}__navigation`}>
+            <ButtonHome/>
+            </nav>
         </article>
     )
 }
